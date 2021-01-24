@@ -1,0 +1,214 @@
+! Title: givillow's custom filters
+! Description: Filters for blocking tracking pixels received in emails to determine 
+!              open rates, read-receipts, and other ethically questionable personal data.
+! License: http://creativecommons.org/licenses/by/3.0/
+! Homepage: https://github.com/givillow/filters
+! Forums: https://github.com/givillow/filters/issues
+
+! 2020-12-23 https://www.reddit.com/r/uBlockOrigin/comments/avwgct/using_my_filters_to_add_a_little_more_to_medium/
+*$data
+*$font,third-party
+*$media
+*$object
+*$other
+*$websocket
+*$xmlhttprequest,third-party
+
+! Common tracking endpoints
+! 2020-12-23 https://discord.com
+@@||gateway.discord.gg^$websocket,domain=discord.com
+
+! 2020-12-24 https://vandenbrug.nl
+@@||www.care-mail.nl^$xhr,domain=vandenbrug.nl
+
+! 2020-12-24 https://tiny4k.com
+@@||cloudfront.net^$script
+
+! 2020-12-24 https://www.milfed.com
+@@||site-api.project1service.com^$xhr,domain=milfed.com
+
+! 2020-12-24 https://www.naughtyamerica.com
+@@||images.naughtycdn.com^$media,domain=naughtyamerica.com
+
+! 2020-12-24 https://www.private.com
+||pcom.st-content.com/images/px.png$image
+
+! 2020-12-24 https://stadia.google.com
+@@||fonts.gstatic.com^$domain=google.com
+@@||www.gstatic.com^$xhr,domain=stadia.google.com
+@@||lh3.googleusercontent.com^$xhr,domain=stadia.google.com
+@@||ssl.gstatic.com^$xhr,domain=stadia.google.com
+
+! 2020-12-24 https://www.humblebundle.com
+@@||humblebundle-a.akamaihd.net^$font,domain=humblebundle.com
+
+! 2020-12-24 https://www.facebook.com
+@@||video-ams4-1.xx.fbcdn.net^$xhr,domain=facebook.com
+
+! 2020-12-24 https://www.reddit.com
+@@||www.redditstatic.com^$font,domain=reddit.com
+
+! 2020-12-24 https://lewdzone.com
+lewdzone.com##.affiliate-block
+lewdzone.com##div.col-sm-6.col-xs-12:nth-of-type(2)
+
+! 2020-12-24 https://www.xbox.com
+@@||www.microsoft.com^$font,domain=xbox.com
+
+! 2020-12-24 https://client.blitzadultparty.ru
+@@||analytic-client.playful-fairies.com:5000^$xhr,domain=blitzadultparty.ru
+@@||assets.playful-fairies.com^$xhr,domain=blitzadultparty.ru
+@@||cdp.cloud.unity3d.com^$xhr,domain=blitzadultparty.ru
+@@||config.uca.cloud.unity3d.com^$xhr,domain=blitzadultparty.ru
+@@||312920.selcdn.ru^$xhr,domain=blitzadultparty.ru
+@@||analytic-client.blitzadultparty.ru^$xhr,1p
+
+! 2020-12-25 https://nl.hardware.info
+nl.hardware.info##.overview-item--success.overview-item--large.overview-item
+
+! 2020-12-27 https://freebies.indiegala.com
+@@||maxcdn.bootstrapcdn.com^$font,domain=indiegala.com
+
+! 2020-12-27 https://www.youtube.com
+@@||googlevideo.com^$xhr,domain=youtube.com
+
+! 2020-12-29 https://outlook.live.com
+@@||cdn.office.net^$xhr,domain=outlook.live.com
+@@||imgproxy-prod.services.web.outlook.com^$xhr,domain=outlook.live.com
+
+! 2020-12-29 https://pod51139.outlook.com
+@@||cdn.office.net^$xhr,domain=outlook.com
+@@||cdn.office.net^$font,domain=outlook.com
+
+! 2020-12-29 https://www.babes.com, https://www.digitalplayground.com, https://www.erito.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofosnetwork.com, https://www.www.realitykings.com, https://www.squirted.com, https://www.trueamateurs.com, https://www.twistys.com
+www.babes.com,www.digitalplayground.com,www.erito.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.trueamateurs.com,www.twistys.com##.fOVgeD.sc-8lvev9-0
+www.babes.com,www.digitalplayground.com,www.erito.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.trueamateurs.com,www.twistys.com##.iWtMlW.sc-8lvev9-1
+
+! 2020-12-29 https://www.erito.com
+@@||site-api.project1service.com^$xhr,domain=erito.com
+
+! 2020-12-29 https://www.mofosnetwork.com
+@@||site-api.project1service.com^$xhr,domain=mofosnetwork.com
+
+! 2020-12-29 https://letsdoeit.com
+letsdoeit.com###vue-app > div > .popup
+
+! 2020-12-29 https://www.spizoo.com
+@@||cdn.amplitude.com/libs/amplitude-4.4.0-min.gz.js$script,domain=spizoo.com
+
+! 2021-01-01 https://tour.trueanal.com
+@@||maxcdn.bootstrapcdn.com^$font,domain=trueanal.com
+
+! 2021-01-01 https://www.wicked.com
+@@||tsmkfa364q-2.algolianet.com^$xhr,domain=wicked.com
+!@@||static01-cms-fame.gammacdn.com^$font,domain=wicked.com
+wicked.com#@#ConsentCookiePopup
+
+! 2021-01-01 https://www.ziggogo.tv
+@@||web-api-pepper.horizon.tv^$xhr,domain=ziggogo.tv
+@@||obc1-4-nl-prod.live.dyncdn.horizon.tv^$xhr,domain=ziggogo.tv
+
+! 2021-01-02 https://mega.nz
+@@||g.api.mega.co.nz^$xhr,domain=mega.nz
+@@||eu.static.mega.co.nz^$xhr,domain=mega.nz
+@@||userstorage.mega.co.nz^$xhr,domain=mega.nz
+
+! 2021-01-03 https://www.devilsfilm.com
+www.devilsfilm.com##.Gamma_Component.base.Cms_PromoBanner
+
+! 2021-01-03 https://www.https://www.security.nl
+security.nl#@#.cookie_consent:not(body):not(html)
+
+! 2021-01-03 https://www.archangelvideo.com
+@@||maxcdn.bootstrapcdn.com^$font,domain=archangelvideo.com
+
+! 2021-01-03 https://www.nu.nl
+www.nu.nl##.active.webpush-popup.overlay
+
+! 2021-01-07 https://photos.google.com
+@@||lh3.googleusercontent.com^$xhr,domain=photos.google.com
+@@||youtube.googleapis.com^$xhr,domain=photos.google.com
+@@||s0^$xhr,domain=photos.google.com
+@@||www.youtube.com^$xhr,domain=photos.google.com
+@@||www.gstatic.com^$xhr,domain=photos.google.com
+
+! 2021-01-07 https://ogs.google.com
+@@||apis.google.com^$other,domain=ogs.google.com
+
+! 2021-01-07 https://www.nu.nl
+www.nu.nl##.active.consent_notification.narrow.overlay
+@@||s-usc1c-nss-251.firebaseio.com^$websocket,domain=nu.nl
+@@||www.nu.nl^$1p
+
+! 2021-01-09 https://www.youtube.com
+www.youtube.com###dismissable.ytd-rich-shelf-renderer
+
+! 2021-01-10 https://www.trainingpeaks.com
+@@||www.trainingpeaks.com^$other,1p
+
+! 2021-01-10 https://interestingengineering.com
+@@||www.youtube.com/embed/*$subdocument,domain=interestingengineering.com
+
+! 2021-01-16 https://fuckingawesome.com
+@@||maxcdn.bootstrapcdn.com/font-awesome/*$font,domain=fuckingawesome.com
+
+! 2021-01-16 https://www.metcams.com
+@@||member.naiadsystems.com^$xhr,domain=metcams.com
+@@||object-cdn.icfsys.com^$xhr,domain=metcams.com
+@@||hybridclient.naiadsystems.com^$xhr,domain=metcams.com
+@@||sea1b-ls.naiadsystems.com^$websocket,domain=metcams.com
+@@||manifest-server.naiadsystems.com^$xhr,domain=metcams.com
+
+! 2021-01-16 https://www.adulttime.com
+@@||tsmkfa364q-3.algolianet.com^$xhr,domain=adulttime.com
+@@||lzzos7clo5.execute-api.us-east-1.amazonaws.com^$xhr,domain=adulttime.com
+
+! 2021-01-16 https://www.21naturals.com
+@@||videothumb.gammacdn.com^$media,domain=21naturals.com
+
+! 2021-01-16 https://czechfantasy.com
+@@||cdn77.czechcash.com^$media,domain=czechfantasy.com
+
+! 2021-01-16 https://czechbitch.com
+@@||cdn77.czechcash.com^$media,domain=czechbitch.com
+
+@@||cdn77.czechcash.com^$media
+
+! 2021-01-16 https://forum.vbulletin.com
+vbulletin.com#@#consent_blackbar:not(.idcac)
+
+! 2021-01-16 https://youtube.googleapis.com
+@@||lh3.googleusercontent.com^$xhr,domain=youtube.googleapis.com
+@@||googlevideo.com^$xhr,domain=youtube.googleapis.com
+
+! 2021-01-16 https://magazine.teufelaudio.nl
+!submagazine.teufelaudio.nl#@.cookie-banner
+
+! 2021-01-16 https://www.quora.com
+@@||tch.quora.com^$websocket,1p
+
+! 2021-01-16 https://www.exxxtrasmall.com
+@@||store.psmcdn.net^$xhr,domain=exxxtrasmall.com
+
+! 2021-01-16 https://www.familystrokes.com
+@@||store.psmcdn.net^$xhr,domain=familystrokes.com
+
+! 2021-01-16 https://www.pervmom.com
+@@||store.psmcdn.net^$xhr,domain=pervmom.com
+
+! 2021-01-16 https://www.mylf.com
+@@||store2.psmcdn.net^$xhr,domain=mylf.com
+
+! 2021-01-16 https://www.brazzers.com
+@@||site-api.project1service.com^$xhr,domain=brazzers.com
+
+! 2021-01-16 https://www.dogfartnetwork.com
+@@||cdn1-media-wefuckblackgirls.dogfartnetwork.com^$media,1p
+@@||cdn1-media-blacksonblondes.dogfartnetwork.com^$media,1p
+
+! 2021-01-21 https://www.21naturals.com
+@@||www.21naturals.com^$image,1p
+
+! 2021-01-21 https://clubseventeen.com
+clubseventeen.com###confirmationModal
+clubseventeen.com##.in.fade.modal-backdrop
