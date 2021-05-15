@@ -15,11 +15,27 @@
 *$xmlhttprequest,third-party
 
 ! Common tracking endpoints
+
+! 2021-01-29 https://forums.plex.tv
+@@||discourse-cdn.com^$xhr,domain=plex.tv
+
+! 2021-01-30 https://bitwardenrs.discourse.group
+@@||discourse-cdn.com^$xhr,domain=bitwardenrs.discourse.group
+
+! 2021-04-09 https://community.letsencrypt.org
+@@||discourse-cdn.com^$xhr,domain=community.letsencrypt.org
+
+! 2021-04-13 https://www.sitepoint.com
+@@||discourse-cdn.com^$xhr,domain=sitepoint.com
+
 ! 2020-12-23 https://discord.com
 @@||gateway.discord.gg^$websocket,domain=discord.com
 
 ! 2020-12-24 https://vandenbrug.nl
 @@||www.care-mail.nl^$xhr,domain=vandenbrug.nl
+
+! 2020-12-24 https://www.facebook.com
+@@||video-ams4-1.xx.fbcdn.net^$xhr,domain=facebook.com
 
 ! 2020-12-24 https://stadia.google.com
 @@||fonts.gstatic.com^$domain=google.com
@@ -30,33 +46,33 @@
 ! 2020-12-24 https://www.humblebundle.com
 @@||humblebundle-a.akamaihd.net^$font,domain=humblebundle.com
 
-! 2020-12-24 https://www.facebook.com
-@@||video-ams4-1.xx.fbcdn.net^$xhr,domain=facebook.com
+! 2020-12-27 https://freebies.indiegala.com
+!@@||^$font,domain=indiegala.com
+@@||9frhv.x.incapdns.net^$xhr,domain=freebies.indiegala.com
 
-! 2020-12-24 https://www.reddit.com
-@@||www.redditstatic.com^$font,domain=reddit.com
+! 2021-04-24 https://isthereanydeal.com
+@@||d2uym1p5obf9p8.cloudfront.net^$font,domain=isthereanydeal.com
 
 ! 2020-12-24 https://lewdzone.com
 lewdzone.com##.affiliate-block
 lewdzone.com##div.col-sm-6.col-xs-12:nth-of-type(2)
 
+! 2020-12-24 https://www.reddit.com
+@@||www.redditstatic.com^$font,domain=reddit.com
+
 ! 2020-12-24 https://www.xbox.com
 @@||www.microsoft.com^$font,domain=xbox.com
 
 ! 2020-12-24 https://client.blitzadultparty.ru
-@@||analytic-client.playful-fairies.com:5000^$xhr,domain=blitzadultparty.ru
+!@@||analytic-client.playful-fairies.com:5000^$xhr,domain=blitzadultparty.ru
 @@||assets.playful-fairies.com^$xhr,domain=blitzadultparty.ru
 @@||cdp.cloud.unity3d.com^$xhr,domain=blitzadultparty.ru
 @@||config.uca.cloud.unity3d.com^$xhr,domain=blitzadultparty.ru
 @@||312920.selcdn.ru^$xhr,domain=blitzadultparty.ru
-@@||analytic-client.blitzadultparty.ru^$xhr,1p
+!@@||analytic-client.blitzadultparty.ru^$xhr,1p
 
 ! 2020-12-25 https://nl.hardware.info
 nl.hardware.info##.overview-item--success.overview-item--large.overview-item
-
-! 2020-12-27 https://freebies.indiegala.com
-@@||^$font,domain=indiegala.com
-
 ! 2020-12-27 https://www.youtube.com
 @@||googlevideo.com^$xhr,domain=youtube.com
 
@@ -69,8 +85,11 @@ nl.hardware.info##.overview-item--success.overview-item--large.overview-item
 @@||cdn.office.net^$font,domain=outlook.com
 
 ! 2021-01-01 https://www.ziggogo.tv
+@@||cdn.dmdsdp.com^$xhr,domain=ziggogo.tv
 @@||web-api-pepper.horizon.tv^$xhr,domain=ziggogo.tv
-@@||obc1-4-nl-prod.live.dyncdn.horizon.tv^$xhr,domain=ziggogo.tv
+@@||live.dyncdn.horizon.tv^$xhr,domain=ziggogo.tv
+@@||dmtgo.upc.biz^$xhr,domain=ziggogo.tv
+@@||cdn.upcbroadband.com^$xhr,domain=ziggogo.tv
 
 ! 2021-01-02 https://mega.nz
 @@||g.api.mega.co.nz^$xhr,domain=mega.nz
@@ -82,24 +101,25 @@ security.nl#@#.cookie_consent:not(body):not(html)
 
 ! 2021-01-03 https://www.nu.nl
 www.nu.nl##.active.webpush-popup.overlay
+www.nu.nl##.active.consent_notification.narrow.overlay
+!@@||s-usc1c-nss-251.firebaseio.com^$websocket,domain=nu.nl
+!@@||www.nu.nl^$1p
 
 ! 2021-01-07 https://photos.google.com
-@@||lh3.googleusercontent.com^$xhr,domain=photos.google.com
-@@||youtube.googleapis.com^$xhr,domain=photos.google.com
-@@||s0^$xhr,domain=photos.google.com
-@@||www.youtube.com^$xhr,domain=photos.google.com
-@@||www.gstatic.com^$xhr,domain=photos.google.com
+!@@||lh3.googleusercontent.com^$xhr,domain=photos.google.com
+!@@||lh3.googleusercontent.com^$media,domain=photos.google.com
+!@@||youtube.googleapis.com^$xhr,domain=photos.google.com
+!@@||s0^$xhr,domain=photos.google.com
+!@@||www.youtube.com^$xhr,domain=photos.google.com
+!@@||www.gstatic.com^$xhr,domain=photos.google.com
+!@@||googlevideo.com^$media,domain=photos.google.com
 
 ! 2021-01-07 https://ogs.google.com
 @@||apis.google.com^$other,domain=ogs.google.com
 
-! 2021-01-07 https://www.nu.nl
-www.nu.nl##.active.consent_notification.narrow.overlay
-@@||s-usc1c-nss-251.firebaseio.com^$websocket,domain=nu.nl
-@@||www.nu.nl^$1p
-
 ! 2021-01-09 https://www.youtube.com
 www.youtube.com###dismissable.ytd-rich-shelf-renderer
+@@||youtube-ui.l.google.com^$xhr,domain=youtube.com
 
 ! 2021-01-10 https://www.trainingpeaks.com
 @@||www.trainingpeaks.com^$other,1p
@@ -131,12 +151,12 @@ nitroflare.com###superbox-wrapper
 ! ############################## PRON BEGIN ############################## !
 ! ############################## ########## ############################## !
 
-! 2020-12-29 https://www.babes.com, https://www.digitalplayground.com, https://www.erito.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofosnetwork.com, https://www.www.realitykings.com, https://www.squirted.com, https://www.trueamateurs.com, https://www.twistys.com
-www.babes.com,www.digitalplayground.com,www.erito.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.trueamateurs.com,www.twistys.com##.fOVgeD.sc-8lvev9-0
-www.babes.com,www.digitalplayground.com,www.erito.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.trueamateurs.com,www.twistys.com##.iWtMlW.sc-8lvev9-1
+! 2020-12-29 https://www.babes.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofosnetwork.com, https://www.www.realitykings.com, https://www.squirted.com, https://www.trueamateurs.com, https://www.twistys.com
+www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.trueamateurs.com,www.twistys.com##.fOVgeD.sc-8lvev9-0
+www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.trueamateurs.com,www.twistys.com##.iWtMlW.sc-8lvev9-1
 
-! 2021-01-03 https://www.blowpass.com, https://www.burningangel.com, https://www.devilsfilm.com, https://www.evilangel.com, https://www.wicked.com, https://www.xempire.com,https://www.21naturals.com
-www.blowpass.com,www.burningangel.com,www.devilsfilm.com,www.evilangel.com,www.wicked.com,www.xempire.com,www.21naturals.com##.Gamma_Component.base.Cms_PromoBanner
+! 2021-01-03 https://www.blowpass.com, https://www.burningangel.com, https://www.devilsfilm.com, https://www.evilangel.com, https://www.fantasymassage.com, https://www.wicked.com, https://www.xempire.com, https://www.21naturals.com, https://www.21sextreme.com
+www.blowpass.com,www.burningangel.com,www.devilsfilm.com,www.evilangel.com,www.fantasymassage.com,www.wicked.com,www.xempire.com,www.21naturals.com,www.21sextreme.com##.Gamma_Component.base.Cms_PromoBanner
 
 ! 2021-01-16 https://www.brazzers.com
 @@||site-api.project1service.com^$xhr,domain=brazzers.com
@@ -155,6 +175,15 @@ www.blowpass.com,www.burningangel.com,www.devilsfilm.com,www.evilangel.com,www.w
 
 ! 2021-02-10 https://www.realitykings.com
 @@||site-api.project1service.com^$xhr,domain=realitykings.com
+
+! 2021-05-08 https://www.doghousedigital.com
+@@||site-api.project1service.com^$xhr,domain=doghousedigital.com
+
+! 2021-05-08 https://www.babesnetwork.com
+@@||site-api.project1service.com^$xhr,domain=babesnetwork.com
+
+! 2021-05-08 https://www.hentaiprosnetwork.com
+@@||site-api.project1service.com^$xhr,domain=hentaiprosnetwork.com
 
 ! 2021-01-16 https://www.exxxtrasmall.com
 @@||store.psmcdn.net^$xhr,domain=exxxtrasmall.com
@@ -207,11 +236,35 @@ letsdoeit.com###vue-app > div > .popup
 ! 2021-01-16 https://fuckingawesome.com
 @@||maxcdn.bootstrapcdn.com^$font,domain=fuckingawesome.com
 
+! 2021-04-17 https://www.familystrokes.com
+www.familystrokes.com##.container.newest-movies
+
+! 2021-04-17 https://www.pervmom.com
+www.pervmom.com##.container.newest-movies
+
+! 2021-04-17 https://www.exxxtrasmall.com
+www.exxxtrasmall.com##.container.newest-movies
+
+! 2021-04-17 https://www.21sextury.com
+@@||tsmkfa364q-1.algolianet.com^$xhr,domain=21sextury.com
+
+! 2021-04-17 https://www.evilangel.com
+@@||tsmkfa364q-3.algolianet.com^$xhr,domain=evilangel.com
+
+! 2021-04-17 https://www.puretaboo.com
+@@||tsmkfa364q-dsn.algolia.net^$xhr,domain=puretaboo.com
+
+! 2021-04-17 https://www.girlsway.com
+@@||tsmkfa364q-dsn.algolia.net^$xhr,domain=girlsway.com
+
 ! 2021-01-01 https://www.wicked.com
 @@||tsmkfa364q-2.algolianet.com^$xhr,domain=wicked.com
-!@@||static01-cms-fame.gammacdn.com^$font,domain=wicked.com
-||www.wicked.com/m/4/9/539221f8ff40c02b612ba82a557938.jpg$image
-wicked.com#@#ConsentCookiePopup
+wicked.com#@#.cookieVisible
+!wicked.com#@#ConsentCookiePopup
+
+! 2021-01-16 https://www.adulttime.com
+@@||tsmkfa364q-3.algolianet.com^$xhr,domain=adulttime.com
+@@||lzzos7clo5.execute-api.us-east-1.amazonaws.com^$xhr,domain=adulttime.com
 
 ! 2021-01-16 https://www.metcams.com
 @@||member.naiadsystems.com^$xhr,domain=metcams.com
@@ -220,10 +273,6 @@ wicked.com#@#ConsentCookiePopup
 @@||sea1b-ls.naiadsystems.com^$websocket,domain=metcams.com
 @@||sea1c-ls.naiadsystems.com^$websocket,domain=metcams.com
 @@||manifest-server.naiadsystems.com^$xhr,domain=metcams.com
-
-! 2021-01-16 https://www.adulttime.com
-@@||tsmkfa364q-3.algolianet.com^$xhr,domain=adulttime.com
-@@||lzzos7clo5.execute-api.us-east-1.amazonaws.com^$xhr,domain=adulttime.com
 
 ! 2021-01-16 https://www.21naturals.com
 @@||videothumb.gammacdn.com^$media,domain=21naturals.com
