@@ -174,10 +174,13 @@ www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,ww
 
 
 !!!! AMA Multimedia !!!!!
+! 2021-05-16 https://cum4k.com, https://exotic4k.com, https://holed.com, https://lubed.com, https://passion-hd.com, https://pornpros.com, https://povd.com, https://puremature.com, https://tiny4k.com
+cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,tiny4k.com##.payment-popup
+
 ! disabled @ 15-5-2021, all require local noop for script, not frames
 ! cum4k.com
-! holed.com
 ! exotic4k.com
+! holed.com
 ! lubed.com
 ! passion-hd.com
 ! pornpros.com
@@ -259,9 +262,16 @@ wicked.com#@#.cookieVisible
 ! metartnetwork.com
 
 
+!!!! BC Media !!!!!
+! no dynamic filters required
+! 2021-05-16 https://www.x-art.com
+www.x-art.com##.promo-bar
+
+
 !!!! DirecTech !!!!!
 ! disabled @ 15-5-2021, no dynamic filters required
 ! 2021-01-16 https://www.dogfartnetwork.com
+www.dogfartnetwork.com##.carousel-container.clearfix.row
 !#!	@@||cdn1-media-wefuckblackgirls.dogfartnetwork.com^$media,1p
 !#!	@@||cdn1-media-blacksonblondes.dogfartnetwork.com^$media,1p
 
@@ -271,6 +281,16 @@ wicked.com#@#.cookieVisible
 ! czechbitch.com
 ! czechfantasy.com
 !#!	@@||cdn77.czechcash.com^$media,domain=xxx
+
+
+!!!! LPF Internet Group !!!!!
+! listed require local noop for script, not frames
+! bootyclapxxx.com
+! bootysisters.com
+! fuckfiesta.com
+! fuckinghardcore.com
+! hustler.com
+! pornstarhardcore.com
 
 
 !!!! Others !!!!!
