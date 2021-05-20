@@ -5,8 +5,13 @@
 ! Homepage: https://github.com/givillow/filters
 ! Forums: https://github.com/givillow/filters/issues
 
+! https://github.com/gorhill/uBlock/wiki/Resources-Library
+!||domain.tld^$queryprune=<parameter>
+
 ! 2020-12-23 https://www.reddit.com/r/uBlockOrigin/comments/avwgct/using_my_filters_to_add_a_little_more_to_medium/
-*$data
+! https://armin.dev/apps/ping-spotter/#
+! hyperlink auditing: *$beacon, *$ping
+!*$data
 *$font,third-party
 *$media
 *$object
@@ -14,378 +19,839 @@
 *$websocket
 *$xmlhttprequest,third-party
 
+
+! Dynamic Filtering Only
+!	interestingengineering.com  * 3p-frame noop
+!	interestingengineering.com * 3p-script noop
+!	magazine.teufelaudio.nl  * 3p-script noop
+
+
 ! Common tracking endpoints
 
-! 2021-01-23 https://www.allekabels.nl
-www.allekabels.nl##.js_close-it.overlay
-www.allekabels.nl##.corona-popup-holder
+! 2021-05-20 https://www.buienalarm.nl
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||api.meteoplaza.com^$xhr,domain=buienalarm.nl
+@@||imn-api.meteoplaza.com^$xhr,domain=buienalarm.nl
+@@||maps.meteoplaza.com^$xhr,domain=buienalarm.nl
 
-! 2021-01-29 https://forums.plex.tv
-@@||discourse-cdn.com^$xhr,domain=plex.tv
+! 2021-05-19 https://www.coolblue.nl
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.coolblue.nl##.cookie
+!www.coolblue.nl##+js(remove-attr, cookienotificationmodalopened, body, stay)
+www.coolblue.nl##.overflow--hidden:style(overflow: visible !important;)
+!www.coolblue.nl##+js(remove-class, overflow--hidden, body)
 
-! 2021-01-30 https://bitwardenrs.discourse.group
-@@||discourse-cdn.com^$xhr,domain=bitwardenrs.discourse.group
-
-! 2021-04-09 https://community.letsencrypt.org
-@@||discourse-cdn.com^$xhr,domain=community.letsencrypt.org
-
-! 2021-04-13 https://www.sitepoint.com
-@@||discourse-cdn.com^$xhr,domain=sitepoint.com
-
-! 2020-12-23 https://discord.com
+! 2021-05-20 https://discord.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||discord.com^$media,1p
 @@||gateway.discord.gg^$websocket,domain=discord.com
 
-! 2020-12-24 https://vandenbrug.nl
-@@||www.care-mail.nl^$xhr,domain=vandenbrug.nl
+! 2021-05-20 https://www.dropbox.com
+! [dynamic filtering]
+!	www.dropbox.com * 3p-script noop
+! [/dynamic filtering]
+@@||cfl.dropboxstatic.com^$xhr,domain=dropbox.com
+@@||www-env.dropbox-dns.com^$xhr,domain=dropbox.com
 
-! 2020-12-24 https://www.facebook.com
-@@||video-ams4-1.xx.fbcdn.net^$xhr,domain=facebook.com
+! 2021-05-20 https://www.dumpert.nl
+! [dynamic filtering]
+!	www.dumpert.nl * 3p-script noop
+! [/dynamic filtering]
+www.dumpert.nl##[class^="ads_container--"]
+www.dumpert.nl##.full-ad-block
+@@||media.dumpert.nl^$media,1p
+@@||player.agnoplay.com^$xhr,domain=dumpert.nl
 
-! 2020-12-24 https://stadia.google.com
-@@||fonts.gstatic.com^$domain=google.com
-@@||www.gstatic.com^$xhr,domain=stadia.google.com
-@@||lh3.googleusercontent.com^$xhr,domain=stadia.google.com
-@@||ssl.gstatic.com^$xhr,domain=stadia.google.com
+! 2021-05-20 https://www.facebook.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+! find a way to skip cookies
+www.facebook.com##.uiLayer
+@@||xx.fbcdn.net^$xhr,domain=facebook.com
 
-! 2020-12-24 https://www.humblebundle.com
+! 2021-05-20 https://www.formula1.com
+! [dynamic filtering]
+!	www.formula1.com * 3p-script noop
+! [/dynamic filtering]
+@@||d2o3p7ajbdlty7.cloudfront.net^$font,domain=formula1.com
+@@||d2amvmy3wylsuf.cloudfront.net^$xhr,domain=formula1.com
+
+! 2021-05-16 https://gfycat.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||a588eba61f0fe11e98296122db75ecc3-166728206.us-east-1.elb.amazonaws.com^$xhr,domain=gfycat.com
+@@||gfycat.com^$media,1p
+
+! 2021-05-20 https://www.google.nl
+!www.google.nl##.fp-nh.gTMtLb
+@@||www.gstatic.com^$xhr,domain=google.nl
+
+! 2021-05-17 https://translate.google.com, https://translate.google.nl
+@@||fonts.gstatic.com^$font,domain=google.com|google.nl
+
+! 2021-05-17 https://photos.google.com, https://stadia.google.com, https://youtube.googleapis.com, https://www.youtube.com
+! require scripts and frames
+www.youtube.com###clarify-box
+www.youtube.com##ytd-clarification-renderer
+!www.youtube.com###dismissable.ytd-rich-shelf-renderer
+@@||lh3.googleusercontent.com^$media,domain=photos.google.com|stadia.google.com|youtube.googleapis.com
+@@||googlevideo.com^$xhr,domain=photos.google.com|youtube.googleapis.com|youtube.com
+@@||youtube-ui.l.google.com^$xhr,domain=www.youtube.com
+
+! 2021-05-17 https://nl.hardware.info
+!nl.hardware.info##.overview-item--success.overview-item--large.overview-item
+@@||nlwebserverssl.hwigroup.com^$xhr,domain=nl.hardware.info
+
+! 2021-05-20 https://www.humblebundle.com
+! [dynamic filtering]
+!	www.humblebundle.com * 3p-script noop
+! [/dynamic filtering]
 @@||humblebundle-a.akamaihd.net^$font,domain=humblebundle.com
 
-! 2020-12-27 https://freebies.indiegala.com
-@@||maxcdn.bootstrapcdn.com^$font,domain=indiegala.com
-@@||9frhv.x.incapdns.net^$xhr,domain=freebies.indiegala.com
+! 2021-05-20 https://imgur.com
+! [dynamic filtering]
+!	imgur.com * 3p-script noop
+! [/dynamic filtering]
+@@||ipv4.imgur.map.fastly.net^$xhr,domain=imgur.com
 
-! 2021-04-24 https://isthereanydeal.com
+! 2021-05-20 https://www.indiegala.com
+! [dynamic filtering]
+!	www.indiegala.com * 3p-script noop
+! [/dynamic filtering]
+@@||9frhv.x.incapdns.net^$xhr,domain=indiegala.com
+
+! 2021-05-19 https://isthereanydeal.com
+! [dynamic filtering]
+!	isthereanydeal.com * 3p-script noop
+! [/dynamic filtering]
 @@||d2uym1p5obf9p8.cloudfront.net^$font,domain=isthereanydeal.com
 
-! 2020-12-24 https://lewdzone.com
-lewdzone.com##.affiliate-block
-lewdzone.com##div.col-sm-6.col-xs-12:nth-of-type(2)
+! 2021-05-20 https://www.komoot.nl
+! [dynamic filtering]
+!	www.komoot.nl * 3p-script noop
+! [/dynamic filtering]
+@@||komoot-web-live-2021.eu-west-1.elasticbeanstalk.com^$font,domain=komoot.nl
+@@||komoot-web-live-2021.eu-west-1.elasticbeanstalk.com^$xhr,domain=komoot.nl
+@@||tiles-api.maps.komoot.net^$xhr,domain=komoot.nl
 
-! 2020-12-24 https://www.reddit.com
+! 2021-05-20 https://www.lc.nl
+! [dynamic filtering]
+!	www.lc.nl * 3p-script noop
+! [/dynamic filtering]
+@@||ms.ndcmediagroep.nl^$xhr,domain=lc.nl
+@@||player.agnoplay.com^$xhr,domain=lc.nl
+@@||ndc.bbvms.com^$xhr,domain=lc.nl
+
+! 2021-05-20 https://www.linkedin.com
+! [dynamic filtering]
+!	www.linkedin.com * 3p-script noop
+! [/dynamic filtering]
+@@||l-0005.l-msedge.net^$xhr,domain=linkedin.com
+@@||dms.licdn.com^$xhr,domain=linkedin.com
+@@||dms.licdn.com^$media,domain=linkedin.com
+
+! 2021-05-17 https://account.microsoft.com, https://www.xbox.com
+! [dynamic filtering]
+!	account.microsoft.com * 3p-script noop
+!	account.xbox.com * 3p-script noop
+!	www.xbox.com * 3p-frame noop
+!	www.xbox.com * 3p-script noop
+! [/dynamic filtering]
+@@||e9412.b.akamaiedge.net^$xhr,domain=account.microsoft.com
+@@||e9412.b.akamaiedge.net^$font,domain=account.microsoft.com
+@@||e1822.g.akamaiedge.net^$xhr,domain=account.xbox.com
+@@||e2699.dspg.akamaiedge.net^$xhr,domain=account.microsoft.com
+@@||e1822.dspg.akamaiedge.net^$xhr,domain=account.xbox.com
+@@||www.microsoft.com^$xhr,domain=account.xbox.com
+
+! 2021-05-20 https://login.live.com, https://login.microsoftonline.com
+! [dynamic filtering]
+!	login.live.com * 3p-script noop
+!	login.microsoftonline.com * 3p-script noop
+! [/dynamic filtering]
+@@||www.tm.a.prd.aadg.akadns.net^$xhr,domain=login.live.com|login.microsoftonline.com
+
+! 2021-05-20 https://outlook.live.com
+! [dynamic filtering]
+!	outlook.live.com * 3p-script noop
+! [/dynamic filtering]
+@@||l-0002.l-msedge.net^$xhr,domain=outlook.live.com
+@@||outlook-1.cdn.office.net^$xhr,domain=outlook.live.com
+@@||outlook-2.cdn.office.net^$xhr,domain=outlook.live.com
+@@||outlook-1.cdn.office.net^$font,domain=outlook.live.com
+
+! 2021-05-20 https://www.office.com
+@@||k-0002.k-msedge.net^$xhr,domain=www.office.com
+@@||ng-eur.home.office.akadns.net^$xhr,domain=www.office.com
+
+! 2021-05-20 https://pod51139.outlook.com
+@@||outlook-2.cdn.office.net^$xhr,domain=pod51139.outlook.com
+@@||outlook-1.cdn.office.net^$xhr,domain=pod51139.outlook.com
+@@||outlook-1.cdn.office.net^$font,domain=pod51139.outlook.com
+
+! 2021-05-20 https://teams.microsoft.com
+! [dynamic filtering]
+!	teams.microsoft.com * 3p-script noop
+! [/dynamic filtering]
+! doesn't working due to either privacy.firstparty.isolate or network.cookie.cookieBehavior
+@@||login.microsoftonline.com^$xhr,domain=teams.microsoft.com
+@@||s-0005.s-msedge.net^$xhr,domain=teams.microsoft.com
+@@||a-ups-presence6-prod-azsc.francecentral.cloudapp.azure.com^$xhr,domain=teams.microsoft.com
+@@||msgapi-prod-wuk-azsc6-1.cloudapp.net^$xhr,domain=teams.microsoft.com
+
+! 2021-05-20 https://web.yammer.com
+! [dynamic filtering]
+!	web.yammer.com * 3p-frame noop
+!	web.yammer.com * 3p-script noop
+! [/dynamic filtering]
+! not fully tested
+@@||b-0005t.b-msedge.net^$xhr,domain=web.yammer.com
+@@||outlook-1.cdn.office.net^$xhr,domain=web.yammer.com
+
+! 2021-05-20 https://intranet.philips.com
+! [dynamic filtering]
+!	intranet.philips.com * 3p-script noop
+! [/dynamic filtering]
+@@||spov-0006.dc-msedge.net^$xhr,domain=intranet.philips.com
+@@||spov-0006.dc-msedge.net^$font,domain=intranet.philips.com
+
+! 2021-05-20 https://docs.philips.com
+! [dynamic filtering]
+!	docs.philips.com * 3p-script noop
+! [/dynamic filtering]
+@@||spov-0006.spov-msedge.net^$font,domain=docs.philips.com
+@@||spov-0006.spov-msedge.net^$xhr,domain=docs.philips.com
+
+! 2021-05-20 https://account.activedirectory.windowsazure.com
+@@||www.tm.f.prd.aadg.akadns.net^$script,domain=account.activedirectory.windowsazure.com
+
+! 2021-05-20 https://nos.nl
+! [dynamic filtering]
+!	nos.nl * 3p-script noop
+! [/dynamic filtering]
+@@||nos1wb-sites.omroep.nl^$font,domain=nos.nl
+@@||resolver.streaming.api.nos.nl^$media,1p
+@@||cdn.streamgate.nl^$xhr,domain=nos.nl
+
+! 2021-05-17 https://www.nu.nl
+! [dynamic filtering]
+!	www.nu.nl * 3p-frame noop
+!	www.nu.nl * 3p-script noop
+! [/dynamic filtering]
+@@||ingress-public.apps-2.osc-nu-prod.k8s.cloud.onenet.nl^$xhr,domain=talk.nu.nl
+@@||cdn.jwplayer.com^$xhr,domain=nu.nl
+! unbreak video playback
+@@||myprivacy.dpgmedia.net/consent.js$script,domain=nu.nl
+@@||cmp.nu.nl/wrapperMessagingWithoutDetection.js$script,domain=nu.nl
+@@||cdn-1294-2.privacy-mgmt.com^$xhr,domain=nu.nl
+
+! 2021-05-20 https://www.rabobank.nl
+@@||e82494.dscb.akamaiedge.net^$font,domain=rabobank.nl
+@@||e16266.dscb.akamaiedge.net^$xhr,domain=rabobank.nl
+@@||e82494.dscb.akamaiedge.net^$xhr,domain=rabobank.nl
+
+! 2021-05-20 https://www.reddit.com
+! [dynamic filtering]
+!	www.reddit.com* 3p-frame noop
+!	www.reddit.com * 3p-script noop
+! [/dynamic filtering]
+@@||reddit.map.fastly.net^$xhr,domain=reddit.com
 @@||www.redditstatic.com^$font,domain=reddit.com
 
-! 2020-12-24 https://www.xbox.com
-@@||www.microsoft.com^$font,domain=xbox.com
+! 2021-05-20 https://www.strava.com
+! [dynamic filtering]
+!	www.strava.com * 3p-script noop
+! [/dynamic filtering]
+@@||albstravaprod-623034023.us-east-1.elb.amazonaws.com^$xhr,domain=strava.com
 
-! 2020-12-24 https://client.blitzadultparty.ru
-!@@||analytic-client.playful-fairies.com:5000^$xhr,domain=blitzadultparty.ru
-@@||assets.playful-fairies.com^$xhr,domain=blitzadultparty.ru
-@@||cdp.cloud.unity3d.com^$xhr,domain=blitzadultparty.ru
-@@||config.uca.cloud.unity3d.com^$xhr,domain=blitzadultparty.ru
-@@||312920.selcdn.ru^$xhr,domain=blitzadultparty.ru
-!@@||analytic-client.blitzadultparty.ru^$xhr,1p
-
-! 2020-12-25 https://nl.hardware.info
-nl.hardware.info##.overview-item--success.overview-item--large.overview-item
-! 2020-12-27 https://www.youtube.com
-@@||googlevideo.com^$xhr,domain=youtube.com
-
-! 2020-12-29 https://outlook.live.com
-@@||cdn.office.net^$xhr,domain=outlook.live.com
-@@||imgproxy-prod.services.web.outlook.com^$xhr,domain=outlook.live.com
-
-! 2020-12-29 https://pod51139.outlook.com
-@@||cdn.office.net^$xhr,domain=outlook.com
-@@||cdn.office.net^$font,domain=outlook.com
-
-! 2021-01-01 https://www.ziggogo.tv
-@@||cdn.dmdsdp.com^$xhr,domain=ziggogo.tv
-@@||web-api-pepper.horizon.tv^$xhr,domain=ziggogo.tv
-@@||live.dyncdn.horizon.tv^$xhr,domain=ziggogo.tv
-@@||dmtgo.upc.biz^$xhr,domain=ziggogo.tv
-@@||cdn.upcbroadband.com^$xhr,domain=ziggogo.tv
-
-! 2021-01-02 https://mega.nz
-@@||g.api.mega.co.nz^$xhr,domain=mega.nz
-@@||eu.static.mega.co.nz^$xhr,domain=mega.nz
-@@||userstorage.mega.co.nz^$xhr,domain=mega.nz
-
-! 2021-01-03 https://www.https://www.security.nl
-security.nl#@#.cookie_consent:not(body):not(html)
-
-! 2021-01-07 https://photos.google.com
-!@@||lh3.googleusercontent.com^$xhr,domain=photos.google.com
-!@@||lh3.googleusercontent.com^$media,domain=photos.google.com
-!@@||youtube.googleapis.com^$xhr,domain=photos.google.com
-!@@||s0^$xhr,domain=photos.google.com
-!@@||www.youtube.com^$xhr,domain=photos.google.com
-!@@||www.gstatic.com^$xhr,domain=photos.google.com
-!@@||googlevideo.com^$media,domain=photos.google.com
-
-! 2021-01-07 https://ogs.google.com
-@@||apis.google.com^$other,domain=ogs.google.com
-
-! 2021-01-09 https://www.youtube.com
-www.youtube.com###dismissable.ytd-rich-shelf-renderer
-@@||youtube-ui.l.google.com^$xhr,domain=youtube.com
-
-! 2021-01-10 https://www.trainingpeaks.com
-@@||www.trainingpeaks.com^$other,1p
-
-! 2021-01-10 https://interestingengineering.com
-@@||www.youtube.com/embed/*$subdocument,domain=interestingengineering.com
-
-! 2021-01-16 https://forum.vbulletin.com
-vbulletin.com#@#consent_blackbar:not(.idcac)
-
-! 2021-01-16 https://youtube.googleapis.com
-@@||lh3.googleusercontent.com^$xhr,domain=youtube.googleapis.com
-@@||googlevideo.com^$xhr,domain=youtube.googleapis.com
-
-! 2021-01-16 https://magazine.teufelaudio.nl
-!submagazine.teufelaudio.nl#@.cookie-banner
-
-! 2021-01-16 https://www.quora.com
-@@||tch.quora.com^$websocket,1p
-
-! 2021-02-11 https://nitroflare.com
-nitroflare.com###superbox-container
-nitroflare.com###superbox-wrapper
-
-! 2021-01-06 https://www.telegraaf.nl
+! 2021-05-20 https://www.telegraaf.nl
+! [dynamic filtering]
+!	www.telegraaf.nl * 3p-script noop
+! [/dynamic filtering]
+! find a way to skip cookies, video player added by "agnoplayer.js"
 www.telegraaf.nl##.WebshopWidget__container
+@@||sdk.privacy-center.org^$script,domain=telegraaf.nl
+@@||player.agnoplay.com^$xhr,domain=telegraaf.nl
+@@||content.tmgvideo.nl^$xhr,domain=telegraaf.nl
+@@||redir-tmg.samgcloud.nepworldwide.nl^$xhr,domain=telegraaf.nl
+@@||cdn.streamgate.nl^$xhr,domain=telegraaf.nl
 
-! 2021-01-25 https://www.versio.nl
-@@||maxcdn.bootstrapcdn.com^$font,domain=versio.nl
+! 2021-05-20 https://www.trainingpeaks.com
+! [dynamic filtering]
+!	home.trainingpeaks.com * 3p-frame noop
+!	home.trainingpeaks.com * 3p-script noop
+!	www.trainingpeaks.com * 3p-script noop
+! [/dynamic filtering]
+!@@||www.trainingpeaks.com^$other,1p
+@@||d2gut7hu01n7jq.cloudfront.net^$xhr,domain=trainingpeaks.com
 
-! 2021-01-03 https://www.nu.nl
-! local noop for script & frames
-!#!	www.nu.nl##.active.webpush-popup.overlay
-!#!	www.nu.nl##.active.consent_notification.narrow.overlay
-!#!	@@||s-usc1c-nss-251.firebaseio.com^$websocket,domain=nu.nl
-!#!	@@||www.nu.nl^$1p
-! nu.nl
+! 2021-05-19 https://tweakers.net
+! [dynamic filtering]
+!	tweakers.net  * 3p-frame noop
+!	tweakers.net * 3p-script noop
+! [/dynamic filtering]
+tweakers.net##+js(no-setTimeout-if, /^/)
+
+! 2021-05-20 https://twitter.com
+! [dynamic filtering]
+!	twitter.com * 3p-script noop
+! [/dynamic filtering]
+@@||video.twimg.com^$media,domain=twitter.com
+
+! 2021-05-17 https://vandenbrug.nl
+! [dynamic filtering]
+!	vandenbrug.nl * 3p-script noop
+! [/dynamic filtering]
+@@||www.care-mail.nl^$xhr,domain=vandenbrug.nl
+
+! 2021-05-20 https://www.vkmag.com
+! [dynamic filtering]
+!	www.vkmag.com* 3p-frame noop
+!	www.vkmag.com * 3p-script noop
+! [/dynamic filtering]
+dailybuzz.nl#@#.vjs-share
+@@||cdn.jsdelivr.net.cdn.cloudflare.net^$script,domain=vkmag.com
+@@||pro.fontawesome.com^$font,domain=dailybuzz.nl
+@@||dailybuzz.nl^$media,1p
+
+! 2021-05-20 https://www.ziggo.nl
+! [dynamic filtering]
+!	www.ziggo.nl * 3p-frame noop
+!	www.ziggo.nl * 3p-script noop
+! [/dynamic filtering]
+@@||d2kczpytluapvy.cloudfront.net^$xhr,domain=ziggo.nl
+@@||d2kczpytluapvy.cloudfront.net^$font,domain=ziggo.nl
+@@||api.prod.aws.ziggo.io^$xhr,domain=ziggo.nl
+@@||mnd.bulk.iss.as9143.net:8080^$xhr,domain=ziggobeta.speedtestcustom.com
+@@||mnd.bulk.iss.as9143.net:8080^$websocket,domain=ziggobeta.speedtestcustom.com
+
+! 2021-05-20 https://www.ziggogo.tv
+! [dynamic filtering]
+!	www.ziggo.nl * 3p-script noop
+! [/dynamic filtering]
+@@||wp-a49d720000000000.id.cdn.upcbroadband.com^$xhr,domain=ziggogo.tv
+!@@||dmtgo.upc.biz^$xhr,domain=ziggogo.tv
+@@||e15977.dscb.akamaiedge.net^$xhr,domain=ziggogo.tv
+@@||live.dyncdn.horizon.tv^$xhr,domain=ziggogo.tv
+
 
 ! ############################## ########## ############################## !
 ! ############################## PRON BEGIN ############################## !
 ! ############################## ########## ############################## !
 
 !!!! Mindgeek !!!!!
-! 2020-12-29 https://www.babes.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofosnetwork.com, https://www.www.realitykings.com, https://www.squirted.com, https://www.trueamateurs.com, https://www.twistys.com
-www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.hentaiprosnetwork.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.trueamateurs.com,www.twistys.com##.fOVgeD.sc-8lvev9-0
-www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.hentaiprosnetwork.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.trueamateurs.com,www.twistys.com##.iWtMlW.sc-8lvev9-1
-www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.hentaiprosnetwork.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.trueamateurs.com,www.twistys.com##.kvhCIH.sc-1xljrhb-0
+! [dynamic filtering]
+!	www.babes.com * 3p-script noop
+!	www.bellesafilms.com * 3p-script noop
+!	www.brazzers.com * 3p-script noop
+!	www.digitalplayground.com * 3p-script noop
+!	www.doghousedigital.com * 3p-script noop
+!	www.erito.com * 3p-script noop
+!	www.hentaiprosnetwork.com * 3p-script noop
+!	www.milehighmedia.com * 3p-script noop
+!	www.milfed.com * 3p-script noop
+!	www.mofosnetwork.com * 3p-script noop
+!	www.propertysex.com * 3p-script noop
+!	www.realitykings.com * 3p-script noop
+!	www.squirted.com * 3p-script noop
+!	www.sweetsinner.com * 3p-script noop
+!	www.trueamateurs.com * 3p-script noop
+!	www.twistys.com * 3p-script noop
+! [/dynamic filtering]
 
-! disabled @ 15-5-2021, all require local noop for script, not frames
-!#!	@@||site-api.project1service.com^$xhr,domain=xxx
-! brazzers.com
-! bellesafilms.com
-! propertysex.com
+! www.sweetsinner.com has duplicated content in www.milehighmedia.com
+
+! 2020-12-29 https://www.babes.com, https://www.bellesafilms.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
+! age-restriction
+www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.hentaiprosnetwork.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.sweetsinner.com,www.trueamateurs.com,www.twistys.com##.fOVgeD
+www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.hentaiprosnetwork.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.sweetsinner.com,www.trueamateurs.com,www.twistys.com##.iWtMlW
+! join (bottom, top, slider)
+www.babes.com,www.bellesafilms.com,www.brazzers.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.hentaiprosnetwork.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.propertysex.com,www.realitykings.com,www.squirted.com,www.sweetsinner.com,www.trueamateurs.com,www.twistys.com##.sc-1xljrhb-0
+www.bellesafilms.com,www.erito.com,www.hentaiprosnetwork.com,www.mofosnetwork.com,www.trueamateurs.com##.jTDHcX
+www.hentaiprosnetwork.com,www.realitykings.com##.sc-1aevsf6-0
+
+! 2021-05-16 https://www.babes.com, https://www.bellesafilms.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
+@@||site-api.project1service.com^$xhr,domain=babes.com|bellesafilms.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
+@@||prog-public-ec.project1content.com^$media,domain=babes.com|bellesafilms.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
+
+! 2021-05-16 https://www.brazzers.com
+@@||oneplayer-ht.project1content.com^$xhr,domain=brazzers.com
+@@||cdn.jsdelivr.net^$xhr,domain=brazzers.com
 
 
 !!!! AMA Multimedia !!!!!
+! [dynamic filtering]
+!	cum4k.com * 3p-script noop
+!	exotic4k.com * 3p-script noop
+!	holed.com * 3p-script noop
+!	lubed.com * 3p-script noop
+!	passion-hd.com * 3p-script noop
+!	pornpros.com * 3p-script noop
+!	povd.com * 3p-script noop
+!	puremature.com * 3p-script noop
+!	tiny4k.com * 3p-script noop
+! [/dynamic filtering]
+
 ! 2021-05-16 https://cum4k.com, https://exotic4k.com, https://holed.com, https://lubed.com, https://passion-hd.com, https://pornpros.com, https://povd.com, https://puremature.com, https://tiny4k.com
 cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,tiny4k.com##.payment-popup
+@@||cdn-videos.r1.cdn.pornpros.com^$media,domain=cum4k.com|exotic4k.com|holed.com|lubed.com|passion-hd.com|pornpros.com|povd.com|puremature.com|tiny4k.com
 
-! disabled @ 15-5-2021, all require local noop for script, not frames
-! cum4k.com
-! exotic4k.com
-! holed.com
-! lubed.com
-! passion-hd.com
-! pornpros.com
-! povd.com
-! puremature.com
-! tiny4k.com
-!#!	@@||cdn-videos.r1.cdn.pornpros.com^$media,domain=xxx
+
+!!!! Mad Cheddar !!!!!
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+
+! 2021-05-16 https://www.tushy.com
+@@||ssl-cdn.com^$media,domain=deeper.com|blacked.com|blackedraw.com|tushy.com|tushyraw.com|vixen.com
 
 
 !!!! Paper Street Media !!!!!
+! [dynamic filtering]
+!	www.analmom.com * 3p-frame noop
+!	www.analmom.com * 3p-script noop
+!	www.exxxtrasmall.com * 3p-frame noop
+!	www.exxxtrasmall.com * 3p-script noop
+!	www.familystrokes.com * 3p-frame noop
+!	www.familystrokes.com * 3p-script noop
+!	www.pervmom.com * 3p-frame noop
+!	www.pervmom.com * 3p-script noop
+!	www.mylf.com * 3p-frame noop
+!	www.mylf.com * 3p-script noop
+!	www.teamskeet.com * 3p-frame noop
+!	www.teamskeet.com * 3p-script noop
+! [/dynamic filtering]
+
 ! 2021-04-17 https://www.exxxtrasmall.com, https://www.familystrokes.com, https://www.pervmom.com
-www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.container.newest-movies
+www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.container.newest-movies
+www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.formwrapper
 
+! 2021-05-17 https://www.mylf.com, https://www.teamskeet.com
+!www.mylf.com,www.teamskeet.com##.mb-5.col-12
+www.mylf.com,www.teamskeet.com##.join-btn
+www.mylf.com,www.teamskeet.com##.video-page-iframe
 
-! disabled @ 15-5-2021, all local noop for script & frames
-! exxxtrasmall.com
-! familystrokes.com
-! mylf.com
-! pervmom.com
-! teamskeet.com
-!#!	@@||store.psmcdn.net^$xhr,domain=xxx
-!#!	@@||store2.psmcdn.net^$xhr,domain=xxx
+! 2021-05-16 https://www.mylf.com, https://www.teamskeet.com
+@@||store2.psmcdn.net^$xhr,domain=mylf.com|teamskeet.com
+
+! 2021-05-16 https://www.exxxtrasmall.com, https://www.familystrokes.com, https://www.pervmom.com
+@@||store.psmcdn.net^$xhr,domain=analmom.com|exxxtrasmall.com|familystrokes.com|pervmom.com
 
 
 !!!! Gamma Entertainment !!!!!
-! 2021-01-03 https://www.blowpass.com, https://www.burningangel.com, https://www.devilsfilm.com, https://www.evilangel.com, https://www.fantasymassage.com, https://www.wicked.com, https://www.xempire.com, https://www.21naturals.com, https://www.21sextreme.com
-www.blowpass.com,www.burningangel.com,www.devilsfilm.com,www.evilangel.com,www.fantasymassage.com,www.wicked.com,www.xempire.com,www.21naturals.com,www.21sextreme.com##.Gamma_Component.base.Cms_PromoBanner
+! [dynamic filtering]
+!	www.21naturals.com * 3p-script noop
+!	www.21sextreme.com * 3p-script noop
+!	www.21sextury.com * 3p-script noop
+!	www.adulttime.com * 3p-script noop
+!	www.blowpass.com * 3p-script noop
+!	www.burningangel.com * 3p-script noop
+!	www.devilsfilm.com * 3p-script noop
+!	www.evilangel.com * 3p-script noop
+!	www.fantasymassage.com * 3p-script noop
+!	www.girlsway.com * 3p-script noop
+!	www.nurumassage.com 3p-script noop
+!	www.puretaboo.com * 3p-script noop
+!	www.wicked.com * 3p-script noop
+!	www.xempire.com * 3p-script noop
+! [/dynamic filtering]
 
-! disabled @ 15-5-2021, all require local noop for script, not frames
+! 2021-01-03 https://www.21naturals.com, https://www.21sextreme.com, https://www.blowpass.com, https://www.burningangel.com, https://www.devilsfilm.com, https://www.evilangel.com, https://www.fantasymassage.com, https://www.wicked.com, https://www.xempire.com
+www.21naturals.com,www.21sextreme.com,www.blowpass.com,www.burningangel.com,www.devilsfilm.com,www.evilangel.com,www.fantasymassage.com,www.nurumassage.com,www.wicked.com,www.xempire.com##.Gamma_Component.base.Cms_PromoBanner
 
-! 2021-04-02 https://www.21sextreme.com
-@@||www.21sextreme.com/static-parent/Giraffe/TabListContainer/img/1x1Transparent.gif$image,1p
-!#!	@@||videothumb.gammacdn.com^$media,domain=www.21sextreme.com
+! 2021-05-16 https://www.21sextreme.com, https://www.21naturals.com, https://www.fantasymassage.com, https://www.nurumassage.com
+@@||*/static-parent/Giraffe/TabListContainer/img/1x1Transparent.gif$image,domain=21sextreme.com|21naturals.com|fantasymassage.com|nurumassage.com
 
-! 2021-01-01 https://www.wicked.com
+! 2021-05-16 https://www.wicked.com
 wicked.com#@#.cookieVisible
 !wicked.com#@#ConsentCookiePopup
-!#!	@@||tsmkfa364q-2.algolianet.com^$xhr,domain=wicked.com
 
-! 2021-04-17 https://www.21sextury.com
-!#!	@@||tsmkfa364q-1.algolianet.com^$xhr,domain=21sextury.com
+! 2021-05-18 https://www.adulttime.com
+@@||tsmkfa364q-dsn.algolia.net^$xhr,domain=adulttime.com
+@@||lzzos7clo5.execute-api.us-east-1.amazonaws.com^$xhr,domain=adulttime.com
 
-! 2021-05-14 https://www.burningangel.com
-!#!	@@||static01-cms-fame.gammacdn.com^$script,domain=burningangel.com
+! 2021-05-16 https://www.21sextury.com, https://www.evilangel.com, https://www.girlsway.com, https://www.puretaboo.com, https://www.wicked.com
+@@||algolianet.com^$xhr,domain=21sextury.com|evilangel.com|girlsway.com|puretaboo.com|wicked.com
 
-! 2021-04-17 https://www.evilangel.com
-!#!	@@||tsmkfa364q-3.algolianet.com^$xhr,domain=evilangel.com
+! 2021-05-16 https://www.21naturals.com, https://www.21sextury.com, https://www.21sextreme.com, https://www.blowpass.com, https://www.burningangel.com, https://www.devilsfilm.com, https://www.evilangel.com, https://www.fantasymassage.com, https://www.girlsway.com, https://www.nurumassage.com, https://www.puretaboo.com, https://www.wicked.com, https://www.xempire.com
+@@||gammacdn.com^$media,domain=21naturals.com|21sextury.com|21sextreme.com|blowpass.com|burningangel.com|devilsfilm.com|evilangel.com|fantasymassage.com|girlsway.com|nurumassage.com|puretaboo.com|wicked.com|xempire.com
 
-! 2021-04-03 https://www.fantasymassage.com
-@@||www.fantasymassage.com/static-parent/Giraffe/TabListContainer/img/1x1Transparent.gif$image,1p
-!#!	@@||videothumb.gammacdn.com^$media,domain=fantasymassage.com
-
-! 2021-04-17 https://www.girlsway.com
-!#!	@@||tsmkfa364q-dsn.algolia.net^$xhr,domain=girlsway.com
-
-! 2021-01-21 https://www.21naturals.com
-@@||www.21naturals.com/static-parent/Giraffe/TabListContainer/img/1x1Transparent.gif$image,1p
-!#!	@@||videothumb.gammacdn.com^$media,domain=21naturals.com
-
-! 2021-04-17 https://www.puretaboo.com
-!#!	@@||tsmkfa364q-dsn.algolia.net^$xhr,domain=puretaboo.com
+! 2021-05-16 https://www.vivid.com
+@@||content.vivid.com^$media,1p
 
 
 !!!! KB Productions !!!!!
-! disabled @ 15-5-2021, only listed require local noop for script, not frames
-! mariskax.com
-! 2021-01-01 https://trueanal.com
-!#!	@@||maxcdn.bootstrapcdn.com^$font,domain=trueanal.com
+! [dynamic filtering]
+!	tour.allanal.com * 3p-script noop
+!	tour.mariskax.com * 3p-script noop
+!	tour.nympho.com * 3p-script noop
+!	tour.swallowed.com * 3p-script noop
+!	tour.trueanal.com * 3p-script noop
+! [/dynamic filtering]
+
+! 2021-05-16 https://tour.mariskax.com
+tour.mariskax.com,tour.swallowed.com##.join-now-bottom
+tour.nympho.com##.join-button
+tour.mariskax.com##.paypal-popup-wrap
+
+! 2021-05-16 https://tour.mariskax.com, https://tour.nympho.com, https://tour.swallowed.com, https://tour.trueanal.com
+@@||ssl.hwcdn.net^$media,domain=tour.allanal.com|mariskax.com|nympho.com|swallowed.com|trueanal.com
+
+
+!!!! XFC !!!!!
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+
+! 2021-05-16 https://deeplush.com, https://nubiles-porn.com
+deeplush.com,nubiles-porn.com##.my-4.container
+deeplush.com,nubiles-porn.com##.hover-join-form
+deeplush.com,nubiles-porn.com##.form-join
+
+! 2021-05-16 https://deeplush.com
+@@||images.deeplush.com^$media,1p
+
+! 2021-05-16 https://nubiles-porn.com
+@@||images.nubiles-porn.com^$media,1p
 
 
 !!!! SJGP !!!!!
-! disabled @ 15-5-2021, no dynamic filters required
-! 2021-01-16 https://fuckingawesome.com
-!#!	@@||maxcdn.bootstrapcdn.com^$font,domain=fuckingawesome.com
+! [dynamic filtering]
+!	fuckingawesome.com * 3p-script noop
+! [/dynamic filtering]
+
+! 2021-05-16 https://fuckingawesome.com
+fuckingawesome.com##.e-overlay
+fuckingawesome.com##.fp-premium-overlay
+@@||cdn2-videos-ht.fuckingawesome.com^$media,1p
 
 
 !!!! SARJ !!!!!
-! listed require local noop for script, not frames
-! metartnetwork.com
+! [dynamic filtering]
+!	www.metartnetwork.com * 3p-script noop
+! [/dynamic filtering]
+
+! 2021-05-17 https://www.metartnetwork.com
+@@||cds.b7w5v7j6.hwcdn.net^$xhr,domain=metartnetwork.com
 
 
 !!!! BC Media !!!!!
-! no dynamic filters required
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+
 ! 2021-05-16 https://www.x-art.com
 www.x-art.com##.promo-bar
 
 
 !!!! DirecTech !!!!!
-! disabled @ 15-5-2021, no dynamic filters required
-! 2021-01-16 https://www.dogfartnetwork.com
+! [dynamic filtering]
+!	www.dogfartnetwork.com * 3p-script noop
+! [/dynamic filtering]
+
+! 2021-05-17 https://www.dogfartnetwork.com
 www.dogfartnetwork.com##.carousel-container.clearfix.row
-!#!	@@||cdn1-media-wefuckblackgirls.dogfartnetwork.com^$media,1p
-!#!	@@||cdn1-media-blacksonblondes.dogfartnetwork.com^$media,1p
+@@||dogfartnetwork.com^$media,1p
 
 
 !!!! NetLook !!!!!
-! disabled @ 15-5-2021, no dynamic filters required
-! czechbitch.com
-! czechfantasy.com
-!#!	@@||cdn77.czechcash.com^$media,domain=xxx
+! [dynamic filtering]
+!	czechbitch.com * 3p-script noop
+!	czechfantasy.com * 3p-script noop
+! [/dynamic filtering]
+
+! 2021-05-17 https://czechbitch.com, https://czechfantasy.com
+czechbitch.com,czechfantasy.com##.active.modal
+czechbitch.com,czechfantasy.com##+js(remove-attr, style, html)
+czechbitch.com,czechfantasy.com##+js(remove-attr, class, body[class*="blurred")
+czechbitch.com,czechfantasy.com##+js(remove-attr, class, body[class*="blurred"], complete)
+!czechfantasy.com##.blurred:style(-webkit-transition: none !important; -o-transition: none !important; -moz-transition: none !important; transition: none !important;)
+!czechfantasy.com##.blurred:not([data-site="czechcasting.com"])::after:style(content: '' !important; position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; background: transparent !important; z-index: auto !important;)
+!czechfantasy.com##.blurred .content-wrapper:style(filter: none !important; -webkit-filter: none !important; -webkit-transform: none !important; -moz-transform: none !important; -ms-transform: none !important; -o-transform: none !important; transform: none !important;)
+!czechfantasy.com##.blurred .content-wrapper *:style(-ms-touch-action: auto !important; touch-action: auto !important; pointer-events: auto !important)
+!czechfantasy.com##.blurred header:style(filter: none !important; -webkit-filter: none !important;)
+!czechfantasy.com##*:style(filter: none !important; -webkit-filter: none !important;)
+
+czechbitch.com,czechfantasy.com##.network__bottom-join
+@@||cdn77.czechcash.com^$media,domain=czechbitch.com|czechfantasy.com
+@@||static.v2.paysites.czechcash.com^$font,domain=czechbitch.com|czechfantasy.com
 
 
 !!!! LPF Internet Group !!!!!
-! listed require local noop for script, not frames
-! bootyclapxxx.com
-! bootysisters.com
-! fuckfiesta.com
-! fuckinghardcore.com
-! hustler.com
-! pornstarhardcore.com
+! [dynamic filtering]
+!	bootyclapxxx.com * 3p-script noop
+!	bootysisters.com * 3p-script noop
+!	fuckfiesta.com * 3p-script noop
+!	fuckinghardcore.com * 3p-script noop
+!	hustler.com * 3p-script noop
+!	pornstarhardcore.com * 3p-script noop
+! [/dynamic filtering]
+
+! 2021-05-16 https://www.bootyclapxxx.com, https://www.bootysisters.com, https://www.fuckfiesta.com, https://www.fuckinghardcore.com, https://www.hustler.com, https://www.pornstarhardcore.com
+@@||cdn.metartnetwork.com^$xhr,domain=bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
 
 
-!!!! Others !!!!!
+!!!! Individual !!!!!
 
-! 2020-12-24 https://www.naughtyamerica.com
-! disabled @ 15-5-2021, listed require local noop for script, not frames
-!#!	@@||images.naughtycdn.com^$media,domain=naughtyamerica.com
+! 2021-05-16 https://bangbros.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+bangbros.com##.plyrRgt
+@@||trailers1.bangbros.com^$media,1p
 
-! 2020-12-24 https://www.private.com
-! disabled @ 15-5-2021, no dynamic filters required
+! 2021-05-16 https://www.naughtyamerica.com
+! [dynamic filtering]
+!	www.naughtyamerica.com * 3p-script noop
+! [/dynamic filtering]
+www.naughtyamerica.com##.footer-join-button
+www.naughtyamerica.com##.right-scene
+@@||videos.naughtycdn.com^$media,domain=naughtyamerica.com
+
+! 2021-05-16 https://www.julesjordan.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||cdnstream2.julesjordan.com^$media,1p
+
+! 2021-05-18 https://www.private.com
+! [dynamic filtering]
+!	www.private.com * 3p-script noop
+! [/dynamic filtering]
+www.private.com##.free-pause
+www.private.com###limited-offer
+www.private.com###SCENE-UHD4K-LOGO
+www.private.com###SCENE-AFTERVIDEO-JOIN
 ||pcom.st-content.com/images/px.png$image
-!#!	@@||pcoms.st-content.com^$media,domain=private.com
+@@||pcoms.st-content.com^$media,domain=private.com
+@@||pcom.st-content.com^$media,domain=private.com
+@@||pcom.st-content.com^$font,domain=private.com
 
-! 2021-02-04 https://www.newsensations.com
-! disabled @ 15-5-2021, no dynamic filters required
+! 2021-05-16 https://perfectgonzo.com
+! [dynamic filtering]
+!	perfectgonzo.com * 3p-script noop
+! [/dynamic filtering]
+perfectgonzo.com###site1-button
+@@||trailers-cdn-perfectgonzo.explicithd.com^$media,domain=perfectgonzo.com
+@@||static-cdn-perfectgonzo.explicithd.com^$font,domain=perfectgonzo.com
+
+! 2021-05-16 https://www.newsensations.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
 www.newsensations.com##.dvdMidBanner
-!#!	@@||nsnetworktour.newsensations.com^$media,1p
+www.newsensations.com##.sceneRight
+@@||nsnetworktour.newsensations.com^$media,1p
 
-! listed require local noop for script, not frames
-! pornstarplatinum.com
-! elegantangel.com
+! 2021-05-16 https://www.dorcelclub.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.dorcelclub.com###agreement
+www.dorcelclub.com##+js(remove-class, disclaimer-enabled, body)
+www.dorcelclub.com##.promo_banner
 
-! 2020-12-29 https://www.spizoo.com
-! disabled @ 15-5-2021, no dynamic filters required
-!#!	@@||cdn.amplitude.com/libs/amplitude-4.4.0-min.gz.js$script,domain=spizoo.com
+! 2021-05-16 https://www.stasyq.com
+! [dynamic filtering]
+!	www.stasyq.com * 3p-script noop
+! [/dynamic filtering]
+! enable autoplay permission, instead of "block audio" (media.autoplay.blocking_policy)
+www.stasyq.com##.welcome-banner
+@@||cdn.stasyq.com^$media,1p
 
-! 2020-12-29 https://letsdoeit.com
+! 2021-05-16 https://pornworld.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+pornworld.com##.site-banner
+@@||cdn-video-preview.gtflixtv.com^$media,domain=pornworld.com
+@@||hwnds.ddfstatic.com^$media,domain=pornworld.com
+
+! 2021-05-16 https://www.analvids.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.analvids.com##.user--guest.col-xs-12
+@@||gtflixtv.com^$media,domain=analvids.com
+
+! 2021-05-16 https://www.pornstarplatinum.com
+! [dynamic filtering]
+!	www.pornstarplatinum.com * 3p-script noop
+! [/dynamic filtering]
+www.pornstarplatinum.com##.header-upper
+www.pornstarplatinum.com##.join-button-full
+
+! 2021-05-18 https://www.elegantangel.com
+! [dynamic filtering]
+!	www.elegantangel.com * 3p-frame noop
+!	www.elegantangel.com * 3p-script noop
+! [/dynamic filtering]
+www.elegantangel.com##.membership-cards-container
+
+! 2021-05-06 https://tour.topwebmodels.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+tour.topwebmodels.com##.cta-join-wrap
+tour.topwebmodels.com##.show.announcement-popup.fade.modal
+tour.topwebmodels.com##.show.fade.modal-backdrop
+
+! 2021-05-16 https://www.spizoo.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.spizoo.com##.NoPromoVersion
+@@||content.spizoo.com^$media,1p
+
+! 2021-05-16 https://letsdoeit.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
 letsdoeit.com###popup-legal_age
+letsdoeit.com##.partner-offer-bar
+@@||p.cdn.letsdoeit.com^$media,1p
 
-! listed require local noop for script, not frames
-! inthecrack.com
-! javhd.com
+! 2021-05-16 https://joymii.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+joymii.com###emobanner
+joymii.com###promo_bar
+@@||trailers-cdn.joymii.com^$media,1p
 
-! 2021-02-04 https://www.teenfidelity.com
-! disabled @ 15-5-2021, listed require local noop for script, not frames
-www.teenfidelity.com###main-carousel
-www.teenfidelity.com##.pb-0.has-background-dark.container
-!#!	@@||tour-cdn.kellymadisonmedia.com^$media,domain=teenfidelity.com
+! 2021-05-16 https://www.bang.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.bang.com##.top-announcement
+www.bang.com##.button-wrapper
+@@||i.bang.com^$media,1p
 
-! 2021-01-03 https://www.archangelvideo.com
-! disabled @ 15-5-2021, no dynamic filters required
-!#!	@@||maxcdn.bootstrapcdn.com^$font,domain=archangelvideo.com
+! 2021-05-16 https://www.tugpass.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.tugpass.com##.food-lifeline
+www.tugpass.com###bannerlink
 
-! listed require local noop for script & frames
-! redbled.com
+! 2021-05-16 https://wtfpass.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||wtfpass.com^$media,1p
+
+! 2021-05-16 https://www.kink.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.kink.com##.nag-screen
+@@||cdnp.kink.com^$media,1p
+
+! 2021-05-16 https://javhd.com
+! [dynamic filtering]
+!	javhd.com * 3p-script noop
+! [/dynamic filtering]
+javhd.com##+js(remove-class, showWarningPopup, body)
+@@||c4.cdnjav.com^$media,domain=javhd.com
+@@||static.javhd.com^$media,1p
+
+! 2021-05-16 https://alljapanesepass.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+alljapanesepass.com##+js(remove-class, showWarningPopup, body)
+
+! 2021-05-16 https://cherrypimps.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+cherrypimps.com##.hero
+cherrypimps.com##.member-benefits
+cherrypimps.com##.call2action
+@@||cdn.jsdelivr.net.cdn.cloudflare.net^$script,domain=cherrypimps.com
+
+! 2021-05-16 https://www.teenfidelity.com
+! [dynamic filtering]
+!	www.teenfidelity.com * 3p-script noop
+! [/dynamic filtering]
+www.teenfidelity.com##+js(remove-class, hasPromoBar, html)
+www.teenfidelity.com##.promoBar
+www.teenfidelity.com##.upcoming-model-container
+www.teenfidelity.com##.section.p-0
+www.teenfidelity.com##.join-options
+@@||tour-cdn.kellymadisonmedia.com^$media,domain=teenfidelity.com
+
+! 2021-05-16 https://www.archangelvideo.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||archangelvideo.com^$media,1p
 
 
+!!!! Miscellaneous !!!!!
 
-! BELOW NEEDS CHECKING !
+! 2021-05-16 https://www.fleshlight.com, https://www.fleshlight.eu
+! [dynamic filtering]
+!	www.fleshlight.com * 3p-script noop
+!	www.fleshlight.eu * 3p-script noop
+! [/dynamic filtering]
+@@||shops.myshopify.com^$xhr,domain=fleshlight.com|fleshlight.eu
 
-! 2021-02-05 https://www.nurumassage.com
-!@@||videothumb.gammacdn.com^$media,domain=nurumassage.com
-!@@||trailers-fame.gammacdn.com^$media,domain=nurumassage.com
-!@@||www.nurumassage.com/static-parent/Giraffe/TabListContainer/img/1x1Transparent.gif$image,1p
+! 2021-05-16 https://www.redbled.com
+! [dynamic filtering]
+!	www.redbled.com * 3p-frame noop
+!	www.redbled.com * 3p-script noop
+! [/dynamic filtering]
 
-! 2021-04-03 https://www.sweetsinner.com
-@@||site-api.project1service.com^$xhr,domain=sweetsinner.com
+! 2021-05-16 https://www.redgifs.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||af5bf2df785b311ea8f900e147107dc2-312203450.us-east-1.elb.amazonaws.com^$xhr,domain=redgifs.com
+@@||thumbs2.redgifs.com^$media,1p
 
-! 2021-01-21 https://clubseventeen.com
-clubseventeen.com###confirmationModal
-clubseventeen.com##.in.fade.modal-backdrop
+! 2021-05-16 https://www.adultempire.com
+! [dynamic filtering]
+!	www.adultempire.com * 3p-script noop
+! [/dynamic filtering]
+||analytics.adultempire.com
+www.adultempire.com##.beacon
+www.adultempire.com##picture
+!www.adultempire.com##+js(remove-class, inactive, #previewContainer)           
+!www.adultempire.com###loadPreview:style(display: none !important;)
+!www.adultempire.com###preview-player:style(display: block !important;)
+@@||player.digiflix.video^$xhr,domain=adultempire.com
+@@||cds.c6e5j5a6.hwcdn.net^$xhr,domain=adultempire.com
 
-! 2021-01-16 https://www.adulttime.com
-@@||tsmkfa364q-3.algolianet.com^$xhr,domain=adulttime.com
-!@@||lzzos7clo5.execute-api.us-east-1.amazonaws.com^$xhr,domain=adulttime.com
+! 2021-05-18 https://chaturbate.com
+! [dynamic filtering]
+!	chaturbate.com * 3p-script noop
+! [/dynamic filtering]
+chaturbate.com##+js(remove-attr, style, body)
+chaturbate.com###entrance_terms_overlay
+@@||stream.highwebmedia.com^$xhr,domain=chaturbate.com
+@@||static-assets.highwebmedia.com^$xhr,domain=chaturbate.com
+!@@||realtime.pa.highwebmedia.com^$xhr,domain=chaturbate.com
 
-! 2021-01-16 https://www.metcams.com
+! 2021-05-18 https://www.metcams.com
+! [dynamic filtering]
+!	metcams.com * 3p-script noop
+! [/dynamic filtering]
+www.metcams.com##[class^="GDPRConsent-root-"]
 @@||member.naiadsystems.com^$xhr,domain=metcams.com
 @@||object-cdn.icfsys.com^$xhr,domain=metcams.com
 @@||hybridclient.naiadsystems.com^$xhr,domain=metcams.com
-@@||sea1b-ls.naiadsystems.com^$websocket,domain=metcams.com
-@@||sea1c-ls.naiadsystems.com^$websocket,domain=metcams.com
 @@||manifest-server.naiadsystems.com^$xhr,domain=metcams.com
-
-! 2021-02-09 https://www.xvideos.com
-www.xvideos.com###disclaimer_background
-@@||cdn77-vid.xvideos-cdn.com^$xhr,domain=xvideos.com
-@@||img-hw.xvideos-cdn.com^$xhr,domain=xvideos.com
-@@||img-hw.xvideos-cdn.com^$media,domain=xvideos.com
-@@||static-ss.xvideos-cdn.com^$media,domain=xvideos.com
-
-! 2021-02-10 https://www.youjizz.com
-@@||cdne-mobile.youjizz.com^$media,1p
-@@||abre-videos.yjcontentdelivery.com^$xhr,domain=youjizz.com
-
-! 2021-03-25 https://www.analmom.com
-!@@||www2.pstreetma.com^$xhr,domain=analmom.com
-@@||store.psmcdn.net^$xhr,domain=analmom.com
-
-! 2021-02-06 https://nl.chaturbate.com
-@@||realtime.pa.highwebmedia.com^$xhr,domain=chaturbate.com
-@@||stream.highwebmedia.com^$xhr,domain=chaturbate.com
-@@||realtime.pa.highwebmedia.com^$websocket,domain=chaturbate.com
-@@||stream.highwebmedia.com^$websocket,domain=chaturbate.com
-@@||static-assets.highwebmedia.com^$media,domain=chaturbate.com
+@@||manifest-server.naiadsystems.com^$media,domain=metcams.com
+@@||nginxborder-server.naiadsystems.com^$xhr,domain=metcams.com
 
 ! ############################## ######## ############################## !
 ! ############################## PRON END ############################## !
