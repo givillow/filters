@@ -28,6 +28,27 @@
 
 ! Common tracking endpoints
 
+! 2021-05-21 https://www.accuweather.com
+! [dynamic filtering]
+!	www.accuweather.com * 3p-script noop
+! [/dynamic filtering]
+@@||e1524.e12.akamaiedge.net^$xhr,domain=accuweather.com
+
+! 2021-05-21 https://www.allekabels.nl
+! [dynamic filtering]
+!	www.allekabels.nl * 3p-script noop
+! [/dynamic filtering]
+!www.allekabels.nl##.js_close-it.overlay
+!www.allekabels.nl##.corona-popup-holder
+@@||www.allekabels.nl.cdn.cloudflare.net^$font,domain=allekabels.nl
+@@||www.allekabels.nl.cdn.cloudflare.net^$xhr,domain=allekabels.nl
+
+! 2021-05-21 https://arstechnica.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||cdn.arstechnica.net^$font,domain=arstechnica.com
+
 ! 2021-05-20 https://www.buienalarm.nl
 ! [dynamic filtering]
 !	n.a.
@@ -222,6 +243,8 @@ www.youtube.com##ytd-clarification-renderer
 ! [/dynamic filtering]
 @@||spov-0006.dc-msedge.net^$xhr,domain=intranet.philips.com
 @@||spov-0006.dc-msedge.net^$font,domain=intranet.philips.com
+@@||spov-0006.spov-msedge.net^$xhr,domain=intranet.philips.com
+@@||spov-0006.spov-msedge.net^$font,domain=intranet.philips.com
 
 ! 2021-05-20 https://docs.philips.com
 ! [dynamic filtering]
@@ -232,6 +255,15 @@ www.youtube.com##ytd-clarification-renderer
 
 ! 2021-05-20 https://account.activedirectory.windowsazure.com
 @@||www.tm.f.prd.aadg.akadns.net^$script,domain=account.activedirectory.windowsazure.com
+
+! 2021-05-21 https://mega.nz
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||eu.static.mega.co.nz^$xhr,domain=mega.nz
+@@||eu.static.mega.co.nz^$font,domain=mega.nz
+@@||g.api.mega.co.nz^$xhr,domain=mega.nz
+@@||userstorage.mega.co.nz^$xhr,domain=mega.nz
 
 ! 2021-05-20 https://nos.nl
 ! [dynamic filtering]
@@ -253,6 +285,14 @@ www.youtube.com##ytd-clarification-renderer
 @@||cmp.nu.nl/wrapperMessagingWithoutDetection.js$script,domain=nu.nl
 @@||cdn-1294-2.privacy-mgmt.com^$xhr,domain=nu.nl
 
+! 2021-05-21 https://www.patreon.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.patreon.com##div[data-focus-guard="true"]
+www.patreon.com##div[data-focus-lock-disabled="false"]
+www.patreon.com##.fikHVz:style(filter: none !important;)
+
 ! 2021-05-20 https://www.rabobank.nl
 @@||e82494.dscb.akamaiedge.net^$font,domain=rabobank.nl
 @@||e16266.dscb.akamaiedge.net^$xhr,domain=rabobank.nl
@@ -265,6 +305,18 @@ www.youtube.com##ytd-clarification-renderer
 ! [/dynamic filtering]
 @@||reddit.map.fastly.net^$xhr,domain=reddit.com
 @@||www.redditstatic.com^$font,domain=reddit.com
+
+! 2021-05-21 https://www.seaofthieves.com
+! [dynamic filtering]
+!	www.seaofthieves.com * 3p-script noop
+! [/dynamic filtering]
+@@||part-0039.t-0009.t-msedge.net^$xhr,domain=seaofthieves.com
+
+! 2021-05-21 https://www.sidn.nl
+! [dynamic filtering]
+!	www.sidn.nl * 3p-script noop
+! [/dynamic filtering]
+@@||storage.googleapis.com^$xhr,domain=sidn.nl
 
 ! 2021-05-20 https://www.strava.com
 ! [dynamic filtering]
@@ -367,7 +419,7 @@ dailybuzz.nl#@#.vjs-share
 !	www.twistys.com * 3p-script noop
 ! [/dynamic filtering]
 
-! www.sweetsinner.com has duplicated content in www.milehighmedia.com
+! www.doghousedigital.com & www.sweetsinner.com has duplicated content in www.milehighmedia.com
 
 ! 2020-12-29 https://www.babes.com, https://www.bellesafilms.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
 ! age-restriction
@@ -410,8 +462,16 @@ cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,
 !	n.a.
 ! [/dynamic filtering]
 
-! 2021-05-16 https://www.tushy.com
+! 2021-05-16 https://www.deeper.com, https://www.blacked.com, https://www.blackedraw.com, https://www.tushy.com, https://www.tushyraw.com, https://www.vixen.com
 @@||ssl-cdn.com^$media,domain=deeper.com|blacked.com|blackedraw.com|tushy.com|tushyraw.com|vixen.com
+
+! 2021-05-21 https://www.blacked.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.blacked.com##div[data-test-component="TopBanner"]
+www.blacked.com##.hrIeLO:style(top: 0 !important;)
+www.blacked.com##.yMzuj:style(margin-top: 0 !important;)
 
 
 !!!! Paper Street Media !!!!!
@@ -798,26 +858,6 @@ www.teenfidelity.com##.join-options
 
 !!!! Miscellaneous !!!!!
 
-! 2021-05-16 https://www.fleshlight.com, https://www.fleshlight.eu
-! [dynamic filtering]
-!	www.fleshlight.com * 3p-script noop
-!	www.fleshlight.eu * 3p-script noop
-! [/dynamic filtering]
-@@||shops.myshopify.com^$xhr,domain=fleshlight.com|fleshlight.eu
-
-! 2021-05-16 https://www.redbled.com
-! [dynamic filtering]
-!	www.redbled.com * 3p-frame noop
-!	www.redbled.com * 3p-script noop
-! [/dynamic filtering]
-
-! 2021-05-16 https://www.redgifs.com
-! [dynamic filtering]
-!	n.a.
-! [/dynamic filtering]
-@@||af5bf2df785b311ea8f900e147107dc2-312203450.us-east-1.elb.amazonaws.com^$xhr,domain=redgifs.com
-@@||thumbs2.redgifs.com^$media,1p
-
 ! 2021-05-16 https://www.adultempire.com
 ! [dynamic filtering]
 !	www.adultempire.com * 3p-script noop
@@ -841,6 +881,20 @@ chaturbate.com###entrance_terms_overlay
 @@||static-assets.highwebmedia.com^$xhr,domain=chaturbate.com
 !@@||realtime.pa.highwebmedia.com^$xhr,domain=chaturbate.com
 
+! 2021-05-16 https://www.fleshlight.com, https://www.fleshlight.eu
+! [dynamic filtering]
+!	www.fleshlight.com * 3p-script noop
+!	www.fleshlight.eu * 3p-script noop
+! [/dynamic filtering]
+@@||shops.myshopify.com^$xhr,domain=fleshlight.com|fleshlight.eu
+
+! 2021-05-21 https://lewdzone.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+lewdzone.com##.card
+lewdzone.com##.col-xs-12 > .widget_text:nth-ancestor(1)
+
 ! 2021-05-18 https://www.metcams.com
 ! [dynamic filtering]
 !	metcams.com * 3p-script noop
@@ -852,6 +906,19 @@ www.metcams.com##[class^="GDPRConsent-root-"]
 @@||manifest-server.naiadsystems.com^$xhr,domain=metcams.com
 @@||manifest-server.naiadsystems.com^$media,domain=metcams.com
 @@||nginxborder-server.naiadsystems.com^$xhr,domain=metcams.com
+
+! 2021-05-16 https://www.redbled.com
+! [dynamic filtering]
+!	www.redbled.com * 3p-frame noop
+!	www.redbled.com * 3p-script noop
+! [/dynamic filtering]
+
+! 2021-05-16 https://www.redgifs.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||af5bf2df785b311ea8f900e147107dc2-312203450.us-east-1.elb.amazonaws.com^$xhr,domain=redgifs.com
+@@||thumbs2.redgifs.com^$media,1p
 
 ! ############################## ######## ############################## !
 ! ############################## PRON END ############################## !
