@@ -43,6 +43,12 @@
 @@||www.allekabels.nl.cdn.cloudflare.net^$font,domain=allekabels.nl
 @@||www.allekabels.nl.cdn.cloudflare.net^$xhr,domain=allekabels.nl
 
+! 2021-05-21 https://www.anandtech.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+@@||d24n0zebi1pua2.cloudfront.net^$font,domain=anandtech.com
+
 ! 2021-05-21 https://arstechnica.com
 ! [dynamic filtering]
 !	n.a.
@@ -72,6 +78,14 @@ www.coolblue.nl##.overflow--hidden:style(overflow: visible !important;)
 ! [/dynamic filtering]
 @@||discord.com^$media,1p
 @@||gateway.discord.gg^$websocket,domain=discord.com
+
+! 2021-05-21 https://community.letsencrypt.org, https://forums.plex.tv, https://vaultwarden.discourse.group
+! [dynamic filtering]
+!	community.letsencrypt.org * 3p-script noop
+!	forums.plex.tv * 3p-script noop
+!	vaultwarden.discourse.group * 3p-script noop
+! [/dynamic filtering]
+@@||hosted-by-discourse.com^$xhr,domain=community.letsencrypt.org|forums.plex.tv|vaultwarden.discourse.group
 
 ! 2021-05-20 https://www.dropbox.com
 ! [dynamic filtering]
@@ -110,6 +124,15 @@ www.facebook.com##.uiLayer
 ! [/dynamic filtering]
 @@||a588eba61f0fe11e98296122db75ecc3-166728206.us-east-1.elb.amazonaws.com^$xhr,domain=gfycat.com
 @@||gfycat.com^$media,1p
+
+! 2021-05-22 https://www.gog.com
+! [dynamic filtering]
+!	www.gog.com * 3p-frame noop
+!	www.gog.com * 3p-script noop
+! [/dynamic filtering]
+@@||www4-static.gog-statics.com^$font,domain=gog.com
+@@||a1915.b.akamai.net^$xhr,domain=gog.com
+@@||e11072.b.akamaiedge.net^$xhr,domain=gog.com
 
 ! 2021-05-20 https://www.google.nl
 !www.google.nl##.fp-nh.gTMtLb
@@ -285,6 +308,20 @@ www.youtube.com##ytd-clarification-renderer
 @@||cmp.nu.nl/wrapperMessagingWithoutDetection.js$script,domain=nu.nl
 @@||cdn-1294-2.privacy-mgmt.com^$xhr,domain=nu.nl
 
+! 2021-05-22 https://www.otrium.nl
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.otrium.nl##div[data-testid="accept-cookie"]
+@@||api.otrium.com^$xhr,domain=otrium.nl
+
+! 2021-05-22 https://accounts.paradoxplaza.com
+! [dynamic filtering]
+!	accounts.paradoxplaza.com * 3p-script noop
+! [/dynamic filtering]
+@@||api.paradox-interactive.com^$xhr,domain=accounts.paradoxplaza.com
+@@||prod-default-195445318.us-east-1.elb.amazonaws.com^$xhr,domain=accounts.paradoxplaza.com
+
 ! 2021-05-21 https://www.patreon.com
 ! [dynamic filtering]
 !	n.a.
@@ -317,6 +354,16 @@ www.patreon.com##.fikHVz:style(filter: none !important;)
 !	www.sidn.nl * 3p-script noop
 ! [/dynamic filtering]
 @@||storage.googleapis.com^$xhr,domain=sidn.nl
+
+! 2021-05-21 https://www.sitepoint.com
+! [dynamic filtering]
+!	www.sitepoint.com * 3p-script noop
+! [/dynamic filtering]
+www.sitepoint.com##.s13se1v,.s3srsdt,.a59sgpd
+www.sitepoint.com##.roller-door-placeholder,#job_ad_list,#community-ad-unit
+@@||d3127enrb2eeow.cloudfront.net^$xhr,domain=sitepoint.com
+!@@||algolia.net^$xhr,domain=sitepoint.com
+@@||algolianet.com^$xhr,domain=sitepoint.com
 
 ! 2021-05-20 https://www.strava.com
 ! [dynamic filtering]
@@ -471,7 +518,8 @@ cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,
 ! [/dynamic filtering]
 www.blacked.com##div[data-test-component="TopBanner"]
 www.blacked.com##.hrIeLO:style(top: 0 !important;)
-www.blacked.com##.yMzuj:style(margin-top: 0 !important;)
+!www.blacked.com##.yMzuj:style(margin-top: 0 !important;)
+www.blacked.com##.yMzuj:style(margin-top: 4.2rem; !important;)
 
 
 !!!! Paper Street Media !!!!!
@@ -491,8 +539,8 @@ www.blacked.com##.yMzuj:style(margin-top: 0 !important;)
 ! [/dynamic filtering]
 
 ! 2021-04-17 https://www.exxxtrasmall.com, https://www.familystrokes.com, https://www.pervmom.com
-www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.container.newest-movies
-www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.formwrapper
+www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.getaccess:upward(1)
+www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.formwrapper,.sub-footer
 
 ! 2021-05-17 https://www.mylf.com, https://www.teamskeet.com
 !www.mylf.com,www.teamskeet.com##.mb-5.col-12
@@ -530,9 +578,18 @@ www.21naturals.com,www.21sextreme.com,www.blowpass.com,www.burningangel.com,www.
 ! 2021-05-16 https://www.21sextreme.com, https://www.21naturals.com, https://www.fantasymassage.com, https://www.nurumassage.com
 @@||*/static-parent/Giraffe/TabListContainer/img/1x1Transparent.gif$image,domain=21sextreme.com|21naturals.com|fantasymassage.com|nurumassage.com
 
+! 2021-05-21 https://www.21naturals.com
+www.21naturals.com##.sidebar,.headerAT
+www.21naturals.com###header:style(top: 0 !important;)
+www.21naturals.com###main:style(padding: 50px 10px 0 !important;)
+@@||static01-cms-fame.gammacdn.com^$font,domain=21naturals.com
+
 ! 2021-05-16 https://www.wicked.com
 wicked.com#@#.cookieVisible
 !wicked.com#@#ConsentCookiePopup
+
+! 2021-05-21 https://www.xempire.com
+www.xempire.com##.sitesWrapper
 
 ! 2021-05-18 https://www.adulttime.com
 @@||tsmkfa364q-dsn.algolia.net^$xhr,domain=adulttime.com
@@ -581,6 +638,18 @@ deeplush.com,nubiles-porn.com##.form-join
 
 ! 2021-05-16 https://nubiles-porn.com
 @@||images.nubiles-porn.com^$media,1p
+
+
+!!!! Sansyl !!!!!
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+
+! 2021-05-21 https://www.elegantraw.com
+www.elegantraw.com##.main-banner
+www.elegantraw.com##.membership-text
+www.elegantraw.com##.row-separator:upward(1):style(margin-top: 70px !important)
+www.elegantraw.com##a[href="join.php"]
 
 
 !!!! SJGP !!!!!
@@ -656,6 +725,7 @@ czechbitch.com,czechfantasy.com##.network__bottom-join
 ! [/dynamic filtering]
 
 ! 2021-05-16 https://www.bootyclapxxx.com, https://www.bootysisters.com, https://www.fuckfiesta.com, https://www.fuckinghardcore.com, https://www.hustler.com, https://www.pornstarhardcore.com
+@@||cdnmansite.metartnetwork.com^$font,domain=bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
 @@||cdn.metartnetwork.com^$xhr,domain=bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
 
 
@@ -709,6 +779,7 @@ perfectgonzo.com###site1-button
 ! [/dynamic filtering]
 www.newsensations.com##.dvdMidBanner
 www.newsensations.com##.sceneRight
+www.newsensations.com##.download
 @@||nsnetworktour.newsensations.com^$media,1p
 
 ! 2021-05-16 https://www.dorcelclub.com
@@ -801,6 +872,7 @@ www.bang.com##.button-wrapper
 ! [/dynamic filtering]
 www.tugpass.com##.food-lifeline
 www.tugpass.com###bannerlink
+www.tugpass.com##a[href^="https://join"]:upward(.item)
 
 ! 2021-05-16 https://wtfpass.com
 ! [dynamic filtering]
@@ -812,6 +884,7 @@ www.tugpass.com###bannerlink
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
+www.kink.com##.info-header
 www.kink.com##.nag-screen
 @@||cdnp.kink.com^$media,1p
 
@@ -893,7 +966,7 @@ chaturbate.com###entrance_terms_overlay
 !	n.a.
 ! [/dynamic filtering]
 lewdzone.com##.card
-lewdzone.com##.col-xs-12 > .widget_text:nth-ancestor(1)
+lewdzone.com##.col-xs-12 > .widget_text:upward(1)
 
 ! 2021-05-18 https://www.metcams.com
 ! [dynamic filtering]
