@@ -23,6 +23,7 @@
 ! Dynamic Filtering Only
 !	interestingengineering.com  * 3p-frame noop
 !	interestingengineering.com * 3p-script noop
+!	racingnews365.nl * 3p-script noop
 !	magazine.teufelaudio.nl  * 3p-script noop
 
 
@@ -54,6 +55,13 @@
 !	n.a.
 ! [/dynamic filtering]
 @@||cdn.arstechnica.net^$font,domain=arstechnica.com
+
+! 2021-05-24 https://eu.shop.battle.net
+! [dynamic filtering]
+!	eu.shop.battle.net * 3p-script noop
+!	account.battle.net * 3p-script noop
+! [/dynamic filtering]
+@@||bnetaccount.akamaized.net^$font,domain=battle.net
 
 ! 2021-05-20 https://www.buienalarm.nl
 ! [dynamic filtering]
@@ -103,6 +111,14 @@ www.dumpert.nl##.full-ad-block
 @@||media.dumpert.nl^$media,1p
 @@||player.agnoplay.com^$xhr,domain=dumpert.nl
 
+! 2021-05-24 https://www.epicgames.com
+! [dynamic filtering]
+!	www.epicgames.com * 3p-frame noop
+!	www.epicgames.com * 3p-script noop
+! [/dynamic filtering]
+@@||e15203.dscb.akamaiedge.net^$xhr,domain=epicgames.com
+@@||e15203.b.akamaiedge.net^$xhr,domain=epicgames.com
+
 ! 2021-05-20 https://www.facebook.com
 ! [dynamic filtering]
 !	n.a.
@@ -110,6 +126,17 @@ www.dumpert.nl##.full-ad-block
 ! find a way to skip cookies
 www.facebook.com##.uiLayer
 @@||xx.fbcdn.net^$xhr,domain=facebook.com
+
+! 2021-05-24 https://filejoker.net
+! [dynamic filtering]
+!	filejoker.net * 3p-frame noop
+!	filejoker.net * 3p-script noop
+! [/dynamic filtering]
+! unable to bypass yet
+filejoker.net###tariffs,#secure,#payment-icons
+!filejoker.net###captcha1
+!filejoker.net###btncount:style(display: block !important)
+!filejoker.net###download_btn:style(display: block !important)
 
 ! 2021-05-20 https://www.formula1.com
 ! [dynamic filtering]
@@ -194,6 +221,12 @@ www.youtube.com##ytd-clarification-renderer
 @@||player.agnoplay.com^$xhr,domain=lc.nl
 @@||ndc.bbvms.com^$xhr,domain=lc.nl
 
+! 2021-05-24 https://www.leenbakker.nl
+! [dynamic filtering]
+!	www.leenbakker.nl * 3p-script noop
+! [/dynamic filtering]
+@@||proxy-live-dot-webshop-frontend-prod.appspot.com^$xhr,domain=leenbakker.nl
+
 ! 2021-05-20 https://www.linkedin.com
 ! [dynamic filtering]
 !	www.linkedin.com * 3p-script noop
@@ -201,6 +234,14 @@ www.youtube.com##ytd-clarification-renderer
 @@||l-0005.l-msedge.net^$xhr,domain=linkedin.com
 @@||dms.licdn.com^$xhr,domain=linkedin.com
 @@||dms.licdn.com^$media,domain=linkedin.com
+
+! 2021-05-24 https://www.mediamarkt.nl
+! [dynamic filtering]
+!	www.mediamarkt.nl * 3p-script noop
+! [/dynamic filtering]
+@@||www.mediamarkt.nl.akadns.net^$font,domain=mediamarkt.nl
+@@||www.mediamarkt.nl.akadns.net^$xhr,domain=mediamarkt.nl
+@@||www.mediamarktlabs.nl^$xhr,domain=mediamarkt.nl
 
 ! 2021-05-17 https://account.microsoft.com, https://www.xbox.com
 ! [dynamic filtering]
@@ -343,6 +384,15 @@ www.patreon.com##.fikHVz:style(filter: none !important;)
 @@||reddit.map.fastly.net^$xhr,domain=reddit.com
 @@||www.redditstatic.com^$font,domain=reddit.com
 
+! 2021-05-24 https://account.riotgames.com, https://auth.riotgames.com
+! [dynamic filtering]
+!	auth.riotgames.com * 3p-script noop
+!	account.riotgames.com * 3p-script noop
+! [/dynamic filtering]
+@@||auth.riotgames.com.cdn.cloudflare.net^$xhr,domain=auth.riotgames.com
+@@||lolstatic-a.akamaihd.net^$font,domain=account.riotgames.com
+@@||account.riotgames.com.cdn.cloudflare.net^$xhr,domain=account.riotgames.com
+
 ! 2021-05-21 https://www.seaofthieves.com
 ! [dynamic filtering]
 !	www.seaofthieves.com * 3p-script noop
@@ -364,6 +414,13 @@ www.sitepoint.com##.roller-door-placeholder,#job_ad_list,#community-ad-unit
 @@||d3127enrb2eeow.cloudfront.net^$xhr,domain=sitepoint.com
 !@@||algolia.net^$xhr,domain=sitepoint.com
 @@||algolianet.com^$xhr,domain=sitepoint.com
+
+! 2021-05-24 https://www.squashdeal.nl
+! [dynamic filtering]
+!	www.squashdeal.nl * 3p-script noop
+! [/dynamic filtering]
+@@||gz2113-merumsport-magweb-cmbl.nodes.hypernode.io^$font,domain=squashdeal.nl
+@@||gz2113-merumsport-magweb-cmbl.nodes.hypernode.io^$xhr,domain=squashdeal.nl
 
 ! 2021-05-20 https://www.strava.com
 ! [dynamic filtering]
@@ -470,8 +527,7 @@ dailybuzz.nl#@#.vjs-share
 
 ! 2020-12-29 https://www.babes.com, https://www.bellesafilms.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
 ! age-restriction
-www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.hentaiprosnetwork.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.sweetsinner.com,www.trueamateurs.com,www.twistys.com##.fOVgeD
-www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.hentaiprosnetwork.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.sweetsinner.com,www.trueamateurs.com,www.twistys.com##.iWtMlW
+www.babes.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.hentaiprosnetwork.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.realitykings.com,www.squirted.com,www.sweetsinner.com,www.trueamateurs.com,www.twistys.com##.fOVgeD,.iWtMlW
 ! join (bottom, top, slider)
 www.babes.com,www.bellesafilms.com,www.brazzers.com,www.digitalplayground.com,www.doghousedigital.com,www.erito.com,www.hentaiprosnetwork.com,www.milehighmedia.com,www.milfed.com,www.mofosnetwork.com,www.propertysex.com,www.realitykings.com,www.squirted.com,www.sweetsinner.com,www.trueamateurs.com,www.twistys.com##.sc-1xljrhb-0
 www.bellesafilms.com,www.erito.com,www.hentaiprosnetwork.com,www.mofosnetwork.com,www.trueamateurs.com##.jTDHcX
@@ -482,6 +538,7 @@ www.hentaiprosnetwork.com,www.realitykings.com##.sc-1aevsf6-0
 @@||prog-public-ec.project1content.com^$media,domain=babes.com|bellesafilms.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
 
 ! 2021-05-16 https://www.brazzers.com
+www.brazzers.com##.cmUdRh
 @@||oneplayer-ht.project1content.com^$xhr,domain=brazzers.com
 @@||cdn.jsdelivr.net^$xhr,domain=brazzers.com
 
@@ -992,6 +1049,14 @@ www.metcams.com##[class^="GDPRConsent-root-"]
 ! [/dynamic filtering]
 @@||af5bf2df785b311ea8f900e147107dc2-312203450.us-east-1.elb.amazonaws.com^$xhr,domain=redgifs.com
 @@||thumbs2.redgifs.com^$media,1p
+
+! 2021-05-23 https://www.xvideos.com
+! [dynamic filtering]
+!	www.xvideos.com * 3p-script noop
+! [/dynamic filtering]
+www.xvideos.com##.xv-cams-block
+@@||static-ss.xvideos-cdn.com^$font,domain=xvideos.com
+@@||cdn77-vid.xvideos-cdn.com^$xhr,domain=xvideos.com
 
 ! ############################## ######## ############################## !
 ! ############################## PRON END ############################## !
