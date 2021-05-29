@@ -11,7 +11,7 @@
 ! 2020-12-23 https://www.reddit.com/r/uBlockOrigin/comments/avwgct/using_my_filters_to_add_a_little_more_to_medium/
 ! https://armin.dev/apps/ping-spotter/#
 ! hyperlink auditing: *$beacon, *$ping
-!*$data 
+!*$data
 *$font,third-party
 *$media
 *$object
@@ -78,15 +78,12 @@
 !	n.a.
 ! [/dynamic filtering]
 www.coolblue.nl##.cookie
-!www.coolblue.nl##+js(remove-attr, cookienotificationmodalopened, body, stay)
 www.coolblue.nl##.overflow--hidden:style(overflow: visible !important;)
-!www.coolblue.nl##+js(remove-class, overflow--hidden, body)
 
 ! 2021-05-24 https://beeldbank.cultureelerfgoed.nl
 ! [dynamic filtering]
 !	beeldbank.cultureelerfgoed.nl * 3p-script noop
 ! [/dynamic filtering]
-!@@||vip-195-93-224-192.pictura-hosting.nl^$font,domain=beeldbank.cultureelerfgoed.nl
 @@||webservices.picturae.com^$font,domain=beeldbank.cultureelerfgoed.nl
 @@||webservices.picturae.com^$xhr,domain=beeldbank.cultureelerfgoed.nl
 @@||images.memorix.nl^$xhr,domain=beeldbank.cultureelerfgoed.nl
@@ -117,8 +114,8 @@ www.coolblue.nl##.overflow--hidden:style(overflow: visible !important;)
 ! [dynamic filtering]
 !	www.dumpert.nl * 3p-script noop
 ! [/dynamic filtering]
-www.dumpert.nl##[class^="ads_container--"]
 www.dumpert.nl##.full-ad-block
+www.dumpert.nl##[class^="ads_container--"]
 @@||media.dumpert.nl^$media,1p
 @@||player.agnoplay.com^$xhr,domain=dumpert.nl
 
@@ -187,15 +184,17 @@ filejoker.net###tariffs,#secure,#payment-icons
 
 ! 2021-05-17 https://photos.google.com, https://stadia.google.com, https://youtube.googleapis.com, https://www.youtube.com
 ! require scripts and frames
-www.youtube.com###clarify-box
-www.youtube.com##ytd-clarification-renderer
+www.youtube.com###clarify-box,ytd-clarification-renderer
 www.youtube.com##.dismissible:upward(ytd-rich-section-renderer)
 @@||lh3.googleusercontent.com^$media,domain=photos.google.com|stadia.google.com|youtube.googleapis.com
 @@||googlevideo.com^$xhr,domain=photos.google.com|youtube.googleapis.com|youtube.com
 @@||youtube-ui.l.google.com^$xhr,domain=www.youtube.com
 
 ! 2021-05-17 https://nl.hardware.info
-!nl.hardware.info##.overview-item--success.overview-item--large.overview-item
+! [dynamic filtering]
+!	nl.hardware.info * 3p-script noop
+! [/dynamic filtering]
+nl.hardware.info##.frontpage__sidebar
 @@||nlwebserverssl.hwigroup.com^$xhr,domain=nl.hardware.info
 
 ! 2021-05-20 https://www.humblebundle.com
@@ -441,8 +440,8 @@ www.patreon.com##.fikHVz:style(filter: none !important;)
 ! [dynamic filtering]
 !	www.sitepoint.com * 3p-script noop
 ! [/dynamic filtering]
-www.sitepoint.com##.s13se1v,.s3srsdt,.a59sgpd
-www.sitepoint.com##.roller-door-placeholder,#job_ad_list,#community-ad-unit
+www.sitepoint.com##.a59sgpd,.s13se1v,.s3srsdt
+www.sitepoint.com###community-ad-unit,#job_ad_list,.roller-door-placeholder
 @@||d3127enrb2eeow.cloudfront.net^$xhr,domain=sitepoint.com
 !@@||algolia.net^$xhr,domain=sitepoint.com
 @@||algolianet.com^$xhr,domain=sitepoint.com
@@ -743,8 +742,8 @@ deeplush.com,nubiles-porn.com##.form-join,.hover-join-form,.my-4.container
 
 ! 2021-05-21 https://www.elegantraw.com
 www.elegantraw.com##.main-banner,.membership-text
-www.elegantraw.com##.row-separator:upward(1):style(margin-top: 70px !important)
 www.elegantraw.com##a[href="join.php"]
+www.elegantraw.com##.row-separator:upward(1):style(margin-top: 70px !important)
 
 
 !!!! SJGP !!!!!
@@ -869,7 +868,6 @@ www.newsensations.com##.download,.dvdMidBanner,.modelBioRight,.sceneRight
 www.dorcelclub.com##.promo_banner,#agreement
 www.dorcelclub.com##+js(remove-attr, class, body[class="promo-banner")
 www.dorcelclub.com##+js(remove-class, disclaimer-enabled, body)
-www.dorcelclub.com##+js(remove-attr, class, body[class="promo-banner")
 
 ! 2021-05-16 https://www.stasyq.com
 ! [dynamic filtering]
@@ -891,7 +889,9 @@ pornworld.com##.site-banner
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.analvids.com##.user--guest.col-xs-12
+www.analvids.com###agree18
+www.analvids.com##+js(remove-attr, class, .blur-thumbnails, stay)
+www.analvids.com##.trial-join-box:upward(1)
 @@||gtflixtv.com^$media,domain=analvids.com
 
 ! 2021-05-16 https://www.pornstarplatinum.com
@@ -951,8 +951,7 @@ www.tugpass.com##a[href^="https://join"]:upward(.item)
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.kink.com##.info-header
-www.kink.com##.nag-screen
+www.kink.com##.info-header,.nag-screen
 @@||cdnp.kink.com^$media,1p
 
 ! 2021-05-16 https://javhd.com
@@ -998,11 +997,7 @@ www.teenfidelity.com##+js(remove-class, hasPromoBar, html)
 !	www.adultempire.com * 3p-script noop
 ! [/dynamic filtering]
 ||analytics.adultempire.com
-www.adultempire.com##.beacon
-www.adultempire.com##picture
-!www.adultempire.com##+js(remove-class, inactive, #previewContainer)           
-!www.adultempire.com###loadPreview:style(display: none !important;)
-!www.adultempire.com###preview-player:style(display: block !important;)
+www.adultempire.com##.beacon,.container-featured,.pricing-container
 @@||player.digiflix.video^$xhr,domain=adultempire.com
 @@||cds.c6e5j5a6.hwcdn.net^$xhr,domain=adultempire.com
 
@@ -1014,7 +1009,6 @@ chaturbate.com###entrance_terms_overlay
 chaturbate.com##+js(remove-attr, style, body)
 @@||stream.highwebmedia.com^$xhr,domain=chaturbate.com
 @@||static-assets.highwebmedia.com^$xhr,domain=chaturbate.com
-!@@||realtime.pa.highwebmedia.com^$xhr,domain=chaturbate.com
 
 ! 2021-05-16 https://www.fleshlight.com, https://www.fleshlight.eu
 ! [dynamic filtering]
