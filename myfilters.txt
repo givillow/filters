@@ -21,6 +21,7 @@
 
 
 ! Dynamic Filtering Only
+! www.hentaiclicker.com* 3p-frame noop
 !	interestingengineering.com  * 3p-frame noop
 !	interestingengineering.com * 3p-script noop
 !	racingnews365.nl * 3p-script noop
@@ -532,7 +533,6 @@ dailybuzz.nl#@#.vjs-share
 !	www.ziggo.nl * 3p-script noop
 ! [/dynamic filtering]
 @@||wp-a49d720000000000.id.cdn.upcbroadband.com^$xhr,domain=ziggogo.tv
-!@@||dmtgo.upc.biz^$xhr,domain=ziggogo.tv
 @@||e15977.dscb.akamaiedge.net^$xhr,domain=ziggogo.tv
 @@||live.dyncdn.horizon.tv^$xhr,domain=ziggogo.tv
 
@@ -635,15 +635,11 @@ www.deeper.com,www.blacked.com,www.blackedraw.com,www.tushy.com,www.tushyraw.com
 ! [/dynamic filtering]
 
 ! 2021-04-17 https://www.exxxtrasmall.com, https://www.familystrokes.com, https://www.pervmom.com
-www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.getaccess:upward(1)
 www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.formwrapper,.sub-footer
+www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.getaccess:upward(1)
 
 ! 2021-05-17 https://www.mylf.com, https://www.teamskeet.com
-!www.mylf.com,www.teamskeet.com##.mb-5.col-12
-www.mylf.com,www.teamskeet.com##.join-btn
-www.mylf.com,www.teamskeet.com##.video-page-iframe
-
-! 2021-05-16 https://www.mylf.com, https://www.teamskeet.com
+www.mylf.com,www.teamskeet.com##.join-btn,.video-page-iframe
 @@||store2.psmcdn.net^$xhr,domain=mylf.com|teamskeet.com
 
 ! 2021-05-16 https://www.exxxtrasmall.com, https://www.familystrokes.com, https://www.pervmom.com
@@ -680,9 +676,15 @@ www.21naturals.com###header:style(top: 0 !important;)
 www.21naturals.com###main:style(padding: 50px 10px 0 !important;)
 @@||static01-cms-fame.gammacdn.com^$font,domain=21naturals.com
 
+! 2021-05-16 https://joymii.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+joymii.com###emobanner,#promo_bar
+@@||trailers-cdn.joymii.com^$media,1p
+
 ! 2021-05-16 https://www.wicked.com
 wicked.com#@#.cookieVisible
-!wicked.com#@#ConsentCookiePopup
 
 ! 2021-05-21 https://www.xempire.com
 www.xempire.com##.sitesWrapper
@@ -725,9 +727,7 @@ tour.mariskax.com##.paypal-popup-wrap
 ! [/dynamic filtering]
 
 ! 2021-05-16 https://deeplush.com, https://nubiles-porn.com
-deeplush.com,nubiles-porn.com##.my-4.container
-deeplush.com,nubiles-porn.com##.hover-join-form
-deeplush.com,nubiles-porn.com##.form-join
+deeplush.com,nubiles-porn.com##.form-join,.hover-join-form,.my-4.container
 
 ! 2021-05-16 https://deeplush.com
 @@||images.deeplush.com^$media,1p
@@ -742,8 +742,7 @@ deeplush.com,nubiles-porn.com##.form-join
 ! [/dynamic filtering]
 
 ! 2021-05-21 https://www.elegantraw.com
-www.elegantraw.com##.main-banner
-www.elegantraw.com##.membership-text
+www.elegantraw.com##.main-banner,.membership-text
 www.elegantraw.com##.row-separator:upward(1):style(margin-top: 70px !important)
 www.elegantraw.com##a[href="join.php"]
 
@@ -754,8 +753,7 @@ www.elegantraw.com##a[href="join.php"]
 ! [/dynamic filtering]
 
 ! 2021-05-16 https://fuckingawesome.com
-fuckingawesome.com##.e-overlay
-fuckingawesome.com##.fp-premium-overlay
+fuckingawesome.com##.e-overlay,.fp-premium-overlay
 @@||cdn2-videos-ht.fuckingawesome.com^$media,1p
 
 
@@ -794,18 +792,10 @@ www.dogfartnetwork.com##.carousel-container.clearfix.row
 ! [/dynamic filtering]
 
 ! 2021-05-17 https://czechbitch.com, https://czechfantasy.com
-czechbitch.com,czechfantasy.com##.active.modal
+czechbitch.com,czechfantasy.com##.active.modal,.network__bottom-join
 czechbitch.com,czechfantasy.com##+js(remove-attr, style, html)
 czechbitch.com,czechfantasy.com##+js(remove-attr, class, body[class*="blurred")
 czechbitch.com,czechfantasy.com##+js(remove-attr, class, body[class*="blurred"], complete)
-!czechfantasy.com##.blurred:style(-webkit-transition: none !important; -o-transition: none !important; -moz-transition: none !important; transition: none !important;)
-!czechfantasy.com##.blurred:not([data-site="czechcasting.com"])::after:style(content: '' !important; position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; background: transparent !important; z-index: auto !important;)
-!czechfantasy.com##.blurred .content-wrapper:style(filter: none !important; -webkit-filter: none !important; -webkit-transform: none !important; -moz-transform: none !important; -ms-transform: none !important; -o-transform: none !important; transform: none !important;)
-!czechfantasy.com##.blurred .content-wrapper *:style(-ms-touch-action: auto !important; touch-action: auto !important; pointer-events: auto !important)
-!czechfantasy.com##.blurred header:style(filter: none !important; -webkit-filter: none !important;)
-!czechfantasy.com##*:style(filter: none !important; -webkit-filter: none !important;)
-
-czechbitch.com,czechfantasy.com##.network__bottom-join
 @@||cdn77.czechcash.com^$media,domain=czechbitch.com|czechfantasy.com
 @@||static.v2.paysites.czechcash.com^$font,domain=czechbitch.com|czechfantasy.com
 
@@ -838,8 +828,7 @@ bangbros.com##.btmTrial,.plyrRgt
 ! [dynamic filtering]
 !	www.naughtyamerica.com * 3p-script noop
 ! [/dynamic filtering]
-www.naughtyamerica.com##.footer-join-button
-www.naughtyamerica.com##.right-scene
+www.naughtyamerica.com##.footer-join-button,.right-scene
 @@||videos.naughtycdn.com^$media,domain=naughtyamerica.com
 
 ! 2021-05-16 https://www.julesjordan.com
@@ -852,10 +841,7 @@ www.naughtyamerica.com##.right-scene
 ! [dynamic filtering]
 !	www.private.com * 3p-script noop
 ! [/dynamic filtering]
-www.private.com##.free-pause
-www.private.com###limited-offer
-www.private.com###SCENE-UHD4K-LOGO
-www.private.com###SCENE-AFTERVIDEO-JOIN
+www.private.com##.free-pause,#limited-offer,#SCENE-AFTERVIDEO-JOIN,#SCENE-UHD4K-LOGO
 ||pcom.st-content.com/images/px.png$image
 @@||pcoms.st-content.com^$media,domain=private.com
 @@||pcom.st-content.com^$media,domain=private.com
@@ -884,7 +870,6 @@ www.dorcelclub.com##.promo_banner,#agreement
 www.dorcelclub.com##+js(remove-attr, class, body[class="promo-banner")
 www.dorcelclub.com##+js(remove-class, disclaimer-enabled, body)
 www.dorcelclub.com##+js(remove-attr, class, body[class="promo-banner")
-www.dorcelclub.com##
 
 ! 2021-05-16 https://www.stasyq.com
 ! [dynamic filtering]
@@ -913,8 +898,7 @@ www.analvids.com##.user--guest.col-xs-12
 ! [dynamic filtering]
 !	www.pornstarplatinum.com * 3p-script noop
 ! [/dynamic filtering]
-www.pornstarplatinum.com##.header-upper
-www.pornstarplatinum.com##.join-button-full
+www.pornstarplatinum.com##.header-upper,.join-button-full
 
 ! 2021-05-18 https://www.elegantangel.com
 ! [dynamic filtering]
@@ -940,32 +924,21 @@ www.spizoo.com##.NoPromoVersion
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-letsdoeit.com###popup-legal_age
-letsdoeit.com##.partner-offer-bar
+letsdoeit.com##.partner-offer-bar,#popup-legal_age
 @@||p.cdn.letsdoeit.com^$media,1p
-
-! 2021-05-16 https://joymii.com
-! [dynamic filtering]
-!	n.a.
-! [/dynamic filtering]
-joymii.com###emobanner
-joymii.com###promo_bar
-@@||trailers-cdn.joymii.com^$media,1p
 
 ! 2021-05-16 https://www.bang.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.bang.com##.top-announcement
-www.bang.com##.button-wrapper
+www.bang.com##.button-wrapper,.top-announcement
 @@||i.bang.com^$media,1p
 
 ! 2021-05-16 https://www.tugpass.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.tugpass.com##.food-lifeline
-www.tugpass.com###bannerlink
+www.tugpass.com###bannerlink,.food-lifeline
 www.tugpass.com##a[href^="https://join"]:upward(.item)
 
 ! 2021-05-16 https://wtfpass.com
@@ -1007,8 +980,8 @@ cherrypimps.com##.call2action,.hero,.member-benefits
 ! [dynamic filtering]
 !	www.teenfidelity.com * 3p-script noop
 ! [/dynamic filtering]
-www.teenfidelity.com##+js(remove-class, hasPromoBar, html)
 www.teenfidelity.com##.join-options,.page-break,.promoBar,.section.p-0,.upcoming-model-container
+www.teenfidelity.com##+js(remove-class, hasPromoBar, html)
 @@||tour-cdn.kellymadisonmedia.com^$media,domain=teenfidelity.com
 
 ! 2021-05-16 https://www.archangelvideo.com
@@ -1037,8 +1010,8 @@ www.adultempire.com##picture
 ! [dynamic filtering]
 !	chaturbate.com * 3p-script noop
 ! [/dynamic filtering]
-chaturbate.com##+js(remove-attr, style, body)
 chaturbate.com###entrance_terms_overlay
+chaturbate.com##+js(remove-attr, style, body)
 @@||stream.highwebmedia.com^$xhr,domain=chaturbate.com
 @@||static-assets.highwebmedia.com^$xhr,domain=chaturbate.com
 !@@||realtime.pa.highwebmedia.com^$xhr,domain=chaturbate.com
