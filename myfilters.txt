@@ -11,7 +11,7 @@
 ! 2020-12-23 https://www.reddit.com/r/uBlockOrigin/comments/avwgct/using_my_filters_to_add_a_little_more_to_medium/
 ! https://armin.dev/apps/ping-spotter/#
 ! hyperlink auditing: *$beacon, *$ping
-!*$data
+!*$data 
 *$font,third-party
 *$media
 *$object
@@ -24,7 +24,8 @@
 !	interestingengineering.com  * 3p-frame noop
 !	interestingengineering.com * 3p-script noop
 !	racingnews365.nl * 3p-script noop
-!	magazine.teufelaudio.nl  * 3p-script noop
+!	magazine.teufelaudio.nl * 3p-script noop
+!	www.trouw.nl * 3p-script noop
 
 
 ! Common tracking endpoints
@@ -79,6 +80,15 @@ www.coolblue.nl##.cookie
 !www.coolblue.nl##+js(remove-attr, cookienotificationmodalopened, body, stay)
 www.coolblue.nl##.overflow--hidden:style(overflow: visible !important;)
 !www.coolblue.nl##+js(remove-class, overflow--hidden, body)
+
+! 2021-05-24 https://beeldbank.cultureelerfgoed.nl
+! [dynamic filtering]
+!	beeldbank.cultureelerfgoed.nl * 3p-script noop
+! [/dynamic filtering]
+!@@||vip-195-93-224-192.pictura-hosting.nl^$font,domain=beeldbank.cultureelerfgoed.nl
+@@||webservices.picturae.com^$font,domain=beeldbank.cultureelerfgoed.nl
+@@||webservices.picturae.com^$xhr,domain=beeldbank.cultureelerfgoed.nl
+@@||images.memorix.nl^$xhr,domain=beeldbank.cultureelerfgoed.nl
 
 ! 2021-05-20 https://discord.com
 ! [dynamic filtering]
@@ -145,6 +155,12 @@ filejoker.net###tariffs,#secure,#payment-icons
 @@||d2o3p7ajbdlty7.cloudfront.net^$font,domain=formula1.com
 @@||d2amvmy3wylsuf.cloudfront.net^$xhr,domain=formula1.com
 
+! 2021-05-29 https://www.locatiewijzer.geldmaat.nl
+! [dynamic filtering]
+!	www.locatiewijzer.geldmaat.nl * 3p-script noop
+! [/dynamic filtering]
+@@||schubergphilis-prod.apigee.net^$xhr,domain=locatiewijzer.geldmaat.nl
+
 ! 2021-05-16 https://gfycat.com
 ! [dynamic filtering]
 !	n.a.
@@ -172,7 +188,7 @@ filejoker.net###tariffs,#secure,#payment-icons
 ! require scripts and frames
 www.youtube.com###clarify-box
 www.youtube.com##ytd-clarification-renderer
-!www.youtube.com###dismissable.ytd-rich-shelf-renderer
+www.youtube.com##.dismissible:upward(ytd-rich-section-renderer)
 @@||lh3.googleusercontent.com^$media,domain=photos.google.com|stadia.google.com|youtube.googleapis.com
 @@||googlevideo.com^$xhr,domain=photos.google.com|youtube.googleapis.com|youtube.com
 @@||youtube-ui.l.google.com^$xhr,domain=www.youtube.com
@@ -212,6 +228,13 @@ www.youtube.com##ytd-clarification-renderer
 @@||komoot-web-live-2021.eu-west-1.elasticbeanstalk.com^$font,domain=komoot.nl
 @@||komoot-web-live-2021.eu-west-1.elasticbeanstalk.com^$xhr,domain=komoot.nl
 @@||tiles-api.maps.komoot.net^$xhr,domain=komoot.nl
+
+! 2021-05-28 https://www.last.fm
+! [dynamic filtering]
+!	www.last.fm * 3p-script noop
+! [/dynamic filtering]
+www.last.fm##.subscribe-cta
+@@||lastfm.cbsi.map.fastly.net^$xhr,domain=last.fm
 
 ! 2021-05-20 https://www.lc.nl
 ! [dynamic filtering]
@@ -263,6 +286,7 @@ www.youtube.com##ytd-clarification-renderer
 !	login.microsoftonline.com * 3p-script noop
 ! [/dynamic filtering]
 @@||www.tm.a.prd.aadg.akadns.net^$xhr,domain=login.live.com|login.microsoftonline.com
+@@||www.tm.a.prd.aadg.trafficmanager.net^$xhr,domain=login.microsoftonline.com
 
 ! 2021-05-20 https://outlook.live.com
 ! [dynamic filtering]
@@ -309,6 +333,13 @@ www.youtube.com##ytd-clarification-renderer
 @@||spov-0006.dc-msedge.net^$font,domain=intranet.philips.com
 @@||spov-0006.spov-msedge.net^$xhr,domain=intranet.philips.com
 @@||spov-0006.spov-msedge.net^$font,domain=intranet.philips.com
+
+! 2021-05-27 https://share.philips.com, https://euc-excel.officeapps.live.com
+! [dynamic filtering]
+!	share.philips.com * 3p-frame noop * 3p-script noop
+! [/dynamic filtering]
+@@||euc-excel.officeapps.live.com^$xhr,domain=share.philips.com
+@@||b-0016.b-msedge.net^$xhr,domain=euc-excel.officeapps.live.com
 
 ! 2021-05-20 https://docs.philips.com
 ! [dynamic filtering]
@@ -427,6 +458,7 @@ www.sitepoint.com##.roller-door-placeholder,#job_ad_list,#community-ad-unit
 !	www.strava.com * 3p-script noop
 ! [/dynamic filtering]
 @@||albstravaprod-623034023.us-east-1.elb.amazonaws.com^$xhr,domain=strava.com
+@@||http-external-1921751985.us-east-1.elb.amazonaws.com^$xhr,domain=strava.com
 
 ! 2021-05-20 https://www.telegraaf.nl
 ! [dynamic filtering]
@@ -467,6 +499,12 @@ tweakers.net##+js(no-setTimeout-if, /^/)
 !	vandenbrug.nl * 3p-script noop
 ! [/dynamic filtering]
 @@||www.care-mail.nl^$xhr,domain=vandenbrug.nl
+
+! 2021-05-28 https://forum.vbulletin.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+forum.vbulletin.com#@#.cookies
 
 ! 2021-05-20 https://www.vkmag.com
 ! [dynamic filtering]
@@ -558,6 +596,8 @@ www.brazzers.com##.cmUdRh
 
 ! 2021-05-16 https://cum4k.com, https://exotic4k.com, https://holed.com, https://lubed.com, https://passion-hd.com, https://pornpros.com, https://povd.com, https://puremature.com, https://tiny4k.com
 cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,tiny4k.com##.payment-popup
+cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,tiny4k.com##.join-btn-massive:upward(1)
+cum4k.com,holed.com,lubed.com,passion-hd.com,povd.com,puremature.com,tiny4k.com###sale-special-placeholder
 @@||cdn-videos.r1.cdn.pornpros.com^$media,domain=cum4k.com|exotic4k.com|holed.com|lubed.com|passion-hd.com|pornpros.com|povd.com|puremature.com|tiny4k.com
 
 
@@ -573,10 +613,9 @@ cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.blacked.com##div[data-test-component="TopBanner"]
-www.blacked.com##.hrIeLO:style(top: 0 !important;)
-!www.blacked.com##.yMzuj:style(margin-top: 0 !important;)
-www.blacked.com##.yMzuj:style(margin-top: 4.2rem; !important;)
+www.deeper.com,www.blacked.com,www.blackedraw.com,www.tushy.com,www.tushyraw.com,www.vixen.com##div[data-test-component="TopBanner"]
+www.deeper.com,www.blacked.com,www.blackedraw.com,www.tushy.com,www.tushyraw.com,www.vixen.com##header:style(top: 0 !important;)
+www.deeper.com,www.blacked.com,www.blackedraw.com,www.tushy.com,www.tushyraw.com,www.vixen.com##div[data-test-component="TopBanner"]:upward(body):style(padding-top: 0 !important;)
 
 
 !!!! Paper Street Media !!!!!
@@ -792,7 +831,7 @@ czechbitch.com,czechfantasy.com##.network__bottom-join
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-bangbros.com##.plyrRgt
+bangbros.com##.btmTrial,.plyrRgt
 @@||trailers1.bangbros.com^$media,1p
 
 ! 2021-05-16 https://www.naughtyamerica.com
@@ -834,18 +873,18 @@ perfectgonzo.com###site1-button
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.newsensations.com##.dvdMidBanner
-www.newsensations.com##.sceneRight
-www.newsensations.com##.download
+www.newsensations.com##.download,.dvdMidBanner,.modelBioRight,.sceneRight
 @@||nsnetworktour.newsensations.com^$media,1p
 
 ! 2021-05-16 https://www.dorcelclub.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.dorcelclub.com###agreement
+www.dorcelclub.com##.promo_banner,#agreement
+www.dorcelclub.com##+js(remove-attr, class, body[class="promo-banner")
 www.dorcelclub.com##+js(remove-class, disclaimer-enabled, body)
-www.dorcelclub.com##.promo_banner
+www.dorcelclub.com##+js(remove-attr, class, body[class="promo-banner")
+www.dorcelclub.com##
 
 ! 2021-05-16 https://www.stasyq.com
 ! [dynamic filtering]
@@ -888,9 +927,7 @@ www.elegantangel.com##.membership-cards-container
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-tour.topwebmodels.com##.cta-join-wrap
-tour.topwebmodels.com##.show.announcement-popup.fade.modal
-tour.topwebmodels.com##.show.fade.modal-backdrop
+tour.topwebmodels.com##.announcement-popup,.announcement-wrap,.cta-join-wrap,.modal-backdrop
 
 ! 2021-05-16 https://www.spizoo.com
 ! [dynamic filtering]
@@ -963,9 +1000,7 @@ alljapanesepass.com##+js(remove-class, showWarningPopup, body)
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-cherrypimps.com##.hero
-cherrypimps.com##.member-benefits
-cherrypimps.com##.call2action
+cherrypimps.com##.call2action,.hero,.member-benefits
 @@||cdn.jsdelivr.net.cdn.cloudflare.net^$script,domain=cherrypimps.com
 
 ! 2021-05-16 https://www.teenfidelity.com
@@ -973,10 +1008,7 @@ cherrypimps.com##.call2action
 !	www.teenfidelity.com * 3p-script noop
 ! [/dynamic filtering]
 www.teenfidelity.com##+js(remove-class, hasPromoBar, html)
-www.teenfidelity.com##.promoBar
-www.teenfidelity.com##.upcoming-model-container
-www.teenfidelity.com##.section.p-0
-www.teenfidelity.com##.join-options
+www.teenfidelity.com##.join-options,.page-break,.promoBar,.section.p-0,.upcoming-model-container
 @@||tour-cdn.kellymadisonmedia.com^$media,domain=teenfidelity.com
 
 ! 2021-05-16 https://www.archangelvideo.com
