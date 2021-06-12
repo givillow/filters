@@ -21,6 +21,7 @@
 
 
 ! Dynamic Filtering Only
+! gitlab.com * 3p-script noop
 ! www.hentaiclicker.com* 3p-frame noop
 !	interestingengineering.com  * 3p-frame noop
 !	interestingengineering.com * 3p-script noop
@@ -58,12 +59,27 @@
 ! [/dynamic filtering]
 @@||cdn.arstechnica.net^$font,domain=arstechnica.com
 
+! 2021-06-10 https://www.banggood.com
+! [dynamic filtering]
+!	www.banggood.com * 3p-script noop
+! [/dynamic filtering]
+@@||e8485.a.akamaiedge.net^$xhr,domain=banggood.com
+@@||s.staticbg.com^$font,domain=banggood.com
+
 ! 2021-05-24 https://eu.shop.battle.net
 ! [dynamic filtering]
-!	eu.shop.battle.net * 3p-script noop
 !	account.battle.net * 3p-script noop
+!	eu.shop.battle.net * 3p-script noop
 ! [/dynamic filtering]
 @@||bnetaccount.akamaized.net^$font,domain=battle.net
+
+! 2021-06-10 https://www.bol.com
+! [dynamic filtering]
+!	www.bol.com * 3p-script noop
+! [/dynamic filtering]
+www.bol.com##wsp-modal-window
+www.bol.com##+js(no-setTimeout-if, function(){t.apply(void 0,r),n=null})
+www.bol.com##+js(remove-class, modal--is-open, body)
 
 ! 2021-05-20 https://www.buienalarm.nl
 ! [dynamic filtering]
@@ -129,9 +145,10 @@ www.dumpert.nl##[class^="ads_container--"]
 
 ! 2021-05-20 https://www.facebook.com
 ! [dynamic filtering]
-!	n.a.
+!	www.facebook.com * 3p-script noop
 ! [/dynamic filtering]
 ! find a way to skip cookies
+www.facebook.com##div[data-testid="cookie-policy-dialog"]
 www.facebook.com##.uiLayer
 @@||xx.fbcdn.net^$xhr,domain=facebook.com
 
@@ -197,10 +214,11 @@ www.youtube.com##.dismissible:upward(ytd-rich-section-renderer)
 nl.hardware.info##.frontpage__sidebar
 @@||nlwebserverssl.hwigroup.com^$xhr,domain=nl.hardware.info
 
-! 2021-05-20 https://www.humblebundle.com
+! 2021-06-12 https://www.humblebundle.com
 ! [dynamic filtering]
 !	www.humblebundle.com * 3p-script noop
 ! [/dynamic filtering]
+@@||ghs.googlehosted.com^$xhr,domain=humblebundle.com
 @@||humblebundle-a.akamaihd.net^$font,domain=humblebundle.com
 
 ! 2021-05-20 https://imgur.com
@@ -214,6 +232,12 @@ nl.hardware.info##.frontpage__sidebar
 !	www.indiegala.com * 3p-script noop
 ! [/dynamic filtering]
 @@||9frhv.x.incapdns.net^$xhr,domain=indiegala.com
+
+! 2021-06-05 https://www.instagram.com
+! [dynamic filtering]
+!	www.instagram.com * 3p-script noop
+! [/dynamic filtering]
+www.instagram.com##div[role='presentation']
 
 ! 2021-05-19 https://isthereanydeal.com
 ! [dynamic filtering]
@@ -402,10 +426,18 @@ www.patreon.com##div[data-focus-guard="true"]
 www.patreon.com##div[data-focus-lock-disabled="false"]
 www.patreon.com##.fikHVz:style(filter: none !important;)
 
-! 2021-05-20 https://www.rabobank.nl
-@@||e82494.dscb.akamaiedge.net^$font,domain=rabobank.nl
+! 2021-06-10 https://bankieren.rabobank.nl, https://betalen.rabobank.nl, https://www.rabobank.nl
+! [dynamic filtering]
+!	bankieren.rabobank.nl * 3p-script noop
+!	betalen.rabobank.nl * 3p-script noop
+!	www.rabobank.nl * 3p-script noop
+! [/dynamic filtering]
 @@||e16266.dscb.akamaiedge.net^$xhr,domain=rabobank.nl
+@@||e76643.dscb.akamaiedge.net^$xhr,domain=betalen.rabobank.nl
+@@||e81204.dscb.akamaiedge.net^$font,domain=rabobank.nl
+@@||e81204.dscb.akamaiedge.net^$xhr,domain=rabobank.nl
 @@||e82494.dscb.akamaiedge.net^$xhr,domain=rabobank.nl
+@@||e82494.dscb.akamaiedge.net^$font,domain=rabobank.nl
 
 ! 2021-05-20 https://www.reddit.com
 ! [dynamic filtering]
@@ -527,10 +559,11 @@ dailybuzz.nl#@#.vjs-share
 @@||mnd.bulk.iss.as9143.net:8080^$xhr,domain=ziggobeta.speedtestcustom.com
 @@||mnd.bulk.iss.as9143.net:8080^$websocket,domain=ziggobeta.speedtestcustom.com
 
-! 2021-05-20 https://www.ziggogo.tv
+! 2021-06-11 https://www.ziggogo.tv
 ! [dynamic filtering]
 !	www.ziggo.nl * 3p-script noop
 ! [/dynamic filtering]
+www.ziggogo.tv##.dialog-portal
 @@||wp-a49d720000000000.id.cdn.upcbroadband.com^$xhr,domain=ziggogo.tv
 @@||e15977.dscb.akamaiedge.net^$xhr,domain=ziggogo.tv
 @@||live.dyncdn.horizon.tv^$xhr,domain=ziggogo.tv
@@ -637,6 +670,9 @@ www.deeper.com,www.blacked.com,www.blackedraw.com,www.tushy.com,www.tushyraw.com
 www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.formwrapper,.sub-footer
 www.analmom.com,www.exxxtrasmall.com,www.familystrokes.com,www.pervmom.com##.getaccess:upward(1)
 
+! 2021-06-10 https://www.exxxtrasmall.com, https://www.familystrokes.com
+www.exxxtrasmall.com,www.familystrokes.com##.coming-soon-thumb:upward(.thumbwrap)
+
 ! 2021-05-17 https://www.mylf.com, https://www.teamskeet.com
 www.mylf.com,www.teamskeet.com##.join-btn,.video-page-iframe
 @@||store2.psmcdn.net^$xhr,domain=mylf.com|teamskeet.com
@@ -669,11 +705,19 @@ www.21naturals.com,www.21sextreme.com,www.blowpass.com,www.burningangel.com,www.
 ! 2021-05-16 https://www.21sextreme.com, https://www.21naturals.com, https://www.fantasymassage.com, https://www.nurumassage.com
 @@||*/static-parent/Giraffe/TabListContainer/img/1x1Transparent.gif$image,domain=21sextreme.com|21naturals.com|fantasymassage.com|nurumassage.com
 
-! 2021-05-21 https://www.21naturals.com
-www.21naturals.com##.sidebar,.headerAT
+! 2021-06-10 https://www.21naturals.com
+www.21naturals.com##.sidebar,.headerAT,#TopBarJoin
 www.21naturals.com###header:style(top: 0 !important;)
 www.21naturals.com###main:style(padding: 50px 10px 0 !important;)
+www.21naturals.com##.mainContent:style(width: 100% !important;)
 @@||static01-cms-fame.gammacdn.com^$font,domain=21naturals.com
+
+! 2021-06-03 https://www.evilangel.com
+www.evilangel.com###headerJoin
+www.evilangel.com##+js(no-setTimeout-if, cookieVisible)
+
+! 2021-06-10 https://www.fantasymassage.com
+www.fantasymassage.com###joinButton,#subcribleForScene
 
 ! 2021-05-16 https://joymii.com
 ! [dynamic filtering]
@@ -686,7 +730,7 @@ joymii.com###emobanner,#promo_bar
 wicked.com#@#.cookieVisible
 
 ! 2021-05-21 https://www.xempire.com
-www.xempire.com##.sitesWrapper
+www.xempire.com###joinButton,.sitesWrapper
 
 ! 2021-05-18 https://www.adulttime.com
 @@||tsmkfa364q-dsn.algolia.net^$xhr,domain=adulttime.com
@@ -890,8 +934,8 @@ pornworld.com##.site-banner
 !	n.a.
 ! [/dynamic filtering]
 www.analvids.com###agree18
-www.analvids.com##+js(remove-attr, class, .blur-thumbnails, stay)
 www.analvids.com##.trial-join-box:upward(1)
+www.analvids.com##+js(remove-attr, class, .blur-thumbnails, stay)
 @@||gtflixtv.com^$media,domain=analvids.com
 
 ! 2021-05-16 https://www.pornstarplatinum.com
@@ -979,7 +1023,9 @@ cherrypimps.com##.call2action,.hero,.member-benefits
 ! [dynamic filtering]
 !	www.teenfidelity.com * 3p-script noop
 ! [/dynamic filtering]
-www.teenfidelity.com##.join-options,.page-break,.promoBar,.section.p-0,.upcoming-model-container
+www.teenfidelity.com##.button,.hero,.join-options,.page-break,.promoBar,.upcoming-model-container
+www.teenfidelity.com###main-carousel:upward(2)
+www.teenfidelity.com##table[style*=" "]:upward(section)
 www.teenfidelity.com##+js(remove-class, hasPromoBar, html)
 @@||tour-cdn.kellymadisonmedia.com^$media,domain=teenfidelity.com
 
@@ -992,12 +1038,20 @@ www.teenfidelity.com##+js(remove-class, hasPromoBar, html)
 
 !!!! Miscellaneous !!!!!
 
-! 2021-05-16 https://www.adultempire.com
+! 2021-06-03 https://forum.adultdvdtalk.com
 ! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+forum.adultdvdtalk.com###enter_overlay
+
+! 2021-06-03 https://www.adultdvdempire.com, https://www.adultempire.com
+! [dynamic filtering]
+!	www.adultdvdempire.com * 3p-frame noop
+!	www.adultdvdempire.com * 3p-script noop
 !	www.adultempire.com * 3p-script noop
 ! [/dynamic filtering]
-||analytics.adultempire.com
-www.adultempire.com##.beacon,.container-featured,.pricing-container
+www.adultdvdempire.com,www.adultempire.com##.beacon,.container-featured,.pricing-container
+www.adultdvdempire.com,www.adultempire.com##+js(no-setTimeout-if, modal)
 @@||player.digiflix.video^$xhr,domain=adultempire.com
 @@||cds.c6e5j5a6.hwcdn.net^$xhr,domain=adultempire.com
 
@@ -1023,6 +1077,15 @@ chaturbate.com##+js(remove-attr, style, body)
 ! [/dynamic filtering]
 lewdzone.com##.card
 lewdzone.com##.col-xs-12 > .widget_text:upward(1)
+
+! 2021-06-03 https://www.manojob.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+www.manojob.com###splash-bypass
+www.manojob.com##+js(no-setTimeout-if, /^/)
+www.manojob.com##+js(remove-attr, style, main)
+@@||www.manojob.com^$media,1p
 
 ! 2021-05-18 https://www.metcams.com
 ! [dynamic filtering]
