@@ -22,9 +22,9 @@
 
 
 ! Dynamic Filtering Only
-! blokker.nl * 3p-script noop
-! gitlab.com * 3p-script noop
-! www.hentaiclicker.com * 3p-frame noop
+!	blokker.nl * 3p-script noop
+!	gitlab.com * 3p-script noop
+!	www.hentaiclicker.com * 3p-frame noop
 !	interestingengineering.com * 3p-frame noop
 !	interestingengineering.com * 3p-script noop
 !	racingnews365.nl * 3p-script noop
@@ -155,7 +155,7 @@ www.dumpert.nl##[class^="ads_container--"]
 ! [dynamic filtering]
 !	www.facebook.com * 3p-script noop
 ! [/dynamic filtering]
-! find a way to skip cookies
+! [check] find a way to skip cookies
 www.facebook.com##div[data-testid="cookie-policy-dialog"]
 www.facebook.com##.uiLayer
 @@||xx.fbcdn.net^$xhr,domain=facebook.com
@@ -170,6 +170,12 @@ filejoker.net###tariffs,#secure,#payment-icons
 !filejoker.net###captcha1
 !filejoker.net###btncount:style(display: block !important)
 !filejoker.net###download_btn:style(display: block !important)
+
+! 2021-06-26 https://www.flightradar24.com
+! [dynamic filtering]
+!	www.flightradar24.com * 3p-script noop
+! [/dynamic filtering]
+www.flightradar24.com##+js(remove-class, has-banner, body.has-banner, stay)
 
 ! 2021-05-20 https://www.formula1.com
 ! [dynamic filtering]
@@ -206,6 +212,10 @@ filejoker.net###tariffs,#secure,#payment-icons
 @@||www.gstatic.com^$xhr,domain=google.nl
 
 ! 2021-05-17 https://translate.google.com, https://translate.google.nl
+! [dynamic filtering]
+!	translate.google.com * 3p-script noop
+!	translate.google.nl * 3p-script noop
+! [/dynamic filtering]
 @@||fonts.gstatic.com^$font,domain=google.com|google.nl
 
 ! 2021-05-17 https://photos.google.com, https://stadia.google.com, https://youtube.googleapis.com, https://www.youtube.com
@@ -361,7 +371,7 @@ www.last.fm##.subscribe-cta
 !	web.yammer.com * 3p-frame noop
 !	web.yammer.com * 3p-script noop
 ! [/dynamic filtering]
-! not fully tested
+! [check] not fully tested
 @@||b-0005t.b-msedge.net^$xhr,domain=web.yammer.com
 @@||outlook-1.cdn.office.net^$xhr,domain=web.yammer.com
 
@@ -461,9 +471,7 @@ www.patreon.com##div[data-focus-lock-disabled="false"]
 !	n.a.
 ! [/dynamic filtering]
 nl.pepper.com##.popover--oreo-message
-nl.pepper.com##.overflow--hidden:style(overflow: visible !important;)
-!nl.pepper.com##+js(remove-class, overflow--hidden, body)
-!nl.pepper.com##+js(remove-attr, class, body[class*="overflow--hidden"], complete)
+nl.pepper.com##+js(remove-class, overflow--hidden, body.overflow--hidden, stay)
 
 ! 2021-06-24 https://webwinkel.poiesz-supermarkten.nl
 ! [dynamic filtering]
@@ -542,7 +550,7 @@ www.sitepoint.com###community-ad-unit,#job_ad_list,.roller-door-placeholder
 ! [dynamic filtering]
 !	www.telegraaf.nl * 3p-script noop
 ! [/dynamic filtering]
-! find a way to skip cookies, video player added by "agnoplayer.js"
+! [check] a way to skip cookies, video player added by "agnoplayer.js"
 www.telegraaf.nl##.WebshopWidget__container
 @@||sdk.privacy-center.org^$script,domain=telegraaf.nl
 @@||player.agnoplay.com^$xhr,domain=telegraaf.nl
@@ -898,8 +906,7 @@ www.dogfartnetwork.com##.carousel-container.clearfix.row
 ! 2021-05-17 https://czechbitch.com, https://czechfantasy.com
 czechbitch.com,czechfantasy.com##.active.modal,.network__bottom-join
 czechbitch.com,czechfantasy.com##+js(remove-attr, style, html)
-czechbitch.com,czechfantasy.com##+js(remove-attr, class, body[class*="blurred")
-czechbitch.com,czechfantasy.com##+js(remove-attr, class, body[class*="blurred"], complete)
+czechbitch.com,czechfantasy.com##+js(remove-class, blurred, body.blurred)
 @@||cdn77.czechcash.com^$media,domain=czechbitch.com|czechfantasy.com
 @@||static.v2.paysites.czechcash.com^$font,domain=czechbitch.com|czechfantasy.com
 
@@ -953,7 +960,7 @@ www.naughtyamerica.com##.footer-join-button,.right-scene
 !	www.private.com * 3p-script noop
 ! [/dynamic filtering]
 www.private.com##+js(no-setTimeout-if, show_window)
-www.private.com##.banner-join-2019,.free-pause,#limited-offer,#SCENE-AFTERVIDEO-JOIN,#SCENE-UHD4K-LOGO
+www.private.com##.banner-join-2019,#pause-zone,#limited-offer,#SCENE-AFTERVIDEO-JOIN,#SCENE-UHD4K-LOGO
 ||pcom.st-content.com/images/px.png$image
 @@||pcoms.st-content.com^$media,domain=private.com
 @@||pcom.st-content.com^$media,domain=private.com
@@ -979,8 +986,8 @@ www.newsensations.com##.download,.dvdMidBanner,.modelBioRight,.sceneRight
 !	n.a.
 ! [/dynamic filtering]
 www.dorcelclub.com##.promo_banner,#agreement
-www.dorcelclub.com##+js(remove-attr, class, body[class="promo-banner")
-www.dorcelclub.com##+js(remove-class, disclaimer-enabled, body)
+www.dorcelclub.com##+js(remove-class, disclaimer-enabled, body.disclaimer-enabled)
+www.dorcelclub.com##+js(remove-class, promo-banner, body.promo-banner)
 
 ! 2021-05-16 https://www.stasyq.com
 ! [dynamic filtering]
@@ -1004,7 +1011,7 @@ pornworld.com##.site-banner
 ! [/dynamic filtering]
 www.analvids.com###agree18
 www.analvids.com##.trial-join-box:upward(1)
-www.analvids.com##+js(remove-attr, class, .blur-thumbnails, stay)
+www.analvids.com##+js(remove-class, blur-thumbnails, body.blur-thumbnails)
 @@||gtflixtv.com^$media,domain=analvids.com
 
 ! 2021-06-21 https://www.pornstarplatinum.com
@@ -1109,7 +1116,7 @@ www.teenfidelity.com##+js(remove-class, hasPromoBar, html)
 ! [dynamic filtering]
 !	penthousegold.com * 3p-script noop
 ! [/dynamic filtering]
-penthousegold.com##.adult-warning,.content-alert
+penthousegold.com##.adult-warning,.content-alert,#limited-offer,#pause-zone
 @@||cdn.penthouse.com^$media,domain=penthousegold.com
 
 ! 2021-06-12 https://hentaied.com
@@ -1117,7 +1124,7 @@ penthousegold.com##.adult-warning,.content-alert
 !	hentaied.com * 3p-script noop
 ! [/dynamic filtering]
 hentaied.com##+js(no-setTimeout-if, exceptionHook)
-hentaied.com##+js(remove-attr, href, a[class="endofvideo"])
+hentaied.com##.endofvideo
 @@||cdnjs.cloudflare.com^$font,domain=hentaied.com
 @@||vids.hentaied.com^$media,1p
 
