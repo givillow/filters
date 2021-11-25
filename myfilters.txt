@@ -24,7 +24,6 @@
 ! Dynamic Filtering Only
 !	blokker.nl * 3p-script noop
 !	gitlab.com * 3p-script noop
-!	www.hentaiclicker.com * 3p-frame noop
 !	interestingengineering.com * 3p-frame noop
 !	interestingengineering.com * 3p-script noop
 !	racingnews365.nl * 3p-script noop
@@ -717,16 +716,11 @@ cum4k.com,holed.com,lubed.com,passion-hd.com,povd.com,puremature.com,tiny4k.com#
 !	n.a.
 ! [/dynamic filtering]
 
-! 2021-05-16 https://www.deeper.com, https://www.blacked.com, https://www.blackedraw.com, https://www.tushy.com, https://www.tushyraw.com, https://www.vixen.com
-@@||ssl-cdn.com^$media,domain=deeper.com|blacked.com|blackedraw.com|tushy.com|tushyraw.com|vixen.com
-
-! 2021-05-21 https://www.blacked.com
-! [dynamic filtering]
-!	n.a.
-! [/dynamic filtering]
-www.deeper.com,www.blacked.com,www.blackedraw.com,www.tushy.com,www.tushyraw.com,www.vixen.com##div[data-test-component="TopBanner"]
-www.deeper.com,www.blacked.com,www.blackedraw.com,www.tushy.com,www.tushyraw.com,www.vixen.com##header:style(top: 0 !important;)
-www.deeper.com,www.blacked.com,www.blackedraw.com,www.tushy.com,www.tushyraw.com,www.vixen.com##div[data-test-component="TopBanner"]:upward(body):style(padding-top: 0 !important;)
+! 2021-05-21, 2021-05-16, 2021-11-21 https://www.deeper.com, https://www.blacked.com, https://www.blackedraw.com, https://www.slayed.com, https://www.tushy.com, https://www.tushyraw.com, https://www.vixen.com
+www.deeper.com,www.blacked.com,www.blackedraw.com,www.slayed.com,www.tushy.com,www.tushyraw.com,www.vixen.com##div[data-test-component="TopBanner"]
+www.deeper.com,www.blacked.com,www.blackedraw.com,www.slayed.com,www.tushy.com,www.tushyraw.com,www.vixen.com##header:style(top: 0 !important;)
+www.deeper.com,www.blacked.com,www.blackedraw.com,www.slayed.com,www.tushy.com,www.tushyraw.com,www.vixen.com##div[data-test-component="TopBanner"]:upward(body):style(padding-top: 0 !important;)
+@@||ssl-cdn.com^$media,domain=deeper.com|blacked.com|blackedraw.com|slayed.com|tushy.com|tushyraw.com|vixen.com
 
 
 !!!! Paper Street Media !!!!!
@@ -821,6 +815,16 @@ wicked.com#@#.cookieVisible
 
 ! 2021-05-21 https://www.xempire.com
 www.xempire.com###joinButton,.sitesWrapper
+
+! 2021-09-12 https://www.darkx.com, https://www.eroticax.com, https://www.hardx.com, https://www.lesbianx.com
+! www.darkx.com, www.eroticax.com, www.hardx.com & www.lesbianx.com has duplicated content in www.xempire.com
+! [dynamic filtering]
+!	www.darkx.com * 3p-script noop
+!	www.eroticax.com * 3p-script noop
+!	www.hardx.com * 3p-script noop
+!	www.lesbianx.com * 3p-script noop
+! [/dynamic filtering]
+@@||trailers-openlife.gammacdn.com^$media,domain=darkx.com|eroticax.com|hardx.com|lesbianx.com
 
 ! 2021-05-18 https://www.adulttime.com
 @@||tsmkfa364q-dsn.algolia.net^$xhr,domain=adulttime.com
@@ -978,12 +982,12 @@ www.naughtyamerica.com##.footer-join-button,.right-scene
 www.julesjordan.com##table
 @@||cdnstream2.julesjordan.com^$media,1p
 
-! 2021-06-15 https://www.private.com
+! 2021-06-15, 2021-11-25 https://www.private.com
 ! [dynamic filtering]
 !	www.private.com * 3p-script noop
 ! [/dynamic filtering]
 www.private.com##+js(no-setTimeout-if, show_window)
-www.private.com##.banner-join-2019,#pause-zone,#limited-offer,#SCENE-AFTERVIDEO-JOIN,#SCENE-UHD4K-LOGO
+www.private.com##.banner-join-2019,#pause-zone,#limited-offer,#SCENE-AFTERVIDEO-JOIN,#SCENE-UHD4K-LOGO,.top-promo
 ||pcom.st-content.com/images/px.png$image
 @@||pcoms.st-content.com^$media,domain=private.com
 @@||pcom.st-content.com^$media,domain=private.com
@@ -1069,13 +1073,13 @@ tour.topwebmodels.com##.announcement-popup,.announcement-wrap,.cta-join-wrap,.mo
 www.spizoo.com##.NoPromoVersion
 @@||content.spizoo.com^$media,1p
 
-! 2021-05-16, 2021-07-08 https://letsdoeit.com
+! 2021-05-16, 2021-07-08, 2021-11-25 https://letsdoeit.com, https://mamacitaz.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-letsdoeit.com##.partner-offer-bar,#partner-offer-media,#popup-legal_age
-@@||p.cdn.letsdoeit.com^$media,1p
-letsdoeit.com##+js(run-script, /dist/apps/main.js)
+letsdoeit.com,mamacitaz.com##.partner-offer-bar,#partner-offer-media,#popup-legal_age
+letsdoeit.com,mamacitaz.com##+js(run-script, /dist/apps/main.js)
+! letsdoeit.com##+js(run-script, /assets/js/loaders/age-gate.js)
 
 ! 2021-05-16 https://www.bang.com
 ! [dynamic filtering]
@@ -1141,6 +1145,13 @@ www.teenfidelity.com##+js(remove-class, hasPromoBar, html)
 ! [/dynamic filtering]
 @@||archangelvideo.com^$media,1p
 
+! 2021-07-24 https://tour.bamvisions.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+tour.bamvisions.com###warningpopup
+@@||tour.bamvisions.com^$media,1p
+
 ! 2021-06-10, 2021-07-03 https://penthousegold.com
 ! [dynamic filtering]
 !	penthousegold.com * 3p-script noop
@@ -1196,12 +1207,24 @@ chaturbate.com##+js(remove-attr, style, body)
 ! [/dynamic filtering]
 @@||shops.myshopify.com^$xhr,domain=fleshlight.com|fleshlight.eu
 
+! 2021-11-21 https://www.hentaiclicker.com
+! [dynamic filtering]
+!	www.hentaiclicker.com * 3p-frame noop
+! [/dynamic filtering]
+hentaiclicker.com##+js(set-constant, confirm, trueFunc)
+
 ! 2021-05-21 https://lewdzone.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
 lewdzone.com##.card
 lewdzone.com##.col-xs-12 > .widget_text:upward(1)
+
+! 2021-11-18 https://lustfel.com
+! [dynamic filtering]
+!	lustfel.com * 3p-script noop
+! [/dynamic filtering]
+lustfel.com##.ai-track
 
 ! 2021-06-03 https://www.manojob.com
 ! [dynamic filtering]
