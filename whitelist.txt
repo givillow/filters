@@ -1,16 +1,29 @@
 ### SMART REFERRER WHITELIST FILE ###
 
 # Gamma Entertainment
-#  - Last checked: 16.04.2022
+#  - Last checked: 16.04.2022 - .algolianet.com
+#  - Last checked: 12.05.2022 - .algolia.net
 .21naturals.com>.algolianet.com
+.21naturals.com>.algolia.net
 .21sextreme.com>.algolianet.com
+.21sextreme.com>.algolia.net
 .21sextury.com>.algolianet.com
+.21sextury.com>.algolia.net
 .burningangel.com>.algolianet.com
+.burningangel.com>.algolia.net
 .devilsfilm.com>.algolianet.com
+.devilsfilm.com>.algolia.net
 .evilangel.com>.algolianet.com
+.evilangel.com>.algolia.net
 .fantasymassage.com>.algolianet.com
+.fantasymassage.com>.algolia.net
 .girlsway.com>.algolianet.com
+.girlsway.com>.algolia.net
 .roccosiffredi.com>.algolianet.com
+.roccosiffredi.com>.algolia.net
 .puretaboo.com>.algolianet.com
+.puretaboo.com>.algolia.net
 .touchmywife.com>.algolianet.com
+.touchmywife.com>.algolia.net
 .wicked.com>.algolianet.com
+.wicked.com>.algolia.net
