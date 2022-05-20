@@ -3,6 +3,7 @@
 # Gamma Entertainment
 #  - Last checked: 16.04.2022 - .algolianet.com
 #  - Last checked: 12.05.2022 - .algolia.net
+#  - Last checked: 20.05.2022 - .mixedx.com
 .21naturals.com>.algolianet.com
 .21naturals.com>.algolia.net
 .21sextreme.com>.algolianet.com
@@ -19,6 +20,8 @@
 .fantasymassage.com>.algolia.net
 .girlsway.com>.algolianet.com
 .girlsway.com>.algolia.net
+.mixedx.com>.algolianet.com
+.mixedx.com.algolia.net
 .roccosiffredi.com>.algolianet.com
 .roccosiffredi.com>.algolia.net
 .puretaboo.com>.algolianet.com
