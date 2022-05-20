@@ -3,7 +3,7 @@
 # Gamma Entertainment
 #  - Last checked: 16.04.2022 - .algolianet.com
 #  - Last checked: 12.05.2022 - .algolia.net
-#  - Last checked: 20.05.2022 - .mixedx.com
+#  - Last checked: 20.05.2022 - .mixedx.com, .zerotolerancefilms.com
 .21naturals.com>.algolianet.com
 .21naturals.com>.algolia.net
 .21sextreme.com>.algolianet.com
@@ -30,3 +30,5 @@
 .touchmywife.com>.algolia.net
 .wicked.com>.algolianet.com
 .wicked.com>.algolia.net
+.zerotolerancefilms.com>.algolianet.com
+.zerotolerancefilms.com>.algolia.net
