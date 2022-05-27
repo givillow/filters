@@ -26,7 +26,6 @@
 !	gitlab.com * 3p-script noop
 !	interestingengineering.com * 3p-frame noop
 !	interestingengineering.com * 3p-script noop
-!	racingnews365.nl * 3p-script noop
 !	magazine.teufelaudio.nl * 3p-script noop
 !	www.trouw.nl * 3p-script noop
 
@@ -43,8 +42,6 @@
 ! [dynamic filtering]
 !	www.allekabels.nl * 3p-script noop
 ! [/dynamic filtering]
-!www.allekabels.nl##.js_close-it.overlay
-!www.allekabels.nl##.corona-popup-holder
 @@||www.allekabels.nl.cdn.cloudflare.net^$font,domain=allekabels.nl
 @@||www.allekabels.nl.cdn.cloudflare.net^$xhr,domain=allekabels.nl
 
@@ -58,7 +55,7 @@
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.armbian.com#@#.cookiebanner
+armbian.com#@#.cookiebanner
 
 ! 2021-05-21 https://arstechnica.com
 ! [dynamic filtering]
@@ -84,9 +81,9 @@ www.armbian.com#@#.cookiebanner
 ! [dynamic filtering]
 !	www.bol.com * 3p-script noop
 ! [/dynamic filtering]
-www.bol.com##wsp-modal-window
-www.bol.com##+js(no-setTimeout-if, function(){t.apply(void 0,r),n=null})
-www.bol.com##+js(remove-class, modal--is-open, body)
+bol.com##wsp-modal-window
+bol.com##+js(no-setTimeout-if, function(){t.apply(void 0,r),n=null})
+bol.com##+js(remove-class, modal--is-open, body)
 
 ! 2021-05-20, 2021-09-29 https://www.buienalarm.nl
 ! [dynamic filtering]
@@ -116,8 +113,8 @@ www.bol.com##+js(remove-class, modal--is-open, body)
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.coolblue.nl##.cookie
-www.coolblue.nl##.overflow--hidden:style(overflow: visible !important;)
+coolblue.nl##.cookie
+coolblue.nl##.overflow--hidden:style(overflow: visible !important;)
 
 ! 2021-05-24 https://beeldbank.cultureelerfgoed.nl
 ! [dynamic filtering]
@@ -134,13 +131,14 @@ www.coolblue.nl##.overflow--hidden:style(overflow: visible !important;)
 @@||discord.com^$media,1p
 @@||gateway.discord.gg^$websocket,domain=discord.com
 
-! 2021-05-21 https://community.letsencrypt.org, https://forums.plex.tv, https://vaultwarden.discourse.group
+! 2021-05-21, 2022-04-30 https://community.letsencrypt.org, https://forums.plex.tv, https://vaultwarden.discourse.group, https://forums.zwift.com
 ! [dynamic filtering]
 !	community.letsencrypt.org * 3p-script noop
 !	forums.plex.tv * 3p-script noop
 !	vaultwarden.discourse.group * 3p-script noop
+!	forums.zwift.com * 3p-script noop
 ! [/dynamic filtering]
-@@||hosted-by-discourse.com^$xhr,domain=community.letsencrypt.org|forums.plex.tv|vaultwarden.discourse.group
+@@||hosted-by-discourse.com^$xhr,domain=community.letsencrypt.org|forums.plex.tv|vaultwarden.discourse.group|forums.zwift.com
 
 ! 2021-05-20 https://www.dropbox.com
 ! [dynamic filtering]
@@ -149,30 +147,36 @@ www.coolblue.nl##.overflow--hidden:style(overflow: visible !important;)
 @@||cfl.dropboxstatic.com^$xhr,domain=dropbox.com
 @@||www-env.dropbox-dns.com^$xhr,domain=dropbox.com
 
-! 2021-05-20 https://www.dumpert.nl
+! 2021-05-20, 2022-04-28 https://www.dumpert.nl
 ! [dynamic filtering]
+!	www.dumpert.nl * 3p-frame noop
 !	www.dumpert.nl * 3p-script noop
 ! [/dynamic filtering]
-www.dumpert.nl##.full-ad-block
-www.dumpert.nl##[class^="ads_container--"]
+dumpert.nl##.full-ad-block
+dumpert.nl##[class^="ads_container--"]
 @@||media.dumpert.nl^$media,1p
 @@||player.agnoplay.com^$xhr,domain=dumpert.nl
+! Didomi CMP
+||sdk.privacy-center.org^$script,redirect=noop.js,domain=www.dumpert.nl,important
 
-! 2021-05-24 https://www.epicgames.com
+! 2021-05-24, 2022-05-27 https://www.epicgames.com, https://store.epicgames.com
 ! [dynamic filtering]
 !	www.epicgames.com * 3p-frame noop
 !	www.epicgames.com * 3p-script noop
+!	store.epicgames.com * 3p-script noop
 ! [/dynamic filtering]
 @@||e15203.dscb.akamaiedge.net^$xhr,domain=epicgames.com
 @@||e15203.b.akamaiedge.net^$xhr,domain=epicgames.com
+@@||store.epicgames.com.cdn.cloudflare.net^$xhr,domain=store.epicgames.com
+@@||talon-service-prod.ecosec.on.epicgames.com.cdn.cloudflare.net^$xhr,domain=epicgames.com
 
 ! 2021-05-20 https://www.facebook.com
 ! [dynamic filtering]
 !	www.facebook.com * 3p-script noop
 ! [/dynamic filtering]
 ! [check] find a way to skip cookies
-www.facebook.com##div[data-testid="cookie-policy-dialog"]
-www.facebook.com##.uiLayer
+facebook.com##div[data-testid="cookie-policy-dialog"]
+facebook.com##.uiLayer
 @@||xx.fbcdn.net^$xhr,domain=facebook.com
 
 ! 2021-05-24 https://filejoker.net
@@ -190,7 +194,7 @@ filejoker.net###tariffs,#secure,#payment-icons
 ! [dynamic filtering]
 !	www.flightradar24.com * 3p-script noop
 ! [/dynamic filtering]
-www.flightradar24.com##+js(remove-class, has-banner, body.has-banner, stay)
+flightradar24.com##+js(remove-class, has-banner, body.has-banner, stay)
 
 ! 2021-11-16 https://www.fia.com
 ! [dynamic filtering]
@@ -233,15 +237,16 @@ www.flightradar24.com##+js(remove-class, has-banner, body.has-banner, stay)
 @@||a588eba61f0fe11e98296122db75ecc3-166728206.us-east-1.elb.amazonaws.com^$xhr,domain=gfycat.com
 @@||gfycat.com^$media,1p
 
-! 2021-05-22 https://www.gog.com
+! 2021-05-22, 2021-06-23, 2021-12-05, 2022-05-27 https://www.gog.com, https://support.gog.com
 ! [dynamic filtering]
 !	www.gog.com * 3p-frame noop
 !	www.gog.com * 3p-script noop
+!	support.gog.com * 3p-script noop
 ! [/dynamic filtering]
 @@||www4-static.gog-statics.com^$font,domain=gog.com
-@@||a1883.b.akamai.net^$xhr,domain=gog.com
-@@||a1915.b.akamai.net^$xhr,domain=gog.com
+@@||b.akamai.net^$xhr,domain=gog.com
 @@||e11072.b.akamaiedge.net^$xhr,domain=gog.com
+@@||maxcdn.bootstrapcdn.com^$font,domain=support.gog.com
 
 ! 2021-05-20 https://www.google.nl
 @@||www.gstatic.com^$xhr,domain=google.nl
@@ -255,9 +260,9 @@ www.flightradar24.com##+js(remove-class, has-banner, body.has-banner, stay)
 
 ! 2021-05-17, 2021-08-14 https://photos.google.com, https://stadia.google.com, https://youtube.googleapis.com, https://www.youtube.com
 ! require scripts and frames
-www.youtube.com###clarify-box,ytd-clarification-renderer,ytd-inline-survey-renderer,ytd-rich-shelf-renderer
-www.youtube.com##.dismissible:upward(ytd-rich-section-renderer)
-www.youtube.com##ytd-compact-promoted-item-renderer:upward(ytd-rich-section-renderer)
+youtube.com###clarify-box,ytd-clarification-renderer,ytd-inline-survey-renderer,ytd-rich-shelf-renderer
+youtube.com##.dismissible:upward(ytd-rich-section-renderer)
+youtube.com##ytd-compact-promoted-item-renderer:upward(ytd-rich-section-renderer)
 @@||lh3.googleusercontent.com^$media,domain=photos.google.com|stadia.google.com|youtube.googleapis.com
 @@||lh3.googleusercontent.com^$xhr,domain=photos.google.com
 !@@||youtube.googleapis.com^$xhr,domain=photos.google.com
@@ -302,7 +307,7 @@ nl.hardware.info##.frontpage__sidebar
 ! [dynamic filtering]
 !	www.instagram.com * 3p-script noop
 ! [/dynamic filtering]
-www.instagram.com##div[role='presentation']
+instagram.com##div[role='presentation']
 
 ! 2021-05-19 https://isthereanydeal.com
 ! [dynamic filtering]
@@ -322,7 +327,7 @@ www.instagram.com##div[role='presentation']
 ! [dynamic filtering]
 !	www.last.fm * 3p-script noop
 ! [/dynamic filtering]
-www.last.fm##.subscribe-cta
+last.fm##.subscribe-cta
 @@||lastfm.cbsi.map.fastly.net^$xhr,domain=last.fm
 
 ! 2021-05-20 https://www.lc.nl
@@ -492,7 +497,7 @@ www.last.fm##.subscribe-cta
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.otrium.nl##div[data-testid="accept-cookie"]
+otrium.nl##div[data-testid="accept-cookie"]
 @@||api.otrium.com^$xhr,domain=otrium.nl
 
 ! 2021-05-22 https://accounts.paradoxplaza.com
@@ -537,6 +542,14 @@ webwinkel.poiesz-supermarkten.nl##.popup:upward(1)
 @@||e81204.dscb.akamaiedge.net^$xhr,domain=rabobank.nl
 @@||e82494.dscb.akamaiedge.net^$xhr,domain=bankieren.rabobank.nl
 @@||e82494.dscb.akamaiedge.net^$font,domain=bankieren.rabobank.nl
+
+! 2021-11-13, 2022-03-19, 2022-05-21 https://racingnews365.nl
+! [dynamic filtering]
+!	racingnews365.nl * 3p-script noop
+! [/dynamic filtering]
+! firefox tracking protection blocks reactions on racingnews365.nl
+racingnews365.nl##.app-install-banner,.breakingbar,.dl-modal,.domain-switch-trigger,.dossier-wrapper
+racingnews365.nl##h3:has-text(Ook interessant:):upward(div)
 
 ! 2021-05-20 https://www.reddit.com
 ! [dynamic filtering]
@@ -593,12 +606,20 @@ sitepoint.com###community-ad-unit,#job_ad_list,.roller-door-placeholder
 @@||http-external-1921751985.us-east-1.elb.amazonaws.com^$xhr,domain=strava.com
 @@||d3u3hkafyj3iak.cloudfront.net^$xhr,domain=strava.com
 
+! 2022-05-27 https://www.techradar.com
+! [dynamic filtering]
+!	www.techradar.com * 3p-script noop
+! [/dynamic filtering]
+techradar.com##.ad-unit,.dfp-leaderboard-container,.hawk-nest,.van_vid_carousel
+@@||pubcast-files.remixd.com^$xhr,domain=techradar.com
+@@||tags.remixd.com^$xhr,domain=techradar.com
+
 ! 2021-05-20 https://www.telegraaf.nl
 ! [dynamic filtering]
 !	www.telegraaf.nl * 3p-script noop
 ! [/dynamic filtering]
 ! [check] a way to skip cookies, video player added by "agnoplayer.js"
-www.telegraaf.nl##.WebshopWidget__container
+telegraaf.nl##.WebshopWidget__container
 @@||sdk.privacy-center.org^$script,domain=telegraaf.nl
 @@||player.agnoplay.com^$xhr,domain=telegraaf.nl
 @@||content.tmgvideo.nl^$xhr,domain=telegraaf.nl
@@ -675,6 +696,13 @@ dailybuzz.nl#@#.vjs-share
 @@||e15977.dscb.akamaiedge.net^$xhr,domain=ziggogo.tv
 @@||live.dyncdn.horizon.tv^$xhr,domain=ziggogo.tv
 
+! 2022-02-06, 2022-02-09, 2022-03-31 https://zwiftinsider.com
+! [dynamic filtering]
+!	zwiftinsider.com * 3p-script noop
+! [/dynamic filtering]
+zwiftinsider.com##.pps-popup
+@@||public-api.wordpress.com^$xhr,domain=zwiftinsider.com
+
 
 ! ############################## ########## ############################## !
 ! ############################## PRON BEGIN ############################## !
@@ -691,7 +719,9 @@ dailybuzz.nl#@#.vjs-share
 !	www.hentaiprosnetwork.com * 3p-script noop
 !	www.milehighmedia.com * 3p-script noop
 !	www.milfed.com * 3p-script noop
+!	www.mofos.com * 3p-script noop
 !	www.mofosnetwork.com * 3p-script noop
+!	www.mypervyfamily.com * 3p-script noop
 !	www.propertysex.com * 3p-script noop
 !	www.realitykings.com * 3p-script noop
 !	www.squirted.com * 3p-script noop
@@ -703,29 +733,35 @@ dailybuzz.nl#@#.vjs-share
 ! www.doghousedigital.com & www.sweetsinner.com has duplicated content in www.milehighmedia.com
 ! www.mofos.com has duplicated content in www.mofosnetwork.com
 
-! 2020-12-29 https://www.babes.com, https://www.bellesafilms.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
+! 2020-12-29 https://www.babes.com, https://www.bellesafilms.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofos.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
 ! age-restriction
-babes.com,digitalplayground.com,doghousedigital.com,erito.com,hentaiprosnetwork.com,milehighmedia.com,milfed.com,mofosnetwork.com,realitykings.com,squirted.com,sweetsinner.com,trueamateurs.com,twistys.com##.fOVgeD,.iWtMlW
+babes.com,digitalplayground.com,doghousedigital.com,erito.com,milehighmedia.com,milfed.com,mofos.com,mofosnetwork.com,realitykings.com,squirted.com,sweetsinner.com,trueamateurs.com,twistys.com##.fOVgeD,.iWtMlW
 ! join (bottom, top, slider)
-babes.com,www.bellesafilms.com,brazzers.com,digitalplayground.com,doghousedigital.com,erito.com,hentaiprosnetwork.com,milehighmedia.com,milfed.com,mofosnetwork.com,propertysex.com,realitykings.com,squirted.com,sweetsinner.com,trueamateurs.com,twistys.com##.sc-1xljrhb-0
-bellesafilms.com,www.erito.com,hentaiprosnetwork.com,mofosnetwork.com,trueamateurs.com##.jTDHcX
-hentaiprosnetwork.com,realitykings.com##.sc-1aevsf6-0
+babes.com,brazzers.com,digitalplayground.com,doghousedigital.com,erito.com,hentaiprosnetwork.com,milehighmedia.com,milfed.com,mofos.com,mofosnetwork.com,propertysex.com,realitykings.com,squirted.com,sweetsinner.com,trueamateurs.com,twistys.com##.sc-1xljrhb-0
 
-! 2021-05-16 https://www.babes.com, https://www.bellesafilms.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
-@@||site-api.project1service.com^$xhr,domain=babes.com|bellesafilms.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
-@@||prog-public-ec.project1content.com^$media,domain=babes.com|bellesafilms.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
+! 2021-05-16, 2022-05-19 https://www.babes.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofos.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
+@@||site-api.project1service.com^$xhr,domain=babes.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofos.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
+@@||prog-public-ht.project1content.com^$media,domain=babes.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofos.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
+@@||onenavigation-ht.project1content.com^$xhr,domain=babes.com|brazzers.com|digitalplayground.com|doghousedigital.com|hentaiprosnetwork.com|realitykings.com|milehighmedia.com|sweetsinner.com|twistys.com
 
-! 2022-05-19
-@@||prog-public-ht.project1content.com^$media,domain=brazzers.com|digitalplayground.com|erito.com|realitykings.com|milehighmedia.com|milfed.com|mofosnetwork.com|propertysex.com|trueamateurs.com|twistys.com
-@@||onenavigation-ht.project1content.com^$xhr,domain=brazzers.com|digitalplayground.com|realitykings.com|milehighmedia.com|twistys.com
+# hide fake play button
+babes.com,bellesafilms.com,doghousedigital.com,erito.com,hentaiprosnetwork.com,milehighmedia.com,milfed.com,mofos.com,mofosnetwork.com,propertysex.com,realitykings.com,squirted.com,sweetsinner.com,trueamateurs.com,twistys.com##.cLzZIr
 
-! 2021-07-28, 2022-02-06, 2022-05-19 https://www.brazzers.com
-brazzers.com##a[href="/joinf"]
-$removeparam=trackEvent,domain=brazzers.com
-@@||oneplayer.project1content.com^$xhr,domain=www.brazzers.com
+! 2021-07-28, 2022-02-06, 2022-05-19 https://www.brazzers.com, https://www.digitalplayground.com
+!brazzers.com##a[href="/joinf"]
+brazzers.com##.flickity-slider:upward(.hAewsL)
+@@||oneplayer.project1content.com^$xhr,domain=brazzers.com|digitalplayground.com
 
 ! 2022-05-19 https://www.realitykings.com
 realitykings.com##.flickity-slider:upward(.hmIGxL)
+
+! 2022-05-20 https://www.propertysex.com
+! ignore filter to keep loading images frames on the category pages
+babes.com,bellesafilms.com,brazzers.com,digitalplayground.com,erito.com,milehighmedia.com,milfed.com,mofos.com,mofosnetwork.com,propertysex.com,realitykings.com,squirted.com,sweetsinner.com,trueamateurs.com##.iPzrBX:upward(.sc-1fep8qc-0):not(:has(img[src*="ategor"]))
+twistys.com##.iPzrBX:upward(.sc-1deoyo3-0):not(:has(img[src*="ategor"]))
+hentaiprosnetwork.com##.cuTOra,.jTDHcX,.krFhOt:not(:has(img[src*="ategor"]))
+doghousedigital.com,milehighmedia.com,sweetsinner.com##.bdszOu:upward(.sc-1fep8qc-0):not(:has(img[src*="ategor"]))
+milfed.com##.fccLt,.hXDxGw:upward(.sc-1fep8qc-0):not(:has(img[src*="ategor"]))
 
 
 !!!! AMA Multimedia !!!!!
@@ -741,13 +777,12 @@ realitykings.com##.flickity-slider:upward(.hmIGxL)
 !	tiny4k.com * 3p-script noop
 ! [/dynamic filtering]
 
-! 2021-05-16, 2021-09-24, 2022-05-19 https://cum4k.com, https://exotic4k.com, https://holed.com, https://lubed.com, https://passion-hd.com, https://pornpros.com, https://povd.com, https://puremature.com, https://spyfam.com, https://tiny4k.com
-cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com##.join
-cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com###disclaimer,.payment-popup
-cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com##.join-btn-massive:upward(1)
+! 2021-05-16, 2021-09-24, 2022-05-19 https://baeb.com, https://cum4k.com, https://exotic4k.com, https://holed.com, https://lubed.com, https://passion-hd.com, https://pornpros.com, https://povd.com, https://puremature.com, https://spyfam.com, https://tiny4k.com
+baeb.com,cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com###disclaimer,.join,.payment-popup,.t2019-button,.t2019-format
+baeb.com,cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com##.join-btn-massive:upward(1)
 cum4k.com,holed.com,lubed.com,passion-hd.com,povd.com,puremature.com,tiny4k.com###sale-special-placeholder
-@@||cdn-videos.r1.cdn.pornpros.com^$media,domain=cum4k.com|exotic4k.com|holed.com|lubed.com|passion-hd.com|pornpros.com|povd.com|puremature.com|spyfam.com|tiny4k.com
-@@||d1idtz7mlshsvc.cloudfront.net^$font,domain=cum4k.com|exotic4k.com|holed.com|lubed.com|passion-hd.com|pornpros.com|povd.com|puremature.com|spyfam.com|tiny4k.com
+@@||cdn-videos.r1.cdn.pornpros.com^$media,domain=baeb.com|cum4k.com|exotic4k.com|holed.com|lubed.com|passion-hd.com|pornpros.com|povd.com|puremature.com|spyfam.com|tiny4k.com
+@@||d1idtz7mlshsvc.cloudfront.net^$font,domain=baeb.com|cum4k.com|exotic4k.com|holed.com|lubed.com|passion-hd.com|pornpros.com|povd.com|puremature.com|spyfam.com|tiny4k.com
 
 
 !!!! Mad Cheddar !!!!!
@@ -755,54 +790,20 @@ cum4k.com,holed.com,lubed.com,passion-hd.com,povd.com,puremature.com,tiny4k.com#
 !	n.a.
 ! [/dynamic filtering]
 
-! 2021-05-21, 2021-05-16, 2021-11-21 https://www.deeper.com, https://www.blacked.com, https://www.blackedraw.com, https://www.slayed.com, https://www.tushy.com, https://www.tushyraw.com, https://www.vixen.com
-www.deeper.com,www.blacked.com,www.blackedraw.com,www.slayed.com,www.tushy.com,www.tushyraw.com,www.vixen.com##div[data-test-component="TopBanner"]
-www.deeper.com,www.blacked.com,www.blackedraw.com,www.slayed.com,www.tushy.com,www.tushyraw.com,www.vixen.com##header:style(top: 0 !important;)
-www.deeper.com,www.blacked.com,www.blackedraw.com,www.slayed.com,www.tushy.com,www.tushyraw.com,www.vixen.com##div[data-test-component="TopBanner"]:upward(body):style(padding-top: 0 !important;)
-@@||ssl-cdn.com^$media,domain=deeper.com|blacked.com|blackedraw.com|slayed.com|tushy.com|tushyraw.com|vixen.com
+! 2021-05-21, 2021-05-16, 2021-11-21, 2022-05-19 https://www.deeper.com, https://www.blacked.com, https://www.blackedraw.com, https://www.slayed.com, https://www.tushy.com, https://www.tushyraw.com, https://www.vixen.com
+deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##header:style(top: 0 !important;)
+deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##div[data-test-component="TopBanner"]
+deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##div[data-test-component="TopBanner"]:upward(body):style(padding-top: 0 !important;)
+deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##[data-test-component="SignUpButton"]
+deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##[data-test-component="DownloadArea"]
 
-
-!!!! Paper Street Media !!!!!
-! [dynamic filtering]
-!	www.analmom.com * 3p-frame noop
-!	www.analmom.com * 3p-script noop
-!	www.exxxtrasmall.com * 3p-frame noop
-!	www.exxxtrasmall.com * 3p-script noop
-!	www.familystrokes.com * 3p-frame noop
-!	www.familystrokes.com * 3p-script noop
-!	www.pervmom.com * 3p-frame noop
-!	www.pervmom.com * 3p-script noop
-!	www.mylf.com * 3p-frame noop
-!	www.mylf.com * 3p-script noop
-!	www.shoplyftermylf.com * 3p-frame noop
-!	www.shoplyftermylf.com * 3p-script noop
-!	www.sislovesme.com * 3p-frame noop
-!	www.sislovesme.com * 3p-script noop
-!	www.teamskeet.com * 3p-frame noop
-!	www.teamskeet.com * 3p-script noop
-!	www.thickumz.com * 3p-frame noop
-!	www.thickumz.com * 3p-script noop
-! [/dynamic filtering]
-
-! www.exxxtrasmall.com has duplicated content in www.teamskeet.com
-
-! 2021-04-17, 2021-06-10, 2021-07-15, 2021-12-29, 2022-02-05 https://www.analmom.com, https://www.exxxtrasmall.com, https://www.familystrokes.com, https://www.pervmom.com, https://www.shoplyftermylf.com, https://www.sislovesme.com, https://www.thickumz.com
-analmom.com,exxxtrasmall.com,familystrokes.com,pervmom.com,shoplyftermylf.com,sislovesme.com,thickumz.com##.formwrapper,.sub-footer
-analmom.com,exxxtrasmall.com,familystrokes.com,pervmom.com,shoplyftermylf.com,sislovesme.com,thickumz.com##.getaccess:upward(1)
-analmom.com,exxxtrasmall.com,familystrokes.com,pervmom.com,shoplyftermylf.com,sislovesme.com##.coming-soon-thumb:upward(.thumbwrap)
-
-! 2021-05-17 https://www.mylf.com, https://www.teamskeet.com
-www.mylf.com,www.teamskeet.com##.join-btn,.video-page-iframe
-@@||store2.psmcdn.net^$xhr,domain=mylf.com|teamskeet.com
-
-! 2021-05-16 https://www.exxxtrasmall.com, https://www.familystrokes.com, https://www.pervmom.com, https://www.shoplyftermylf.com, https://www.sislovesme.com, https://www.thickumz.com
-@@||store.psmcdn.net^$xhr,domain=analmom.com|exxxtrasmall.com|familystrokes.com|pervmom.com|shoplyftermylf.com|sislovesme.com|thickumz.com
-
-! 2022-02-05 https://www.shoplyftermylf.com
-shoplyftermylf.com##.disclaimer-modal-wrapper
-
-! 2022-02-05 https://www.thickumz.com
-thickumz.com##.join-link
+@@||cdn.blacked.com^$media,1p
+@@||cdn.blackedraw.com^$media,1p
+@@||cdn.deeper.com^$media,1p
+@@||cdn.slayed.com^$media,1p
+@@||cdn.tushy.com^$media,1p
+@@||cdn.tushyraw.com^$media,1p
+@@||cdn.vixen.com^$media,1p
 
 
 !!!! Gamma Entertainment !!!!!
@@ -817,67 +818,83 @@ thickumz.com##.join-link
 !	www.evilangel.com * 3p-script noop
 !	www.famedigital.com * 3p-script noop
 !	www.fantasymassage.com * 3p-script noop
+!	www.girlfriendsfilms.com * 3p-script noop
 !	www.girlsway.com * 3p-script noop
 !	www.immorallive.com * 3p-script noop
+!	www.lezcuties.com * 3p-script noop
+!	www.mixedx.com * 3p-script noop
+!	www.mommysboy.com * 3p-script noop
+!	www.mypervyfamily.com * 3p-script noop
 !	www.nurumassage.com 3p-script noop
 !	www.puretaboo.com * 3p-script noop
+!	www.roccosiffredi.com * 3p-script noop
 !	www.touchmywife.com * 3p-script noop
 !	www.wicked.com * 3p-script noop
 !	www.xempire.com * 3p-script noop
+!	www.zerotolerancefilms.com * 3p-script noop
 ! [/dynamic filtering]
 
-! 2021-01-03, 2021-08-09, 2022-01-01 https://www.21naturals.com, https://www.21sextreme.com, https://www.blowpass.com, https://www.burningangel.com, https://www.devilsfilm.com, https://www.evilangel.com, https://www.famedigital.com, https://www.fantasymassage.com, https://www.immorallive.com, https://www.nurumassage.com, https://www.wicked.com, https://www.xempire.com
-21naturals.com,21sextreme.com,blowpass.com,burningangel.com,devilsfilm.com,evilangel.com,famedigital.com,fantasymassage.com,immorallive.com,nurumassage.com,touchmywife.com,wicked.com,xempire.com###PromoBannerOverlay
+! www.lezcuties.com has duplicated content in www.21sextury.com
+
+! 2021-01-03, 2021-08-09, 2021-12-27, 2022-01-01, 2022-05-20 https://www.21naturals.com, https://www.21sextreme.com, https://www.21sextury.com, https://www.blowpass.com, https://www.burningangel.com, https://www.darkx.com, https://www.devilsfilm.com, https://www.eroticax.com, https://www.evilangel.com, https://www.famedigital.com, https://www.fantasymassage.com, https://www.girlfriendsfilms.com, https://www.girlsway.com, https://www.hardx.com, https://www.immorallive.com, https://www.lesbianx.com, https://www.lezcuties.com, https://www.mixedx.com, https://www.mommysboy.com, https://www.mypervyfamily.com, https://www.nurumassage.com, https://www.puretaboo.com, https://www.roccosiffredi.com, https://www.touchmywife.com, https://www.wicked.com, https://www.xempire.com, https://www.zerotolerancefilms.com
+21naturals.com,21sextreme.com,21sextury.com,blowpass.com,burningangel.com,darkx.com,devilsfilm.com,eroticax.com,evilangel.com,famedigital.com,fantasymassage.com,girlfriendsfilms.com,girlsway.com,hardx.com,immorallive.com,lesbianx.com,lezcuties.com,mixedx.com,mommysboy.com,mypervyfamily.com,nurumassage.com,puretaboo.com,roccosiffredi.com,touchmywife.com,wicked.com,xempire.com,zerotolerancefilms.com###PromoBannerOverlay
+
+! 2021-05-16, 2021-08-09, 2022-05-20 https://www.21naturals.com, https://www.21sextreme.com, https://www.21sextury.com, https://www.blowpass.com, https://www.burningangel.com, https://www.devilsfilm.com, https://www.evilangel.com, https://www.famedigital.com, https://www.fantasymassage.com, https://www.girlsway.com, https://www.immorallive.com, https://www.lezcuties.com, https://www.mypervyfamily.com, https://www.nurumassage.com, https://www.puretaboo.com, https://www.roccosiffredi.com, https://www.wicked.com
+@@||algolianet.com^$xhr,domain=wicked.com
+!@@||algolia.net^$xhr,domain=wicked.com
+@@||videothumb.gammacdn.com^$media,domain=21naturals.com|21sextreme.com|21sextury.com|blowpass.com|burningangel.com|devilsfilm.com|evilangel.com|famedigital.com|fantasymassage.com|girlfriendsfilms.com|girlsway.com|immorallive.com|lezcuties.com|mommysboy.com|nurumassage.com|puretaboo.com|roccosiffredi.com|wicked.com
+@@||trailers-fame.gammacdn.com^$media,domain=21naturals.com|21sextury.com|21sextreme.com|burningangel.com|devilsfilm.com|famedigital.com|fantasymassage.com|girlfriendsfilms.com|girlsway.com|lezcuties.com|mommysboy.com|nurumassage.com|puretaboo.com|roccosiffredi.com|wicked.com
+@@||free-at-assets.gammacdn.com^$media,domain=adulttime.com
+@@||trailers-openlife.gammacdn.com^$media,domain=blowpass.com|immorallive.com
+@@||trailers-evilangel.gammacdn.com^$media,domain=evilangel.com
+
+! 2021-09-12, 2022-01-01, 2022-05-20 https://www.darkx.com, https://www.eroticax.com, https://www.hardx.com, https://www.lesbianx.com, https://www.lezcuties.com, https://www.mixedx.com, https://www.mommysboy.com, https://www.mypervyfamily.com, https://www.nurumassage.com, https://www.touchmywife.com, https://www.zerotolerancefilms.com
+21naturals.com,21sextury.com,darkx.com,eroticax.com,fantasymassage.com,hardx.com,lesbianx.com,lezcuties.com,mixedx.com,mommysboy.com,mypervyfamily.com,nurumassage.com,roccosiffredi.com,touchmywife.com,zerotolerancefilms.com##.promobar,.WarningOverlay-BackgroundBox
+@@||videothumb.gammacdn.com^$media,domain=darkx.com|eroticax.com|hardx.com|lesbianx.com|mixedx.com|mypervyfamily.com|touchmywife.com|xempire.com|zerotolerancefilms.com
+@@||trailers-fame.gammacdn.com^$media,domain=mixedx.com|mypervyfamily.com|touchmywife.com|zerotolerancefilms.com
+@@||trailers-openlife.gammacdn.com^$media,domain=darkx.com|eroticax.com|hardx.com|lesbianx.com|xempire.com
+
+! RECOMMENDED VIDEOS
+@@||client-rapi.recombee.us^$xhr,domain=21naturals.com|21sextreme.com|21sextury.com|burningangel.com|darkx.com|devilsfilm.com|eroticax.com|fantasymassage.com|girlsway.com|hardx.com|lesbianx.com|lezcuties.com|mixedx.com|mommysboy.com|mypervyfamily.com|nurumassage.com|puretaboo.com|roccosiffredi.com|touchmywife.com
 
 ! 2021-05-16 https://www.21sextreme.com, https://www.21naturals.com, https://www.fantasymassage.com, https://www.nurumassage.com
-@@||*/static-parent/Giraffe/TabListContainer/img/1x1Transparent.gif$image,domain=21sextreme.com|21naturals.com|fantasymassage.com|nurumassage.com
+!@@||*/static-parent/Giraffe/TabListContainer/img/1x1Transparent.gif$image,domain=21sextreme.com|21naturals.com|fantasymassage.com|nurumassage.com
 
-! 2021-06-10 https://www.21naturals.com
-21naturals.com##.sidebar,.headerAT,#TopBarJoin
-21naturals.com###header:style(top: 0 !important;)
-21naturals.com###main:style(padding: 50px 10px 0 !important;)
-21naturals.com##.mainContent:style(width: 100% !important;)
-@@||static01-cms-fame.gammacdn.com^$font,domain=21naturals.com
+! 2021-05-18 https://www.adulttime.com
+adulttime.com##.VideoTheater-CTABanner-BackgroundBox
+adulttime.com##+js(remove-attr, href, a.VideoTheater-VideoPlayer, stay)
 
 ! 2021-06-03 https://www.evilangel.com
-evilangel.com###headerJoin
-evilangel.com##+js(no-setTimeout-if, cookieVisible)
+!evilangel.com##+js(no-setTimeout-if, cookieVisible)
 
 ! 2021-06-03 https://www.famedigital.com
 famedigital.com###mainOverlay
 
-! 2021-06-10 https://www.fantasymassage.com
-fantasymassage.com###joinButton,#subcribleForScene
+! 2022-05-25 https://www.girlfriendsfilms.com
+girlfriendsfilms.com###headerTopWrapper,#homeBanner,#homeVideo
 
 ! 2021-08-09, 2022-02-05 https://www.immorallive.com
 immorallive.com###headerLiveShow
-@@||kinesis.us-east-1.amazonaws.com^$xhr,domain=immorallive.com
 
-! 2021-05-16 https://joymii.com
+! 2021-05-16, 2022-05-20 https://joymii.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-joymii.com###emobanner,#promo_bar
+joymii.com###promo_bar
+joymii.com###emobanner:upward(.row)
+@@||maxcdn.bootstrapcdn.com^$font,domain=joymii.com
 @@||trailers-cdn.joymii.com^$media,1p
 
-! 2022-01-01 https://www.touchmywife.com
-touchmywife.com##.WarningOverlay-BackgroundBox
-touchmywife.com##.promobar
-@@||algolianet.com^$xhr,domain=touchmywife.com
-@@||algolia.net^$xhr,domain=touchmywife.com
-@@||videothumb.gammacdn.com^$media,domain=touchmywife.com
-@@||trailers-fame.gammacdn.com^$media,domain=touchmywife.com
-@@||lzzos7clo5.execute-api.us-east-1.amazonaws.com^$xhr,domain=touchmywife.com
-
-! 2021-05-16, 2021-06-22 https://www.vivid.com
-www.vivid.com##figure:upward(.row)
+! 2021-05-16, 2021-06-22, 2022-05-20 https://www.vivid.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+vivid.com###radio-section
+vivid.com##.btn-footer:upward(section)
 @@||content.vivid.com^$media,1p
 
 ! 2021-05-16 https://www.wicked.com
-wicked.com#@#.cookieVisible
-
-! 2021-05-21 https://www.xempire.com
-www.xempire.com###joinButton,.sitesWrapper
+!wicked.com#@#.cookieVisible
 
 ! 2021-09-12 https://www.darkx.com, https://www.eroticax.com, https://www.hardx.com, https://www.lesbianx.com
 ! www.darkx.com, www.eroticax.com, www.hardx.com & www.lesbianx.com has duplicated content in www.xempire.com
@@ -887,20 +904,57 @@ www.xempire.com###joinButton,.sitesWrapper
 !	www.hardx.com * 3p-script noop
 !	www.lesbianx.com * 3p-script noop
 ! [/dynamic filtering]
-@@||trailers-openlife.gammacdn.com^$media,domain=darkx.com|eroticax.com|hardx.com|lesbianx.com
+darkx.com,eroticax.com,hardx.com,lesbianx.com##.networkCTA-Link
 
-! 2021-12-27 https://www.hardx.com
-www.hardx.com###PromoBannerOverlay
+! 2021-05-21, 2022-05-20 https://www.xempire.com
+xempire.com###memberZoneWrapper,#playerJoinButton,.sitesWrapper
 
-! 2021-05-18 https://www.adulttime.com
-@@||tsmkfa364q-dsn.algolia.net^$xhr,domain=adulttime.com
-@@||lzzos7clo5.execute-api.us-east-1.amazonaws.com^$xhr,domain=adulttime.com
 
-! 2021-05-16 https://www.21sextury.com, https://www.evilangel.com, https://www.girlsway.com, https://www.puretaboo.com, https://www.wicked.com
-@@||algolianet.com^$xhr,domain=21sextury.com|evilangel.com|girlsway.com|puretaboo.com|wicked.com
+!!!! Paper Street Media !!!!!
+! [dynamic filtering]
+!	www.analmom.com * 3p-frame noop
+!	www.analmom.com * 3p-script noop
+!	www.dyked.com * 3p-frame noop
+!	www.dyked.com * 3p-script noop
+!	www.exxxtrasmall.com * 3p-frame noop
+!	www.exxxtrasmall.com * 3p-script noop
+!	www.familystrokes.com * 3p-frame noop
+!	www.familystrokes.com * 3p-script noop
+!	www.freeusemilf.com * 3p-frame noop
+!	www.freeusemilf.com * 3p-script noop
+!	www.pervmom.com * 3p-frame noop
+!	www.pervmom.com * 3p-script noop
+!	www.mylf.com * 3p-frame noop
+!	www.mylf.com * 3p-script noop
+!	www.shoplyftermylf.com * 3p-frame noop
+!	www.shoplyftermylf.com * 3p-script noop
+!	www.sislovesme.com * 3p-frame noop
+!	www.sislovesme.com * 3p-script noop
+!	www.teamskeet.com * 3p-frame noop
+!	www.teamskeet.com * 3p-script noop
+!	www.thickumz.com * 3p-frame noop
+!	www.thickumz.com * 3p-script noop
+! [/dynamic filtering]
 
-! 2021-05-16, 2021-08-09 https://www.21naturals.com, https://www.21sextury.com, https://www.21sextreme.com, https://www.blowpass.com, https://www.burningangel.com, https://www.devilsfilm.com, https://www.evilangel.com, https://www.famedigital.com, https://www.fantasymassage.com, https://www.girlsway.com, https://www.immorallive.com, https://www.nurumassage.com, https://www.puretaboo.com, https://www.wicked.com, https://www.xempire.com
-@@||gammacdn.com^$media,domain=21naturals.com|21sextury.com|21sextreme.com|blowpass.com|burningangel.com|devilsfilm.com|evilangel.com|famedigital.com|fantasymassage.com|girlsway.com|immorallive.com|nurumassage.com|puretaboo.com|wicked.com|xempire.com
+! www.dyked.com & www.exxxtrasmall.com has duplicated content in www.teamskeet.com
+
+! 2021-04-17, 2021-06-10, 2021-07-15, 2021-12-29, 2022-02-05, 2022-05-20 https://www.analmom.com, https://www.dyked.com, https://www.exxxtrasmall.com, https://www.familystrokes.com, https://www.freeusemilf.com, https://www.pervmom.com, https://www.shoplyftermylf.com, https://www.sislovesme.com, https://www.thickumz.com
+analmom.com,dyked.com,exxxtrasmall.com,familystrokes.com,freeusemilf.com,pervmom.com,shoplyftermylf.com,sislovesme.com,thickumz.com##.formwrapper,.join-link-section,.sub-footer
+analmom.com,dyked.com,exxxtrasmall.com,familystrokes.com,freeusemilf.com,pervmom.com,shoplyftermylf.com,sislovesme.com,thickumz.com##.getaccess:upward(.newest-movies,.newest-models)
+analmom.com,exxxtrasmall.com,familystrokes.com,pervmom.com,shoplyftermylf.com,sislovesme.com##.coming-soon-thumb:upward(.thumbwrap)
+@@||images.mylfcdn.net^$media,domain=analmom.com|freeusemilf.com|mylf.com|shoplyftermylf.com
+@@||images.psmcdn.net^$media,domain=dyked.com|exxxtrasmall.com|familystrokes.com|mylf.com|pervmom.com|sislovesme.com|teamskeet.com|thickumz.com
+
+! 2021-05-16, 2022-05-20  https://www.analmom.com, https://www.dyked.com, https://www.exxxtrasmall.com, https://www.familystrokes.com, https://www.freeusemilf.com, https://www.pervmom.com, https://www.shoplyftermylf.com, https://www.sislovesme.com
+@@||store.psmcdn.net^$xhr,domain=analmom.com|dyked.com|exxxtrasmall.com|familystrokes.com|freeusemilf.com|pervmom.com|shoplyftermylf.com|sislovesme.com
+
+! 2021-05-17, 2022-05-20 https://www.mylf.com, https://www.teamskeet.com
+mylf.com,teamskeet.com##.right-menu,.video-page-iframe
+mylf.com,teamskeet.com##.join-link:upward(div)
+@@||store2.psmcdn.net^$xhr,domain=mylf.com|teamskeet.com
+
+! 2022-02-05 https://www.shoplyftermylf.com
+shoplyftermylf.com##.disclaimer-modal-wrapper
 
 
 !!!! KB Productions !!!!!
@@ -912,61 +966,28 @@ www.hardx.com###PromoBannerOverlay
 !	tour.trueanal.com * 3p-script noop
 ! [/dynamic filtering]
 
+! 2021-05-16, 2022-05-19 https://tour.allanal.com, https://tour.mariskax.com, https://tour.nympho.com, https://tour.swallowed.com, https://tour.trueanal.com
+tour.allanal.com,tour.mariskax.com,tour.nympho.com,tour.swallowed.com,tour.trueanal.com##.navbar-right
+@@||ssl.hwcdn.net^$media,domain=allanal.com|mariskax.com|nympho.com|swallowed.com|trueanal.com
+
+! 2022-05-20 https://tour.allanal.com, https://tour.nympho.com
+tour.allanal.com,tour.nympho.com##.instant-access,.sub-footer-nav
+@@||use.fontawesome.com^$font,domain=tour.allanal.com|tour.nympho.com
+
+! 2022-05-20 https://tour.mariskax.com, https://tour.swallowed.com, https://tour.trueanal.com
+tour.mariskax.com,tour.swallowed.com,tour.trueanal.com##.content-photo-preview:upward(.container)
+tour.mariskax.com,tour.swallowed.com,tour.trueanal.com##.content-downloads:upward(.container)
+
 ! 2021-06-21 https://tour.mariskax.com
 tour.mariskax.com###holiday-promo-bar,.paypal-popup-wrap
 
-! 2021-05-16, 2022-05-19 https://tour.mariskax.com, https://tour.nympho.com, https://tour.swallowed.com, https://tour.trueanal.com
-tour.allanal.com,tour.mariskax.com,tour.nympho.com,tour.swallowed.com,tour.trueanal.com##.navbar-right
-@@||ssl.hwcdn.net^$media,domain=allanal.com|mariskax.com|nympho.com|swallowed.com|trueanal.com
-@@||maxcdn.bootstrapcdn.com^$font,domain=allanal.com|mariskax.com|nympho.com|swallowed.com|trueanal.com
+! 2022-05-20 https://tour.mariskax.com, https://tour.swallowed.com, 
+tour.mariskax.com,tour.swallowed.com##.join-now-bottom-wrap
+tour.mariskax.com,tour.swallowed.com##.footer-nav:upward(.container)
+@@||maxcdn.bootstrapcdn.com^$font,domain=mariskax.com|swallowed.com
 
-
-!!!! XFC !!!!!
-! [dynamic filtering]
-!	n.a.
-! [/dynamic filtering]
-
-! 2021-06-22 https://deeplush.com, https://nubiles-porn.com
-deeplush.com,nubiles-porn.com##.form-join,.hover-join-form,.header-banner-wrapper,.my-4.container
-
-! 2021-05-16 https://deeplush.com
-@@||images.deeplush.com^$media,1p
-
-! 2021-05-16 https://nubiles-porn.com
-@@||images.nubiles-porn.com^$media,1p
-
-
-!!!! Sansyl !!!!!
-! [dynamic filtering]
-!	n.a.
-! [/dynamic filtering]
-
-! 2021-05-21, 2021-07-24, 2021-12-23 https://www.elegantraw.com
-www.elegantraw.com###confirmationModal,.in.fade.modal-backdrop,.main-banner,.membership-text
-www.elegantraw.com##a[href^="join.php"]
-www.elegantraw.com##.guest-promo-container:upward(1)
-www.elegantraw.com##.row-separator:upward(1):style(margin-top: 70px !important)
-www.elegantraw.com##+js(remove-class, modal-open, body)
-
-
-!!!! SJGP !!!!!
-! [dynamic filtering]
-!	fuckingawesome.com * 3p-script noop
-! [/dynamic filtering]
-
-! 2021-05-16, 2022-05-19 https://fuckingawesome.com
-fuckingawesome.com##.e-overlay,.fp-premium-overlay
-@@||cdn2-videos-ht.fuckingawesome.com^$media,1p
-@@||fonts.gstatic.com^$font,domain=fuckingawesome.com
-
-
-!!!! SARJ !!!!!
-! [dynamic filtering]
-!	www.metartnetwork.com * 3p-script noop
-! [/dynamic filtering]
-
-! 2021-05-17 https://www.metartnetwork.com
-@@||cds.b7w5v7j6.hwcdn.net^$xhr,domain=metartnetwork.com
+! 2022-05-20 https://tour.trueanal.com
+tour.trueanal.com##.footer-mid,.footer-sitemap
 
 
 !!!! BC Media !!!!!
@@ -974,8 +995,9 @@ fuckingawesome.com##.e-overlay,.fp-premium-overlay
 !	n.a.
 ! [/dynamic filtering]
 
-! 2021-05-16, 2021-07-08 https://www.x-art.com
-www.x-art.com##.contentbtnjoin,.promo-bar
+! 2021-05-16, 2021-07-08, 2022-05-20 https://www.x-art.com
+x-art.com##.contentbtnjoin,.promo-bar
+x-art.com##+js(remove-attr, href, a[href$="/join/"])
 
 
 !!!! DirecTech !!!!!
@@ -984,22 +1006,48 @@ www.x-art.com##.contentbtnjoin,.promo-bar
 ! [/dynamic filtering]
 
 ! 2021-05-17 https://www.dogfartnetwork.com
-www.dogfartnetwork.com##.carousel-container.clearfix.row
+dogfartnetwork.com##.carousel-container.clearfix.row
 @@||dogfartnetwork.com^$media,1p
 
 
-!!!! NetLook !!!!!
+!!!! Jules Jordan Video !!!!!
 ! [dynamic filtering]
-!	czechbitch.com * 3p-script noop
-!	czechfantasy.com * 3p-script noop
+!	n.a.
 ! [/dynamic filtering]
 
-! 2021-05-17 https://czechbitch.com, https://czechfantasy.com
-czechbitch.com,czechfantasy.com##.active.modal,.network__bottom-join
-czechbitch.com,czechfantasy.com##+js(remove-attr, style, html)
-czechbitch.com,czechfantasy.com##+js(remove-class, blurred, body.blurred)
-@@||cdn77.czechcash.com^$media,domain=czechbitch.com|czechfantasy.com
-@@||static.v2.paysites.czechcash.com^$font,domain=czechbitch.com|czechfantasy.com
+! 2021-05-16, 2021-07-03 https://www.julesjordan.com
+julesjordan.com##table
+@@||cdnstream2.julesjordan.com^$media,1p
+
+! 2022-05-20 https://www.theassfactory.com
+theassfactory.com##.format_select_menu
+theassfactory.com##+js(remove-attr, href, a[href*="/signup/"])
+
+
+!!!! Lets Doe It !!!!!
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+
+! 2021-05-16, 2021-07-08, 2021-11-25, 2021-12-09, 2022-05-20 https://letsdoeit.com, https://mamacitaz.com
+letsdoeit.com,mamacitaz.com##.fake-play,.partner-offer-bar,#partner-offer-media,#popup-legal_age
+letsdoeit.com,mamacitaz.com##.global-any-carousel-swiper:upward(.section-full)
+letsdoeit.com,mamacitaz.com##+js(run-script, /dist/apps/main.js)
+letsdoeit.com##+js(remove-class, age-gate-visible, html)
+@@||p.cdn.letsdoeit.com^$media,domain=letsdoeit.com|mamacitaz.com
+
+
+!!!! Love Her Feet !!!!!
+! [dynamic filtering]
+!	www.loveherfeet.com * 3p-script noop
+!	www.loveherboobs.com * 3p-script noop
+!	www.shelovesblack.com* 3p-script noop
+! [/dynamic filtering]
+
+! 2021-12-30, 2022-05-20 https://www.loveherboobs.com, https://www.loveherfeet.com, https://www.shelovesblack.com
+loveherboobs.com,loveherfeet.com,shelovesblack.com##.join-now-button,.oneday_bar,.right,.see-more,#warningpopup
+loveherboobs.com,loveherfeet.com,shelovesblack.com##+js(remove-attr, href, a[href*="/signup/"])
+@@||ssl.hwcdn.net^$media,domain=loveherfeet.com|loveherboobs.com|shelovesblack.com
 
 
 !!!! LPF Internet Group !!!!!
@@ -1015,37 +1063,111 @@ czechbitch.com,czechfantasy.com##+js(remove-class, blurred, body.blurred)
 
 ! www.bootyclapxxx.com, www.bootysisters.com, www.fuckfiesta.com, www.fuckinghardcore.com & www.pornstarhardcore.com has duplicated content in www.barelylegal.com
 
-! 2021-06-17 https://www.barelylegal.com
-@@||cdnmansite.metartnetwork.com^$font,domain=barelylegal.com
-@@||cdn.metartnetwork.com^$xhr,domain=barelylegal.com
+! 2021-05-16, 2021-06-17, 2022-05-25 https://www.barelylegal.com, https://www.bootyclapxxx.com, https://www.bootysisters.com, https://www.fuckfiesta.com, https://www.fuckinghardcore.com, https://www.hustler.com, https://www.pornstarhardcore.com
+barelylegal.com,hustler.com##.sc-kigWZE
+barelylegal.com,hustler.com##+js(remove-attr, href, a[href="/signup"], stay)
+@@||cdnmansite.metartnetwork.com^$font,domain=barelylegal.com|bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
+@@||cdn-hustlernetwork.metartnetwork.com^$media,domain=barelylegal.com
+barelylegal.com,hustler.com##+js(addEventListener-defuser, click)
+!@@||cdn.metartnetwork.com^$xhr,domain=bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
 
-! 2021-05-16 https://www.bootyclapxxx.com, https://www.bootysisters.com, https://www.fuckfiesta.com, https://www.fuckinghardcore.com, https://www.hustler.com, https://www.pornstarhardcore.com
-@@||cdnmansite.metartnetwork.com^$font,domain=bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
-@@||cdn.metartnetwork.com^$xhr,domain=bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
 
-
-!!!! Love Her Feet !!!!!
+!!!! NetLook !!!!!
 ! [dynamic filtering]
-!	www.loveherfeet.com * 3p-script noop
-!	www.loveherboobs.com * 3p-script noop
-!	www.shelovesblack.com* 3p-script noop
+!	czechbitch.com * 3p-script noop
+!	czechfantasy.com * 3p-script noop
 ! [/dynamic filtering]
 
-! 2021-12-30 https://www.loveherfeet.com, https://www.loveherboobs.com, https://www.shelovesblack.com
-loveherfeet.com,loveherboobs.com,shelovesblack.com##.oneday_bar,.right,#warningpopup
-@@||ssl.hwcdn.net^$media,domain=loveherfeet.com|loveherboobs.com|shelovesblack.com
+! 2021-05-17 https://czechbitch.com, https://czechfantasy.com
+czechbitch.com,czechfantasy.com##.active.modal,.network__bottom-join,.video-join
+czechbitch.com,czechfantasy.com##+js(remove-attr, style, html)
+czechbitch.com,czechfantasy.com##+js(remove-class, blurred, body.blurred)
+@@||cdn77.czechcash.com^$media,domain=czechbitch.com|czechfantasy.com
+@@||static.v2.paysites.czechcash.com^$font,domain=czechbitch.com|czechfantasy.com
+@@||static.v3.paysites.czechcash.com^$font,domain=czechbitch.com|czechfantasy.com
+
+
+!!!! Radical Entertainment !!!!!
+! [dynamic filtering]
+!	tour.purgatoryx.com * 3p-script noop
+! [/dynamic filtering]
+
+! 2021-12-29, 2022-05-20, 2022-05-26 https://www.bjraw.com https://tour.purgatoryx.com
+bjraw.com##.backdrop,.warning-wrap
+tour.purgatoryx.com###holiday-promo-bar,.social-net-wrap
+@@||use.fontawesome.com^$font,domain=bjraw.com|tour.purgatoryx.com
+@@||ssl.hwcdn.net^$media,domain=bjraw.com|tour.purgatoryx.com
+
+
+!!!! Sansyl !!!!!
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+
+! 2021-05-21, 2021-07-24, 2021-12-23 https://www.elegantraw.com
+elegantraw.com##a[href^="join.php"],#confirmationModal,.in.fade.modal-backdrop,.main-banner,.membership-text
+elegantraw.com##.guest-promo-container:upward(1)
+elegantraw.com##.row-separator:upward(1):style(margin-top: 70px !important)
+elegantraw.com##+js(remove-class, modal-open, body)
+
+! 2022-05-20 https://www.passionxxx.com
+||passionxxx.com/template/images/play.png$image
+passionxxx.com##+js(remove-attr, href, a[href="/site/join"])
+
+
+!!!! SARJ !!!!!
+! [dynamic filtering]
+!	www.metartnetwork.com * 3p-script noop
+! [/dynamic filtering]
+
+! 2021-05-17, 2022-05-20 https://www.metartnetwork.com
+metartnetwork.com##+js(remove-attr, href, a[href="/signup"], stay)
+metartnetwork.com##+js(addEventListener-defuser, click)
+@@||cds.b7w5v7j6.hwcdn.net^$xhr,domain=metartnetwork.com
+@@||cds.j8s4k9c3.hwcdn.net^$font,domain=metartnetwork.com
+
+
+!!!! SJGP !!!!!
+! [dynamic filtering]
+!	fuckingawesome.com * 3p-script noop
+! [/dynamic filtering]
+
+! 2021-05-16, 2022-05-19 https://fuckingawesome.com
+fuckingawesome.com##.e-overlay,.fp-premium-overlay
+@@||maxcdn.bootstrapcdn.com^$font,domain=fuckingawesome.com
+@@||cdnjs.cloudflare.com^$font,domain=fuckingawesome.com
+@@||cdn2-videos-ht.fuckingawesome.com^$media,1p
+
+
+!!!! XFC !!!!!
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+
+! 2021-06-22, 2021-12-29, 2022-05-20 https://anilos.com, https://deeplush.com, https://nubiles-porn.com
+anilos.com,deeplush.com,nubiles-porn.com##.header-banner-wrapper,.hover-join-form,a[href="/join"]
+anilos.com,deeplush.com,nubiles-porn.com##.watch-page-join-header:upward(.container-fluid)
+
+@@||images.anilos.com^$media,1p
+@@||images.deeplush.com^$media,1p
+@@||images.nubiles-porn.com^$media,1p
+
 
 !!!! Individual !!!!!
 
-! 2021-12-30 https://www.familyhookups.com, https://www.metrohd.com, www.shewillcheat.com
-! www.familyhookups.com & www.shewillcheat.com has duplicated content in www.metrohd.com
+! 2021-12-30, 2022-05-20 https://www.familyhookups.com, https://www.metrohd.com, www.shewillcheat.com
 ! [dynamic filtering]
 !	www.familyhookups.com * 3p-script noop
 !	www.metrohd.com * 3p-script noop
 !	www.shewillcheat.com * 3p-script noop
 ! [/dynamic filtering]
+
+! www.familyhookups.com & www.shewillcheat.com has duplicated content in www.metrohd.com
+
 familyhookups.com,metrohd.com,shewillcheat.com##.cLzZIr,.fOVgeD,.iWtMlW,.jTDHcX,.kvhCIH
-shewillcheat.com##.fhQTeR
+familyhookups.com,shewillcheat.com##.fhQTeR
+@@||site-api.project1service.com^$xhr,domain=familyhookups.com|metrohd.com|shewillcheat.com
+@@||prog-public-ht.project1content.com^$media,domain=familyhookups.com|metrohd.com|shewillcheat.com
 
 ! 2021-05-16 https://bangbros.com
 ! [dynamic filtering]
@@ -1058,59 +1180,66 @@ bangbros.com##.btmTrial,.plyrRgt
 ! [dynamic filtering]
 !	www.naughtyamerica.com * 3p-script noop
 ! [/dynamic filtering]
-www.naughtyamerica.com##.footer-join-button,.right-scene
+naughtyamerica.com##.footer-join-button,.right-scene
 @@||videos.naughtycdn.com^$media,domain=naughtyamerica.com
-
-! 2021-05-16, 2021-07-03 https://www.julesjordan.com
-! [dynamic filtering]
-!	n.a.
-! [/dynamic filtering]
-www.julesjordan.com##table
-@@||cdnstream2.julesjordan.com^$media,1p
 
 ! 2021-06-15, 2021-11-25 https://www.private.com
 ! [dynamic filtering]
 !	www.private.com * 3p-script noop
 ! [/dynamic filtering]
-www.private.com##+js(no-setTimeout-if, show_window)
-www.private.com##.banner-join-2019,#pause-zone,#limited-offer,#SCENE-AFTERVIDEO-JOIN,#SCENE-UHD4K-LOGO,.top-promo
+private.com##+js(no-setTimeout-if, show_window)
+private.com##.banner-join-2019,.join,#limited-offer,#pause-zone,#SCENE-AFTERVIDEO-JOIN,#SCENE-UHD4K-LOGO,.top-promo,.zoom
+private.com##+js(remove-attr, href, a[href*="/join?"])
+private.com#@#+js(no-setTimeout-if, prvtoffer)
 ||pcom.st-content.com/images/px.png$image
 @@||pcoms.st-content.com^$media,domain=private.com
 @@||pcom.st-content.com^$media,domain=private.com
 @@||pcom.st-content.com^$font,domain=private.com
 
-! 2021-05-16 https://perfectgonzo.com
+! 2021-05-16, 2022-05-21 https://perfectgonzo.com
 ! [dynamic filtering]
 !	perfectgonzo.com * 3p-script noop
 ! [/dynamic filtering]
 perfectgonzo.com###site1-button
+perfectgonzo.com##+js(remove-attr, href, a[href*="/signup/"])
 @@||trailers-cdn-perfectgonzo.explicithd.com^$media,domain=perfectgonzo.com
 @@||static-cdn-perfectgonzo.explicithd.com^$font,domain=perfectgonzo.com
 
-! 2021-05-16, 2022-05-12 https://www.newsensations.com
+! 2021-05-16, 2022-05-12, 2022-05-21 https://www.newsensations.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.newsensations.com##.download,.dvdMidBanner,.modelBioRight,.sceneRight,#timer
+newsensations.com##.download,.dvdMidBanner,.join,.modelBioRight,.sceneRight,#timer
+newsensations.com##+js(remove-attr, href, a[onclick^="newtload"])
 @@||nsnetworktour.newsensations.com^$media,1p
 
-! 2021-05-16, 2021-08-29 https://www.dorcelclub.com
+! 2021-05-16, 2021-08-29, 2022-05-21 https://www.dorcelclub.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.dorcelclub.com###agreement,iframe,.promo_banner
-www.dorcelclub.com##+js(remove-attr, style, html)
-www.dorcelclub.com##+js(remove-attr, style, body)
-www.dorcelclub.com##+js(remove-class, disclaimer-enabled, body.disclaimer-enabled)
-www.dorcelclub.com##+js(remove-class, promo-banner, body.promo-banner)
+dorcelclub.com###agreement,.btn-dl,iframe,.no-access.photos,.play,.promo_banner
+dorcelclub.com##.no_access:watch-attr(style)
+dorcelclub.com##+js(remove-attr, style, html)
+dorcelclub.com##+js(remove-attr, style, body)
+dorcelclub.com##+js(remove-class, disclaimer-enabled, body.disclaimer-enabled)
+dorcelclub.com##+js(remove-class, promo-banner, body.promo-banner)
 
-! 2021-05-16 https://www.stasyq.com
+! 2021-05-16, 2022-05-21 https://www.stasyq.com
 ! [dynamic filtering]
 !	www.stasyq.com * 3p-script noop
 ! [/dynamic filtering]
 ! enable autoplay permission, instead of "block audio" (media.autoplay.blocking_policy)
-www.stasyq.com##.welcome-banner
+stasyq.com##.log-nav__link--join,.release-control,.welcome-banner
+stasyq.com##+js(no-setTimeout-if, redirectToMembership)
 @@||cdn.stasyq.com^$media,1p
+
+! 2022-05-21 https://www.westcoastproductions.com
+! [dynamic filtering]
+!	www.westcoastproductions.com * 3p-frame noop
+!	www.westcoastproductions.com * 3p-script noop
+! [/dynamic filtering]
+westcoastproductions.com##.membership-cards-container
+@@||cname.empirestores.co^$xhr,domain=westcoastproductions.com
 
 ! 2021-05-16, 2021-07-28, 2022-01-01 https://pornworld.com
 ! [dynamic filtering]
@@ -1122,22 +1251,94 @@ pornworld.com##+js(remove-attr, style, body, stay)
 @@||gtflixtv.com^$media,domain=pornworld.com
 @@||hwnds.ddfstatic.com^$media,domain=pornworld.com
 
-
-! 2021-05-16 https://www.analvids.com
+! 2021-05-16, 2022-05-21 https://www.analvids.com
 ! [dynamic filtering]
 !	www.analvids.com * 3p-script noop
 ! [/dynamic filtering]
-www.analvids.com###agree18
-www.analvids.com##.trial-join-box:upward(1)
-www.analvids.com##+js(remove-class, blur-thumbnails, body.blur-thumbnails)
+analvids.com###agree18,.endscreen 
+analvids.com##.trial-join:upward(div)
+analvids.com##+js(remove-class, blur-thumbnails, body.blur-thumbnails)
 @@||gtflixtv.com^$media,domain=analvids.com
 @@||hwnds.ddfstatic.com^$media,domain=analvids.com
+
+! 2022-05-26 https://pervcity.com
+pervcity.com##.avaiFormate,#consentWindow,.downloadBox,.member-benefits,.onjoin,.paymentArea
+@@||stackpath.bootstrapcdn.com^$font,domain=pervcity.com
+@@||pervcity.com^$media,1p
+
+! 2022-05-27 https://riggsfilms.com
+! [dynamic filtering]
+!	riggsfilms.com * 3p-script noop
+! [/dynamic filtering]
+riggsfilms.com##div[data-animationtype="slideInRight"],div[data-elfsight-widget-id="elfsight-age-verification-1"],.fusion-builder-column-3,.fusion-builder-column-4,.fusion-builder-column-17,.fusion-builder-row-4,.fusion-footer-widget-area
+@@||dssu76qi0lb2l.cloudfront.net^$media,domain=riggsfilms.com
+
+! 2021-12-29, 2022-05-21 https://www.scoreland.com
+! [dynamic filtering]
+!	www.scoreland.com * 3p-script noop
+! [/dynamic filtering]
+scoreland.com###ad,.fourk-ad
+scoreland.com##a[href*="promo"]:upward(div)
+scoreland.com##.ali-stretch:upward(div)
+@@||cdn77.scoreuniverse.com^$media,domain=scoreland.com
+
+! 2021-12-29, 2022-05-21 https://teenmegaworld.net
+! [dynamic filtering]
+!	teenmegaworld.net * 3p-script noop
+! [/dynamic filtering]
+teenmegaworld.net##.big-button,.cookie,#form,#iframe1,.parallax-window,.warning-page
+@@||pub-static-101037.teenmegaworld.com^$media,domain=teenmegaworld.net
+
+! 2021-12-30, 2022-02-17, 2022-05-21 https://hotmilfsfuck.com
+! [dynamic filtering]
+!	hotmilfsfuck.com * 3p-script noop
+! [/dynamic filtering]
+hotmilfsfuck.com##.player-bar,.player-window-play,#warningpopup
+hotmilfsfuck.com##+js(addEventListener-defuser, click)
+@@||hotmilfsfuck.com^$media,1p
+@@||cdnjs.cloudflare.com^$font,domain=hotmilfsfuck.com
+
+! 2021-12-29, 2022-05-21 https://www.modelmediaus.com, https://iframe.videodelivery.net
+! [dynamic filtering]
+!	www.modelmediaus.com * 3p-frame noop
+!	www.modelmediaus.com * 3p-script noop
+! [/dynamic filtering]
+modelmediaus.com###limited-sale-app,.promo-bar,#video-cta-cover,#video-cta-side
+@@||source.modelmediaus.com^$media,1p
+@@||cloudflarestream.com^$xhr,domain=iframe.videodelivery.net
+modelmediaus.com##+js(set, $.magnificPopup.open, noopFunc)
+!modelmediaus.com##+js(no-setTimeout-if, magnificPopup)
+
+! 2021-12-29, 2022-01-01 https://milftrip.com
+! [dynamic filtering]
+!	milftrip.com * 3p-script noop
+! [/dynamic filtering]
+milftrip.com##.footer-banner,.news-center
+milftrip.com##.join-options:upward(div)
+@@||maxcdn.bootstrapcdn.com^$font,domain=milftrip.com
+@@||milftrip.com^$media,1p
+
+
+! 2022-05-20 https://www.frolicme.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+frolicme.com###bannerPopup
+!frolicme.com##div[data-canplaytrailer="false"] 
+! > .jw-controls
+@@||d1442exqiprt72.cloudfront.net^$xhr,domain=frolicme.com
+
+! 2022-05-20 https://ftvgirls.com
+! [dynamic filtering]
+!	n.a.
+! [/dynamic filtering]
+ftvgirls.com###Form
 
 ! 2021-06-21 https://www.pornstarplatinum.com
 ! [dynamic filtering]
 !	www.pornstarplatinum.com * 3p-script noop
 ! [/dynamic filtering]
-www.pornstarplatinum.com##.header-upper,.join-button-full
+pornstarplatinum.com##.header-upper,.join-button-full
 @@||c7m9n4u4.ssl.hwcdn.net^$font,domain=pornstarplatinum.com
 
 ! 2021-05-18 https://www.elegantangel.com
@@ -1145,88 +1346,76 @@ www.pornstarplatinum.com##.header-upper,.join-button-full
 !	www.elegantangel.com * 3p-frame noop
 !	www.elegantangel.com * 3p-script noop
 ! [/dynamic filtering]
-www.elegantangel.com##.membership-cards-container
+elegantangel.com##.membership-cards-container
 
-! 2021-05-06, 2021-09-23 https://tour.topwebmodels.com
+! 2021-05-06, 2021-09-23, 2022-05-20 https://tour.topwebmodels.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
 tour.topwebmodels.com##.announcement-popup,.announcement-wrap,.cta-join-wrap,.modal-backdrop,.warning-wrap
+@@||use.fontawesome.com^$font,domain=tour.topwebmodels.com
+@@||ssl.hwcdn.net^$media,domain=tour.topwebmodels.com
 
 ! 2021-05-16 https://www.spizoo.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.spizoo.com##.NoPromoVersion
+spizoo.com##.NoPromoVersion
 @@||content.spizoo.com^$media,1p
 
-! 2021-05-16, 2021-07-08, 2021-11-25, 2021-12-09 https://letsdoeit.com, https://mamacitaz.com
+! 2021-05-16, 2021-12-29, 2022-05-20 https://www.bang.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-letsdoeit.com,mamacitaz.com##.partner-offer-bar,#partner-offer-media,#popup-legal_age
-letsdoeit.com,mamacitaz.com##+js(run-script, /dist/apps/main.js)
-letsdoeit.com,mamacitaz.com##.fake-play
-letsdoeit.com,mamacitaz.com##.global-any-carousel-swiper:upward(.section-full)
-letsdoeit.com##+js(remove-class, age-gate-visible, html)
-
-! 2021-05-16, 2021-12-29 https://www.bang.com
-! [dynamic filtering]
-!	n.a.
-! [/dynamic filtering]
-www.bang.com##.button-wrapper,#globalAd,.top-announcement
+bang.com##.button-wrapper,#globalAd,.image-overlay,.top-announcement-wrapper
 @@||i.bang.com^$media,1p
 
 ! 2021-05-16 https://www.tugpass.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.tugpass.com###bannerlink,.food-lifeline
-www.tugpass.com##a[href^="https://join"]:upward(.item)
+tugpass.com###bannerlink,.food-lifeline
+tugpass.com##a[href^="https://join"]:upward(.item)
 
-! 2021-05-16 https://wtfpass.com
+! 2021-05-16, 2022-05-20 https://wtfpass.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
+wtfpass.com##.signup-here
 @@||wtfpass.com^$media,1p
 
 ! 2021-05-16, 2021-09-02 https://www.kink.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.kink.com##.info-header,.nag-screen,.promo-join
+kink.com##.info-header,.nag-screen,.promo-join
+@@||cds.d3c5g3k7.hwcdn.net^$font,domain=kink.com
 @@||cdnp.kink.com^$media,1p
 
-! 2021-05-16 https://javhd.com
+! 2021-05-16, 2022-05-20 https://javhd.com
 ! [dynamic filtering]
 !	javhd.com * 3p-script noop
 ! [/dynamic filtering]
+javhd.com##.btn--buy
 javhd.com##+js(remove-class, showWarningPopup, body)
 @@||c4.cdnjav.com^$media,domain=javhd.com
 @@||static.javhd.com^$media,1p
 
-! 2021-05-16 https://alljapanesepass.com
+! 2021-05-16, 2022-05-20 https://alljapanesepass.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
+alljapanesepass.com##.b-player-join,.b-fake-player-bar,.b-fake-player-play_btn,.btn-download
+alljapanesepass.com##+js(remove-attr, href, a[href*="/signup/"])
 alljapanesepass.com##+js(remove-class, showWarningPopup, body)
 
-! 2021-05-16, 2022-05-17 https://cherrypimps.com
+! 2021-07-24, 2022-05-17 https://tour.bamvisions.com
 ! [dynamic filtering]
-!	cherrypimps.com * 3p-script noop
+!	tour.bamvisions.com * 3p-script noop
 ! [/dynamic filtering]
-cherrypimps.com##.call2action,.hero,.member-benefits,.player-bar,.player-window-play
-cherrypimps.com##+js(aeld, click)
-
-! 2021-05-16, 2021-09-28 https://www.teenfidelity.com
-! [dynamic filtering]
-!	www.teenfidelity.com * 3p-script noop
-! [/dynamic filtering]
-www.teenfidelity.com###age-verification-modal,.button,.hero,.join-options,.page-break,.promoBar,.upcoming-model-container
-www.teenfidelity.com###main-carousel:upward(2)
-www.teenfidelity.com##table[style*=" "]:upward(section)
-www.teenfidelity.com##+js(remove-class, hasPromoBar, html)
-@@||tour-cdn.kellymadisonmedia.com^$media,domain=teenfidelity.com
+tour.bamvisions.com###warningpopup
+@@||tour.bamvisions.com^$media,1p
+@@||maxcdn.bootstrapcdn.com/font-awesome/*$font,domain=tour.bamvisions.com
 
 ! 2021-05-16, 2022-05-17 https://www.archangelvideo.com
 ! [dynamic filtering]
@@ -1236,13 +1425,24 @@ archangelvideo.com##.exclusive
 @@||archangelvideo.com^$media,1p
 @@||stackpath.bootstrapcdn.com/font-awesome/*$font,domain=archangelvideo.com
 
-! 2021-07-24, 2022-05-17 https://tour.bamvisions.com
+! 2021-05-16, 2022-05-17, 2022-05-20 https://cherrypimps.com
 ! [dynamic filtering]
-!	tour.bamvisions.com * 3p-script noop
+!	cherrypimps.com * 3p-script noop
 ! [/dynamic filtering]
-tour.bamvisions.com###warningpopup
-@@||tour.bamvisions.com^$media,1p
-@@||maxcdn.bootstrapcdn.com/font-awesome/*$font,domain=tour.bamvisions.com
+cherrypimps.com##.call2action,.hero,.member-benefits,.player-bar,.player-window-play
+cherrypimps.com##+js(addEventListener-defuser, click)
+@@||cdn.cherrypimps.com^$media,1p
+@@||cdnjs.cloudflare.com^$font,domain=cherrypimps.com
+
+! 2021-05-16, 2021-09-28 https://www.teenfidelity.com
+! [dynamic filtering]
+!	www.teenfidelity.com * 3p-script noop
+! [/dynamic filtering]
+teenfidelity.com###age-verification-modal,.button,.hero,.join-options,.page-break,.promoBar,.upcoming-model-container
+teenfidelity.com###main-carousel:upward(2)
+teenfidelity.com##table[style*=" "]:upward(section)
+teenfidelity.com##+js(remove-class, hasPromoBar, html)
+@@||tour-cdn.kellymadisonmedia.com^$media,domain=teenfidelity.com
 
 ! 2021-06-10, 2021-07-03 https://penthousegold.com
 ! [dynamic filtering]
@@ -1255,8 +1455,8 @@ penthousegold.com##.adult-warning,.banner-d,.banner-e,.content-alert,#limited-of
 ! [dynamic filtering]
 !	hentaied.com * 3p-script noop
 ! [/dynamic filtering]
-hentaied.com##+js(no-setTimeout-if, exceptionHook)
 hentaied.com##.endofvideo
+hentaied.com##+js(no-setTimeout-if, exceptionHook)
 @@||cdnjs.cloudflare.com^$font,domain=hentaied.com
 @@||vids.hentaied.com^$media,1p
 
@@ -1268,9 +1468,9 @@ hentaied.com##.endofvideo
 !	n.a.
 ! [/dynamic filtering]
 forum.adultdvdtalk.com###enter_overlay
-www.adultdvdtalk.com###enterPageModal,.modal-backdrop
-www.adultdvdtalk.com##+js(remove-class, modal-open, body)
-www.adultdvdtalk.com##+js(remove-attr, style, .app, stay)
+adultdvdtalk.com###enterPageModal,.modal-backdrop
+adultdvdtalk.com##+js(remove-class, modal-open, body)
+adultdvdtalk.com##+js(remove-attr, style, .app, stay)
 
 ! 2021-06-03 https://www.adultdvdempire.com, https://www.adultempire.com
 ! [dynamic filtering]
@@ -1278,8 +1478,8 @@ www.adultdvdtalk.com##+js(remove-attr, style, .app, stay)
 !	www.adultdvdempire.com * 3p-script noop
 !	www.adultempire.com * 3p-script noop
 ! [/dynamic filtering]
-www.adultdvdempire.com,www.adultempire.com##.beacon,.container-featured,.pricing-container
-www.adultdvdempire.com,www.adultempire.com##+js(no-setTimeout-if, modal)
+adultdvdempire.com,adultempire.com##.beacon,.container-featured,.pricing-container
+adultdvdempire.com,adultempire.com##+js(no-setTimeout-if, modal)
 @@||player.digiflix.video^$xhr,domain=adultempire.com
 @@||cds.c6e5j5a6.hwcdn.net^$xhr,domain=adultempire.com
 
@@ -1322,16 +1522,16 @@ lustfel.com##.ai-track
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-www.manojob.com###splash-bypass
-www.manojob.com##+js(no-setTimeout-if, /^/)
-www.manojob.com##+js(remove-attr, style, main)
-@@||www.manojob.com^$media,1p
+manojob.com###splash-bypass
+manojob.com##+js(no-setTimeout-if, /^/)
+manojob.com##+js(remove-attr, style, main)
+@@||manojob.com^$media,1p
 
 ! 2021-05-18 https://www.metcams.com
 ! [dynamic filtering]
 !	metcams.com * 3p-script noop
 ! [/dynamic filtering]
-www.metcams.com##[class^="GDPRConsent-root-"]
+metcams.com##[class^="GDPRConsent-root-"]
 @@||member.naiadsystems.com^$xhr,domain=metcams.com
 @@||object-cdn.icfsys.com^$xhr,domain=metcams.com
 @@||hybridclient.naiadsystems.com^$xhr,domain=metcams.com
@@ -1356,7 +1556,7 @@ www.metcams.com##[class^="GDPRConsent-root-"]
 ! [dynamic filtering]
 !	www.xvideos.com * 3p-script noop
 ! [/dynamic filtering]
-www.xvideos.com##.xv-cams-block
+xvideos.com##.xv-cams-block
 @@||static-ss.xvideos-cdn.com^$font,domain=xvideos.com
 @@||cdn77-vid.xvideos-cdn.com^$xhr,domain=xvideos.com
 
