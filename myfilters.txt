@@ -796,7 +796,7 @@ deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.co
 deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##div[data-test-component="TopBanner"]:upward(body):style(padding-top: 0 !important;)
 deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##[data-test-component="SignUpButton"]
 deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##[data-test-component="DownloadArea"]
-deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##.bSluVf
+deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##+js(remove-class, bSluVf, main)
 
 @@||cdn.blacked.com^$media,1p
 @@||cdn.blackedraw.com^$media,1p
