@@ -822,6 +822,7 @@ deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.co
 !	www.girlfriendsfilms.com * 3p-script noop
 !	www.girlsway.com * 3p-script noop
 !	www.immorallive.com * 3p-script noop
+!	www.joymii.com * 3p-script noop
 !	www.lezcuties.com * 3p-script noop
 !	www.mixedx.com * 3p-script noop
 !	www.mommysboy.com * 3p-script noop
@@ -837,26 +838,23 @@ deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.co
 
 ! www.lezcuties.com has duplicated content in www.21sextury.com
 
-! 2021-01-03, 2021-08-09, 2021-12-27, 2022-01-01, 2022-05-20 https://www.21naturals.com, https://www.21sextreme.com, https://www.21sextury.com, https://www.blowpass.com, https://www.burningangel.com, https://www.darkx.com, https://www.devilsfilm.com, https://www.eroticax.com, https://www.evilangel.com, https://www.famedigital.com, https://www.fantasymassage.com, https://www.girlfriendsfilms.com, https://www.girlsway.com, https://www.hardx.com, https://www.immorallive.com, https://www.lesbianx.com, https://www.lezcuties.com, https://www.mixedx.com, https://www.mommysboy.com, https://www.mypervyfamily.com, https://www.nurumassage.com, https://www.puretaboo.com, https://www.roccosiffredi.com, https://www.touchmywife.com, https://www.wicked.com, https://www.xempire.com, https://www.zerotolerancefilms.com
-21naturals.com,21sextreme.com,21sextury.com,blowpass.com,burningangel.com,darkx.com,devilsfilm.com,eroticax.com,evilangel.com,famedigital.com,fantasymassage.com,girlfriendsfilms.com,girlsway.com,hardx.com,immorallive.com,lesbianx.com,lezcuties.com,mixedx.com,mommysboy.com,mypervyfamily.com,nurumassage.com,puretaboo.com,roccosiffredi.com,touchmywife.com,wicked.com,xempire.com,zerotolerancefilms.com###PromoBannerOverlay
+! 2021-01-03, 2021-08-09, 2021-12-27, 2022-01-01, 2022-05-20, 2022-06-03 https://www.21naturals.com, https://www.21sextreme.com, https://www.21sextury.com, https://www.blowpass.com, https://www.burningangel.com, https://www.darkx.com, https://www.devilsfilm.com, https://www.eroticax.com, https://www.evilangel.com, https://www.famedigital.com, https://www.fantasymassage.com, https://www.girlfriendsfilms.com, https://www.girlsway.com, https://www.hardx.com, https://www.immorallive.com, https://www.joymii.com, https://www.lesbianx.com, https://www.lezcuties.com, https://www.mixedx.com, https://www.mommysboy.com, https://www.mypervyfamily.com, https://www.nurumassage.com, https://www.puretaboo.com, https://www.roccosiffredi.com, https://www.touchmywife.com, https://www.wicked.com, https://www.xempire.com, https://www.zerotolerancefilms.com
+21naturals.com,21sextreme.com,21sextury.com,blowpass.com,burningangel.com,darkx.com,devilsfilm.com,eroticax.com,evilangel.com,famedigital.com,fantasymassage.com,girlfriendsfilms.com,girlsway.com,hardx.com,immorallive.com,joymii.com,lesbianx.com,lezcuties.com,mixedx.com,mommysboy.com,mypervyfamily.com,nurumassage.com,puretaboo.com,roccosiffredi.com,touchmywife.com,wicked.com,xempire.com,zerotolerancefilms.com###PromoBannerOverlay
 
-! 2021-05-16, 2021-08-09, 2022-05-20 https://www.21naturals.com, https://www.21sextreme.com, https://www.21sextury.com, https://www.blowpass.com, https://www.burningangel.com, https://www.devilsfilm.com, https://www.evilangel.com, https://www.famedigital.com, https://www.fantasymassage.com, https://www.girlsway.com, https://www.immorallive.com, https://www.lezcuties.com, https://www.mypervyfamily.com, https://www.nurumassage.com, https://www.puretaboo.com, https://www.roccosiffredi.com, https://www.wicked.com
-@@||algolianet.com^$xhr,domain=wicked.com
-!@@||algolia.net^$xhr,domain=wicked.com
-@@||videothumb.gammacdn.com^$media,domain=21naturals.com|21sextreme.com|21sextury.com|blowpass.com|burningangel.com|devilsfilm.com|evilangel.com|famedigital.com|fantasymassage.com|girlfriendsfilms.com|girlsway.com|immorallive.com|lezcuties.com|mommysboy.com|nurumassage.com|puretaboo.com|roccosiffredi.com|wicked.com
-@@||trailers-fame.gammacdn.com^$media,domain=21naturals.com|21sextury.com|21sextreme.com|burningangel.com|devilsfilm.com|famedigital.com|fantasymassage.com|girlfriendsfilms.com|girlsway.com|lezcuties.com|mommysboy.com|nurumassage.com|puretaboo.com|roccosiffredi.com|wicked.com
+! 2021-05-16, 2021-08-09, 2022-05-20 https://www.21naturals.com, https://www.21sextreme.com, https://www.21sextury.com, https://www.blowpass.com, https://www.burningangel.com, https://www.devilsfilm.com, https://www.evilangel.com, https://www.famedigital.com, https://www.fantasymassage.com, https://www.girlsway.com, https://www.immorallive.com, https://www.joymii.com, https://www.lezcuties.com, https://www.mixedx.com, https://www.mypervyfamily.com, https://www.nurumassage.com, https://www.puretaboo.com, https://www.roccosiffredi.com, https://www.touchmywife.com, https://www.wicked.com, https://www.zerotolerancefilms.com
+@@||videothumb.gammacdn.com^$media,domain=21naturals.com|21sextreme.com|21sextury.com|blowpass.com|burningangel.com|devilsfilm.com|evilangel.com|famedigital.com|fantasymassage.com|girlfriendsfilms.com|girlsway.com|immorallive.com|joymii.com|lezcuties.com|mixedx.com|mommysboy.com|mypervyfamily.com|nurumassage.com|puretaboo.com|roccosiffredi.com|touchmywife.com|wicked.com|zerotolerancefilms.com
+@@||trailers-fame.gammacdn.com^$media,domain=21naturals.com|21sextury.com|21sextreme.com|burningangel.com|devilsfilm.com|famedigital.com|fantasymassage.com|girlfriendsfilms.com|girlsway.com|joymii.com|lezcuties.com|mixedx.com|mommysboy.com|mypervyfamily.com|nurumassage.com|puretaboo.com|roccosiffredi.com|touchmywife.com|wicked.com|zerotolerancefilms.com
 @@||free-at-assets.gammacdn.com^$media,domain=adulttime.com
 @@||trailers-openlife.gammacdn.com^$media,domain=blowpass.com|immorallive.com
 @@||trailers-evilangel.gammacdn.com^$media,domain=evilangel.com
 
-! 2021-09-12, 2022-01-01, 2022-05-20 https://www.darkx.com, https://www.eroticax.com, https://www.hardx.com, https://www.lesbianx.com, https://www.lezcuties.com, https://www.mixedx.com, https://www.mommysboy.com, https://www.mypervyfamily.com, https://www.nurumassage.com, https://www.touchmywife.com, https://www.zerotolerancefilms.com
-21naturals.com,21sextury.com,darkx.com,eroticax.com,fantasymassage.com,hardx.com,lesbianx.com,lezcuties.com,mixedx.com,mommysboy.com,mypervyfamily.com,nurumassage.com,roccosiffredi.com,touchmywife.com,zerotolerancefilms.com##.promobar,.WarningOverlay-BackgroundBox
-@@||videothumb.gammacdn.com^$media,domain=darkx.com|eroticax.com|hardx.com|lesbianx.com|mixedx.com|mypervyfamily.com|touchmywife.com|xempire.com|zerotolerancefilms.com
-@@||trailers-fame.gammacdn.com^$media,domain=mixedx.com|mypervyfamily.com|touchmywife.com|zerotolerancefilms.com
+! 2021-09-12, 2022-01-01, 2022-05-20, 2022-06-03 https://www.darkx.com, https://www.eroticax.com, https://www.hardx.com, https://www.joymii.com, https://www.lesbianx.com, https://www.lezcuties.com, https://www.mixedx.com, https://www.mommysboy.com, https://www.mypervyfamily.com, https://www.nurumassage.com, https://www.touchmywife.com, https://www.zerotolerancefilms.com
+21naturals.com,21sextury.com,darkx.com,eroticax.com,fantasymassage.com,hardx.com,joymii.com,lesbianx.com,lezcuties.com,mixedx.com,mommysboy.com,mypervyfamily.com,nurumassage.com,roccosiffredi.com,touchmywife.com,zerotolerancefilms.com##.promobar,.WarningOverlay-BackgroundBox
+@@||videothumb.gammacdn.com^$media,domain=darkx.com|eroticax.com|hardx.com|lesbianx.com|xempire.com
 @@||trailers-openlife.gammacdn.com^$media,domain=darkx.com|eroticax.com|hardx.com|lesbianx.com|xempire.com
 
 ! RECOMMENDED VIDEOS
-@@||client-rapi.recombee.us^$xhr,domain=21naturals.com|21sextreme.com|21sextury.com|burningangel.com|darkx.com|devilsfilm.com|eroticax.com|fantasymassage.com|girlsway.com|hardx.com|lesbianx.com|lezcuties.com|mixedx.com|mommysboy.com|mypervyfamily.com|nurumassage.com|puretaboo.com|roccosiffredi.com|touchmywife.com
+@@||client-rapi.recombee.us^$xhr,domain=21naturals.com|21sextreme.com|21sextury.com|burningangel.com|darkx.com|devilsfilm.com|eroticax.com|fantasymassage.com|girlsway.com|hardx.com|joymii.com|lesbianx.com|lezcuties.com|mixedx.com|mommysboy.com|mypervyfamily.com|nurumassage.com|puretaboo.com|roccosiffredi.com|touchmywife.com
 
 ! 2021-05-16 https://www.21sextreme.com, https://www.21naturals.com, https://www.fantasymassage.com, https://www.nurumassage.com
 !@@||*/static-parent/Giraffe/TabListContainer/img/1x1Transparent.gif$image,domain=21sextreme.com|21naturals.com|fantasymassage.com|nurumassage.com
@@ -1054,23 +1052,23 @@ loveherboobs.com,loveherfeet.com,shelovesblack.com##+js(remove-attr, href, a[hre
 !!!! LPF Internet Group !!!!!
 ! [dynamic filtering]
 !	www.barelylegal.com * 3p-script noop
-!	bootyclapxxx.com * 3p-script noop
-!	bootysisters.com * 3p-script noop
-!	fuckfiesta.com * 3p-script noop
-!	fuckinghardcore.com * 3p-script noop
-!	hustler.com * 3p-script noop
-!	pornstarhardcore.com * 3p-script noop
+!	www.bootyclapxxx.com * 3p-script noop
+!	www.bootysisters.com * 3p-script noop
+!	www.fuckfiesta.com * 3p-script noop
+!	www.fuckinghardcore.com * 3p-script noop
+!	www.hustler.com * 3p-script noop
+!	www.pornstarhardcore.com * 3p-script noop
 ! [/dynamic filtering]
 
 ! www.bootyclapxxx.com, www.bootysisters.com, www.fuckfiesta.com, www.fuckinghardcore.com & www.pornstarhardcore.com has duplicated content in www.barelylegal.com
 
-! 2021-05-16, 2021-06-17, 2022-05-25 https://www.barelylegal.com, https://www.bootyclapxxx.com, https://www.bootysisters.com, https://www.fuckfiesta.com, https://www.fuckinghardcore.com, https://www.hustler.com, https://www.pornstarhardcore.com
-barelylegal.com,hustler.com##.sc-kigWZE
-barelylegal.com,hustler.com##+js(remove-attr, href, a[href="/signup"], stay)
+! 2021-05-16, 2021-06-17, 2022-05-25, 2022-06-03 https://www.barelylegal.com, https://www.bootyclapxxx.com, https://www.bootysisters.com, https://www.fuckfiesta.com, https://www.fuckinghardcore.com, https://www.hustler.com, https://www.pornstarhardcore.com
+barelylegal.com,bootyclapxxx.com,bootysisters.com,fuckfiesta.com,fuckinghardcore.com,hustler.com,pornstarhardcore.com##.age-compliance,.sc-kigWZE
+barelylegal.com,bootyclapxxx.com,bootysisters.com,fuckfiesta.com,fuckinghardcore.com,hustler.com,pornstarhardcore.com##+js(remove-attr, href, a[href="/signup"], stay)
+barelylegal.com,bootyclapxxx.com,bootysisters.com,fuckfiesta.com,fuckinghardcore.com,hustler.com,pornstarhardcore.com##+js(addEventListener-defuser, click)
 @@||cdnmansite.metartnetwork.com^$font,domain=barelylegal.com|bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
-@@||cdn-hustlernetwork.metartnetwork.com^$media,domain=barelylegal.com
-barelylegal.com,hustler.com##+js(addEventListener-defuser, click)
-!@@||cdn.metartnetwork.com^$xhr,domain=bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
+@@||cdn-hustlernetwork.metartnetwork.com^$xhr,domain=barelylegal.com|bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
+@@||cdn.metartnetwork.com^$xhr,domain=barelylegal.com|bootyclapxxx.com|bootysisters.com|fuckfiesta.com|fuckinghardcore.com|hustler.com|pornstarhardcore.com
 
 
 !!!! NetLook !!!!!
