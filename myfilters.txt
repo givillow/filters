@@ -711,12 +711,15 @@ zwiftinsider.com##.pps-popup
 !!!! Mindgeek !!!!!
 ! [dynamic filtering]
 !	www.babes.com * 3p-script noop
+!	www.bangbros.com * 3p-script noop
 !	www.bellesafilms.com * 3p-script noop
 !	www.brazzers.com * 3p-script noop
 !	www.digitalplayground.com * 3p-script noop
 !	www.doghousedigital.com * 3p-script noop
 !	www.erito.com * 3p-script noop
+!	www.fakehub.com * 3p-script noop
 !	www.hentaiprosnetwork.com * 3p-script noop
+!	www.www.metrohd.com * 3p-script noop
 !	www.milehighmedia.com * 3p-script noop
 !	www.milfed.com * 3p-script noop
 !	www.mofos.com * 3p-script noop
@@ -733,24 +736,37 @@ zwiftinsider.com##.pps-popup
 ! www.doghousedigital.com & www.sweetsinner.com has duplicated content in www.milehighmedia.com
 ! www.mofos.com has duplicated content in www.mofosnetwork.com
 
-! 2020-12-29 https://www.babes.com, https://www.bellesafilms.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofos.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
+! 2023-05-30, 2020-12-29 https://www.babes.com, https://bangbros.com, https://www.bellesafilms.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.fakehub.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofos.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.sexyhub.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
 ! age-restriction
-babes.com,digitalplayground.com,doghousedigital.com,erito.com,milehighmedia.com,milfed.com,mofos.com,mofosnetwork.com,realitykings.com,squirted.com,sweetsinner.com,trueamateurs.com,twistys.com##.fOVgeD,.iWtMlW
+babes.com,bangbros.com,digitalplayground.com,doghousedigital.com,erito.com,fakehub.com,milehighmedia.com,milfed.com,mofos.com,mofosnetwork.com,realitykings.com,sexyhub.com,squirted.com,sweetsinner.com,trueamateurs.com,twistys.com##.fOVgeD,.iWtMlW
 ! join (bottom, top, slider)
 babes.com,brazzers.com,digitalplayground.com,doghousedigital.com,erito.com,hentaiprosnetwork.com,milehighmedia.com,milfed.com,mofos.com,mofosnetwork.com,propertysex.com,realitykings.com,squirted.com,sweetsinner.com,trueamateurs.com,twistys.com##.sc-1xljrhb-0
 
-! 2021-05-16, 2022-05-19 https://www.babes.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofos.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
-@@||site-api.project1service.com^$xhr,domain=babes.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofos.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
-@@||prog-public-ht.project1content.com^$media,domain=babes.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofos.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
-@@||onenavigation-ht.project1content.com^$xhr,domain=babes.com|brazzers.com|digitalplayground.com|doghousedigital.com|hentaiprosnetwork.com|realitykings.com|milehighmedia.com|sweetsinner.com|twistys.com
+! 2023-06-22, 2021-05-16, 2022-05-19 https://www.babes.com, https://bangbros.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.fakehub.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofos.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.sexyhub.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
+@@||site-api.project1service.com^$xhr,domain=babes.com|bangbros.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|fakehub.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofos.com|mofosnetwork.com|propertysex.com|realitykings.com|sexyhub.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
+@@||prog-public-ht.project1content.com^$media,domain=babes.com|bangbros.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|fakehub.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofos.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
+@@||onenavigation-ht.project1content.com^$xhr,domain=babes.com|bangbros.com|brazzers.com|digitalplayground.com|doghousedigital.com|hentaiprosnetwork.com|realitykings.com|milehighmedia.com|sweetsinner.com|twistys.com
+
+! 2022-07-31, https://www.babes.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.hentaiprosnetwork.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofos.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
+@@||onelist-ht.project1content.com^$xhr,domain=babes.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|hentaiprosnetwork.com|milehighmedia.com|milfed.com|mofos.com|mofosnetwork.com|propertysex.com|realitykings.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
+
+! 2023-05-11 https://www.babes.com, https://bangbros.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.milehighmedia.com, https://www.realitykings.com, https://www.twistys.com
+@@||navigation-api.project1service.com^$xhr,domain=babes.com|bangbros.com|brazzers.com|digitalplayground.com|milehighmedia.com|realitykings.com|twistys.com
 
 # hide fake play button
 babes.com,bellesafilms.com,doghousedigital.com,erito.com,hentaiprosnetwork.com,milehighmedia.com,milfed.com,mofos.com,mofosnetwork.com,propertysex.com,realitykings.com,squirted.com,sweetsinner.com,trueamateurs.com,twistys.com##.cLzZIr
 
-! 2021-07-28, 2022-02-06, 2022-05-19 https://www.brazzers.com, https://www.digitalplayground.com
+! 2022-12-23, 2022-11-24, 2021-07-28, 2022-02-06, 2022-05-19 https://bangbros.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.realitykings.com
 !brazzers.com##a[href="/joinf"]
-brazzers.com##.flickity-slider:upward(.hAewsL)
-@@||oneplayer.project1content.com^$xhr,domain=brazzers.com|digitalplayground.com
+!brazzers.com##.flickity-slider:upward(.hAewsL)
+brazzers.com##.flickity-slider:upward(.hAewsL):not(:has(div[class^="one-list"],.dyOrUm))
+@@||filter-api.project1service.com^$xhr,domain=brazzers.com
+@@||onefilter-ht.project1content.com^$xhr,domain=brazzers.com
+@@||prog-public-hw.project1content.com^$media,domain=brazzers.com
+@@||oneplayer.project1content.com^$xhr,domain=bangbros.com|brazzers.com|digitalplayground.com|realitykings.com
+
+! 2023-05-30, 2022-12-26 https://www.fakehub.com, https://www.sexyhub.com
+fakehub.com,sexyhub.com##div[data-cy="catfish"]
 
 ! 2022-05-19 https://www.realitykings.com
 realitykings.com##.flickity-slider:upward(.hmIGxL)
@@ -790,17 +806,18 @@ cum4k.com,holed.com,lubed.com,passion-hd.com,povd.com,puremature.com,spyfam.com,
 !	n.a.
 ! [/dynamic filtering]
 
-! 2021-05-21, 2021-05-16, 2021-11-21, 2022-05-19 https://www.deeper.com, https://www.blacked.com, https://www.blackedraw.com, https://www.slayed.com, https://www.tushy.com, https://www.tushyraw.com, https://www.vixen.com
-deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##header:style(top: 0 !important;)
-deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##div[data-test-component="TopBanner"]
-deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##div[data-test-component="TopBanner"]:upward(body):style(padding-top: 0 !important;)
-deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##[data-test-component="SignUpButton"]
-deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##[data-test-component="DownloadArea"]
-deeper.com,blacked.com,blackedraw.com,slayed.com,tushy.com,tushyraw.com,vixen.com##+js(remove-class, bSluVf, main)
+! 2023-08-03, 2021-05-21, 2021-05-16, 2021-11-21, 2022-05-19 https://www.blacked.com, https://www.blackedraw.com, https://www.deeper.com, https://www.milfy.com, https://www.slayed.com, https://www.tushy.com, https://www.tushyraw.com, https://www.vixen.com
+blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##header:style(top: 0 !important;)
+blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##div[data-test-component="TopBanner"]
+blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##div[data-test-component="TopBanner"]:upward(body):style(padding-top: 0 !important;)
+blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##[data-test-component="SignUpButton"]
+blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##[data-test-component="DownloadArea"]
+blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##+js(remove-class, bSluVf, main)
 
 @@||cdn.blacked.com^$media,1p
 @@||cdn.blackedraw.com^$media,1p
 @@||cdn.deeper.com^$media,1p
+@@||cdn.milfy.com^$media,1p
 @@||cdn.slayed.com^$media,1p
 @@||cdn.tushy.com^$media,1p
 @@||cdn.tushyraw.com^$media,1p
@@ -1173,12 +1190,13 @@ bangbros.com##.btmTrial,.plyrRgt
 naughtyamerica.com##.footer-join-button,.right-scene
 @@||videos.naughtycdn.com^$media,domain=naughtyamerica.com
 
-! 2021-06-15, 2021-11-25 https://www.private.com
+! 2022-12-22, 2021-06-15, 2021-11-25 https://www.private.com
 ! [dynamic filtering]
 !	www.private.com * 3p-script noop
 ! [/dynamic filtering]
 private.com##+js(no-setTimeout-if, show_window)
-private.com##.banner-join-2019,.join,#limited-offer,#pause-zone,#SCENE-AFTERVIDEO-JOIN,#SCENE-UHD4K-LOGO,.top-promo,.zoom
+private.com##.adult-warning,.banner-join-2019,#disclaimer-dialog,#disclaimer-background,.join,#limited-offer,#pause-zone,#SCENE-AFTERVIDEO-JOIN,#SCENE-UHD4K-LOGO,.top-promo,.zoom
+private.com##+js(remove-class, plus18, body, complete)
 private.com##+js(remove-attr, href, a[href*="/join?"])
 private.com#@#+js(no-setTimeout-if, prvtoffer)
 ||pcom.st-content.com/images/px.png$image
@@ -1195,11 +1213,11 @@ perfectgonzo.com##+js(remove-attr, href, a[href*="/signup/"])
 @@||trailers-cdn-perfectgonzo.explicithd.com^$media,domain=perfectgonzo.com
 @@||static-cdn-perfectgonzo.explicithd.com^$font,domain=perfectgonzo.com
 
-! 2021-05-16, 2022-05-12, 2022-05-21 https://www.newsensations.com
+! 2022-08-17, 2021-05-16, 2022-05-12, 2022-05-21 https://www.newsensations.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-newsensations.com##.download,.dvdMidBanner,.join,.modelBioRight,.sceneRight,#timer
+newsensations.com##.additionaloutmostdiv,.download,.dvdMidBanner,.join,.modelBioRight,.sceneRight,#timer
 newsensations.com##+js(remove-attr, href, a[onclick^="newtload"])
 @@||nsnetworktour.newsensations.com^$media,1p
 
@@ -1231,11 +1249,12 @@ stasyq.com##+js(no-setTimeout-if, redirectToMembership)
 westcoastproductions.com##.membership-cards-container
 @@||cname.empirestores.co^$xhr,domain=westcoastproductions.com
 
-! 2021-05-16, 2021-07-28, 2022-01-01 https://pornworld.com
+! 2023-07-21, 2021-05-16, 2021-07-28, 2022-01-01 https://pornworld.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
 pornworld.com###agree18,.join-now,.modal-backdrop,.site-banner
+pornworld.com##.banner:upward(1)
 pornworld.com##+js(remove-class, __blur-thumbnails|modal-open, body, stay)
 pornworld.com##+js(remove-attr, style, body, stay)
 @@||gtflixtv.com^$media,domain=pornworld.com
@@ -1251,8 +1270,8 @@ analvids.com##+js(remove-class, blur-thumbnails, body.blur-thumbnails)
 @@||gtflixtv.com^$media,domain=analvids.com
 @@||hwnds.ddfstatic.com^$media,domain=analvids.com
 
-! 2022-05-26 https://pervcity.com
-pervcity.com##.avaiFormate,#consentWindow,.downloadBox,.member-benefits,.onjoin,.paymentArea
+! 2023-07-03, 2022-05-26 https://pervcity.com
+pervcity.com##.avaiFormate,.banner-sale,#consentWindow,.downloadBox,.member-benefits,.onjoin,.paymentArea
 @@||stackpath.bootstrapcdn.com^$font,domain=pervcity.com
 @@||pervcity.com^$media,1p
 
@@ -1279,11 +1298,11 @@ scoreland.com##.ali-stretch:upward(div)
 teenmegaworld.net##.big-button,.cookie,#form,#iframe1,.parallax-window,.warning-page
 @@||pub-static-101037.teenmegaworld.com^$media,domain=teenmegaworld.net
 
-! 2021-12-30, 2022-02-17, 2022-05-21 https://hotmilfsfuck.com
+! 2023-05-24, 2022-12-26, 2021-12-30, 2022-02-17, 2022-05-21 https://hotmilfsfuck.com
 ! [dynamic filtering]
 !	hotmilfsfuck.com * 3p-script noop
 ! [/dynamic filtering]
-hotmilfsfuck.com##.player-bar,.player-window-play,#warningpopup
+hotmilfsfuck.com##.player-bar,.player-window-play,.sale-banner,.sale-bkg,.sale-red,.sale-top,#warningpopup
 hotmilfsfuck.com##+js(addEventListener-defuser, click)
 @@||hotmilfsfuck.com^$media,1p
 @@||cdnjs.cloudflare.com^$font,domain=hotmilfsfuck.com
@@ -1331,12 +1350,13 @@ ftvgirls.com###Form
 pornstarplatinum.com##.header-upper,.join-button-full
 @@||c7m9n4u4.ssl.hwcdn.net^$font,domain=pornstarplatinum.com
 
-! 2021-05-18 https://www.elegantangel.com
+! 2022-12-09, 2021-05-18 https://www.elegantangel.com
 ! [dynamic filtering]
 !	www.elegantangel.com * 3p-frame noop
 !	www.elegantangel.com * 3p-script noop
 ! [/dynamic filtering]
 elegantangel.com##.membership-cards-container
+@@||video.adultempire.com^$xhr,domain=elegantangel.com
 
 ! 2021-05-06, 2021-09-23, 2022-05-20 https://tour.topwebmodels.com
 ! [dynamic filtering]
@@ -1353,11 +1373,15 @@ tour.topwebmodels.com##.announcement-popup,.announcement-wrap,.cta-join-wrap,.mo
 spizoo.com##.NoPromoVersion
 @@||content.spizoo.com^$media,1p
 
-! 2021-05-16, 2021-12-29, 2022-05-20 https://www.bang.com
+! 2023-06-22, 2022-12-21, 2021-05-16, 2021-12-29, 2022-05-20 https://www.bang.com
 ! [dynamic filtering]
 !	n.a.
 ! [/dynamic filtering]
-bang.com##.button-wrapper,#globalAd,.image-overlay,.top-announcement-wrapper
+bang.com##.button-wrapper,#download-watch,#globalAd,.image-overlay,.top-announcement-wrapper
+bang.com##.upgrade-bar:upward(.w-full)
+bang.com##+js(remove-class, pt-[96px], body)
+bang.com##+js(remove-class, top-10, header)
+bang.com##+js(remove-class, pt-24, body)
 @@||i.bang.com^$media,1p
 
 ! 2021-05-16 https://www.tugpass.com
@@ -1434,20 +1458,22 @@ teenfidelity.com##table[style*=" "]:upward(section)
 teenfidelity.com##+js(remove-class, hasPromoBar, html)
 @@||tour-cdn.kellymadisonmedia.com^$media,domain=teenfidelity.com
 
-! 2021-06-10, 2021-07-03 https://penthousegold.com
+! 2023-01-05, 2022-06-08, 2021-06-10, 2021-07-03 https://penthousegold.com
 ! [dynamic filtering]
 !	penthousegold.com * 3p-script noop
 ! [/dynamic filtering]
-penthousegold.com##.adult-warning,.banner-d,.banner-e,.content-alert,#limited-offer,#pause-zone
+penthousegold.com##.adult-warning,.banner-d,.banner-e,.content-alert,#cookies,#limited-offer,#pause-zone,#trailer_player_finished > .trackj
 @@||cdn.penthouse.com^$media,domain=penthousegold.com
+@@||vtcdn.penthouse.com^$xhr,domain=penthousegold.com
 
-! 2021-06-12 https://hentaied.com
+! 2023-04-06, 2022-07-07, 2021-06-12 https://hentaied.com
 ! [dynamic filtering]
 !	hentaied.com * 3p-script noop
 ! [/dynamic filtering]
-hentaied.com##.endofvideo
+hentaied.com##.adbanner-float,.endofvideo
 hentaied.com##+js(no-setTimeout-if, exceptionHook)
 @@||cdnjs.cloudflare.com^$font,domain=hentaied.com
+@@||stream.defeated.xxx^$media,domain=hentaied.com
 @@||vids.hentaied.com^$media,1p
 
 
