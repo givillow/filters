@@ -750,8 +750,7 @@ babes.com,brazzers.com,digitalplayground.com,doghousedigital.com,erito.com,fakeh
 @@||onenavigation-ht.project1content.com^$xhr,domain=babes.com|bangbros.com|brazzers.com|digitalplayground.com|doghousedigital.com|hentaiprosnetwork.com|realitykings.com|milehighmedia.com|sweetsinner.com|twistys.com
 
 ! 2022-07-31, https://www.babes.com, https://bangbros.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.doghousedigital.com, https://www.erito.com, https://www.fakehub.com, https://www.hentaiprosnetwork.com, https://www.metrohd.com, https://www.milehighmedia.com, https://www.milfed.com, https://www.mofos.com, https://www.mofosnetwork.com, https://www.propertysex.com, https://www.realitykings.com, https://www.sexyhub.com, https://www.squirted.com, https://www.sweetsinner.com, https://www.trueamateurs.com, https://www.twistys.com
-@@||onelist-ht.project1content.com^$xhr,domain=babes.com|bangbros.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|fakehub.com|hentaiprosnetwork.com|metrohd.com|
-milehighmedia.com|milfed.com|mofos.com|mofosnetwork.com|propertysex.com|realitykings.com|sexyhub.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
+@@||onelist-ht.project1content.com^$xhr,domain=babes.com|bangbros.com|brazzers.com|digitalplayground.com|doghousedigital.com|erito.com|fakehub.com|hentaiprosnetwork.com|metrohd.com|milehighmedia.com|milfed.com|mofos.com|mofosnetwork.com|propertysex.com|realitykings.com|sexyhub.com|squirted.com|sweetsinner.com|trueamateurs.com|twistys.com
 
 ! 2023-05-11 https://www.babes.com, https://bangbros.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.milehighmedia.com, https://www.realitykings.com, https://www.twistys.com
 @@||navigation-api.project1service.com^$xhr,domain=babes.com|bangbros.com|brazzers.com|digitalplayground.com|milehighmedia.com|realitykings.com|twistys.com
