@@ -763,8 +763,6 @@ babes.com,brazzers.com,digitalplayground.com,doghousedigital.com,erito.com,fakeh
 babes.com,bellesafilms.com,doghousedigital.com,erito.com,fakehub.com,hentaiprosnetwork.com,milehighmedia.com,milfed.com,mofos.com,mofosnetwork.com,propertysex.com,realitykings.com,sexyhub.com,squirted.com,sweetsinner.com,trueamateurs.com,twistys.com##.cLzZIr
 
 ! 2022-12-23, 2022-11-24, 2021-07-28, 2022-02-06, 2022-05-19 https://bangbros.com, https://www.brazzers.com, https://www.digitalplayground.com, https://www.realitykings.com
-!brazzers.com##a[href="/joinf"]
-!brazzers.com##.flickity-slider:upward(.hAewsL)
 brazzers.com##.flickity-slider:upward(.hAewsL):not(:has(div[class^="one-list"],.dyOrUm))
 @@||filter-api.project1service.com^$xhr,domain=brazzers.com
 @@||onefilter-ht.project1content.com^$xhr,domain=brazzers.com
@@ -782,6 +780,7 @@ hentaiprosnetwork.com##.cuTOra,.jTDHcX,.krFhOt:not(:has(img[src*="ategor"]))
 doghousedigital.com,milehighmedia.com,sweetsinner.com##.bdszOu:upward(.sc-1fep8qc-0):not(:has(img[src*="ategor"]))
 milfed.com##.fccLt,.hXDxGw:upward(.sc-1fep8qc-0):not(:has(img[src*="ategor"]))
 erito.com,mofosnetwork.com,trueamateurs.com##.gQCKeh:upward(.sc-1fep8qc-0)
+erito.com##.gsDJW:upward(.hAewsL)
 metrohd.com##.gQCKeh:upward(.dXXztf,.hAewsL)
 
 !!!! AMA Multimedia !!!!!
@@ -798,13 +797,16 @@ metrohd.com##.gQCKeh:upward(.dXXztf,.hAewsL)
 ! [/dynamic filtering]
 
 ! 2023-12-15, 2021-05-16, 2021-09-24, 2022-05-19 https://baeb.com, https://cum4k.com, https://exotic4k.com, https://holed.com, https://lubed.com, https://passion-hd.com, https://pornpros.com, https://povd.com, https://puremature.com, https://spyfam.com, https://tiny4k.com
-anal4k.com,baeb.com,cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com###disclaimer,.join,.join-btn-massive:upward(1),.payment-popup,.t2019-button,.t2019-format
-anal4k.com,baeb.com,cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com##a.btn:has-text(Get Your Password Now),div[data-controller="paypal-box"]:upward(.hidden),div.w-full:has-text(Top Rated):not(:matches-path(/^/$/))
+anal4k.com,baeb.com,cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com###disclaimer,.join,.payment-popup,.t2019-button,.t2019-format
+anal4k.com,baeb.com,cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com##.join-btn-massive:upward(1)
+anal4k.com,baeb.com,cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com##a.btn:has-text(Get Your Password Now)
+anal4k.com,baeb.com,cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com##div[data-controller="paypal-box"]:upward(.hidden)
+anal4k.com,baeb.com,cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com##div.w-full:has-text(Top Rated):not(:matches-path(/^/$/))
 baeb.com,cum4k.com,holed.com,lubed.com,passion-hd.com,povd.com,puremature.com,spyfam.com,tiny4k.com###sale-special-placeholder
-cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com###featured-video-player
+anal4k.com,cum4k.com,exotic4k.com,holed.com,lubed.com,passion-hd.com,pornpros.com,povd.com,puremature.com,spyfam.com,tiny4k.com###featured-video-player
 anal4k.com,povd.com,puremature.com##a[href="/join"]:remove-attr(href)
-@@||cdn-videos.r1.cdn.pornpros.com^$media,domain=baeb.com|cum4k.com|exotic4k.com|holed.com|lubed.com|passion-hd.com|pornpros.com|povd.com|puremature.com|spyfam.com|tiny4k.com
-@@||d1idtz7mlshsvc.cloudfront.net^$font,domain=baeb.com|cum4k.com|exotic4k.com|holed.com|lubed.com|passion-hd.com|pornpros.com|povd.com|puremature.com|spyfam.com|tiny4k.com
+@@||cdn-videos.r1.cdn.pornpros.com^$media,domain=anal4k.com|cum4k.com|exotic4k.com|holed.com|lubed.com|passion-hd.com|pornpros.com|povd.com|puremature.com|spyfam.com|tiny4k.com
+@@||d1idtz7mlshsvc.cloudfront.net^$font,domain=anal4k.com|baeb.com|cum4k.com|exotic4k.com|holed.com|lubed.com|passion-hd.com|pornpros.com|povd.com|puremature.com|spyfam.com|tiny4k.com
 
 
 !!!! Mad Cheddar !!!!!
