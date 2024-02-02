@@ -954,7 +954,7 @@ xempire.com###memberZoneWrapper,#playerJoinButton,.sitesWrapper
 !	www.thickumz.com * 3p-script noop
 ! [/dynamic filtering]
 
-! www.dyked.com, www.exxxtrasmall.com, www.familystrokes.com, www.shoplyftermylf.com, swww.islovesme.com, www.pervmom.com & www.thickumz.com has duplicated content in www.teamskeet.com
+! www.dyked.com, www.exxxtrasmall.com, www.familystrokes.com, www.shoplyftermylf.com, www.sislovesme.com, www.pervmom.com & www.thickumz.com has duplicated content in www.teamskeet.com
 ! www.analmom.com, www.freeusemilf.com & www.pervmom.com has duplicated content in www.mylf.com
 
 ! 2021-04-17, 2021-06-10, 2021-07-15, 2021-12-29, 2022-02-05, 2022-05-20 https://www.analmom.com, https://www.dyked.com, https://www.exxxtrasmall.com, https://www.familystrokes.com, https://www.freeusemilf.com, https://www.pervmom.com, https://www.shoplyftermylf.com, https://www.sislovesme.com, https://www.thickumz.com
@@ -1085,7 +1085,8 @@ loveherboobs.com,loveherfeet.com,shelovesblack.com##+js(remove-attr, href, a[hre
 ! www.bootyclapxxx.com, www.bootysisters.com, www.fuckfiesta.com, www.fuckinghardcore.com & www.pornstarhardcore.com has duplicated content in www.barelylegal.com
 
 ! 2023-09-29, 2023-12-08, 2021-05-16, 2021-06-17, 2022-05-25, 2022-06-03 https://www.barelylegal.com, https://www.bootyclapxxx.com, https://www.bootysisters.com, https://www.fuckfiesta.com, https://www.fuckinghardcore.com, https://www.hustler.com, https://www.pornstarhardcore.com
-barelylegal.com,bootyclapxxx.com,bootysisters.com,fuckfiesta.com,fuckinghardcore.com,hustler.com,pornstarhardcore.com##.age-compliance,.gallery-purchase,.gallery-thumbnail:remove-attr(href),.movie-purchase,.sc-kigWZE,.slider-img
+barelylegal.com,bootyclapxxx.com,bootysisters.com,fuckfiesta.com,fuckinghardcore.com,hustler.com,pornstarhardcore.com##.age-compliance,.gallery-purchase,.movie-purchase,.sc-kigWZE,.slider-img
+barelylegal.com,bootyclapxxx.com,bootysisters.com,fuckfiesta.com,fuckinghardcore.com,hustler.com,pornstarhardcore.com##.gallery-thumbnail:remove-attr(href)
 barelylegal.com,bootyclapxxx.com,bootysisters.com,fuckfiesta.com,fuckinghardcore.com,hustler.com,pornstarhardcore.com##+js(remove-attr, href, a[href="/signup"], stay)
 barelylegal.com,bootyclapxxx.com,bootysisters.com,fuckfiesta.com,fuckinghardcore.com,hustler.com,pornstarhardcore.com##+js(addEventListener-defuser, click)
 hustler.com,hustlerunlimited.com###agl_wrapper,.header-cta-alerts
@@ -1238,8 +1239,8 @@ analized.com,slutinspection.com###ad_blocker_note,#age-confirm-modal,.tour-join-
 !	n.a.
 ! [/dynamic filtering]
 ! 2022-12-23 https://momlover.com
-momlover.com##.header-banner-wrapper
-momlover.com##a[href="/join"]:upward(.container)
+momlover.com##a[href="/join"]:upward(.container),.header-banner-wrapper,.watch-page-join-header:upward(.container-fluid)
+@@||images.brattymilf.com^$media,domain=momlover.com
 
 ! 2021-12-30, 2022-05-20 https://www.familyhookups.com, https://www.metrohd.com, www.shewillcheat.com
 ! [dynamic filtering]
