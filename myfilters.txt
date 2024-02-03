@@ -82,8 +82,8 @@ armbian.com#@#.cookiebanner
 !	www.bol.com * 3p-script noop
 ! [/dynamic filtering]
 bol.com##wsp-modal-window
+bol.com##body:remove-class(modal--is-open)
 bol.com##+js(no-setTimeout-if, function(){t.apply(void 0,r),n=null})
-bol.com##+js(remove-class, modal--is-open, body)
 
 ! 2021-05-20, 2021-09-29 https://www.buienalarm.nl
 ! [dynamic filtering]
@@ -194,7 +194,7 @@ filejoker.net###tariffs,#secure,#payment-icons
 ! [dynamic filtering]
 !	www.flightradar24.com * 3p-script noop
 ! [/dynamic filtering]
-flightradar24.com##+js(remove-class, has-banner, body.has-banner, stay)
+flightradar24.com##body:remove-class(has-banner)
 
 ! 2021-11-16 https://www.fia.com
 ! [dynamic filtering]
@@ -521,7 +521,7 @@ patreon.com##+js(remove-attr, class, div#membership-page, stay)
 !	n.a.
 ! [/dynamic filtering]
 nl.pepper.com##.popover--oreo-message
-nl.pepper.com##+js(remove-class, overflow--hidden, body.overflow--hidden, stay)
+nl.pepper.com##body:remove-class(overflow--hidden)
 
 ! 2021-06-24 https://www.poiesz-supermarkten.nl, https://webwinkel.poiesz-supermarkten.nl
 ! [dynamic filtering]
@@ -820,7 +820,7 @@ blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.co
 blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##div[data-test-component="TopBanner"]:upward(body):style(padding-top: 0 !important;)
 blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##[data-test-component="SignUpButton"]
 blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##[data-test-component="DownloadArea"]
-blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##+js(remove-class, bSluVf, main)
+blacked.com,blackedraw.com,deeper.com,milfy.com,slayed.com,tushy.com,tushyraw.com,vixen.com##main:remove-class(bSluVf)
 
 @@||cdn.blacked.com^$media,1p
 @@||cdn.blackedraw.com^$media,1p
@@ -1056,7 +1056,7 @@ theassfactory.com##+js(remove-attr, href, a[href*="/signup/"])
 letsdoeit.com,mamacitaz.com##.fake-play,#manage-biscuiti,.partner-offer-bar,#partner-offer-media,.popup,#popup-legal_age
 letsdoeit.com,mamacitaz.com##.global-any-carousel-swiper:upward(.section-full)
 letsdoeit.com,mamacitaz.com##+js(run-script, /dist/apps/main.js)
-letsdoeit.com##+js(remove-class, age-gate-visible, html)
+letsdoeit.com##html:remove-class(age-gate-visible)
 @@||p.cdn.letsdoeit.com^$media,domain=letsdoeit.com|mamacitaz.com
 
 
@@ -1105,8 +1105,8 @@ hustler.com,hustlerunlimited.com###agl_wrapper,.header-cta-alerts
 
 ! 2021-05-17 https://czechbitch.com, https://czechfantasy.com
 czechbitch.com,czechfantasy.com##.active.modal,.network__bottom-join,.video-join
+czechbitch.com,czechfantasy.com##body:remove-class(blurred)
 czechbitch.com,czechfantasy.com##+js(remove-attr, style, html)
-czechbitch.com,czechfantasy.com##+js(remove-class, blurred, body.blurred)
 @@||cdn77.czechcash.com^$media,domain=czechbitch.com|czechfantasy.com
 @@||static.v2.paysites.czechcash.com^$font,domain=czechbitch.com|czechfantasy.com
 @@||static.v3.paysites.czechcash.com^$font,domain=czechbitch.com|czechfantasy.com
@@ -1120,7 +1120,7 @@ czechbitch.com,czechfantasy.com##+js(remove-class, blurred, body.blurred)
 ! 2023-09-29, 2023-08-03, 2022-09-10, 2021-12-29, 2022-05-20, 2022-05-26 https://www.bjraw.com https://tour.purgatoryx.com
 bjraw.com###announcement-popup,#announcement-wrap,.backdrop,.instant-access,.ma-benefits-wrap,.modal,.modal-backdrop,.warning-wrap
 bjraw.com##body:style(overflow: auto !important;)
-bjraw.com##+js(remove-class, modal-open, body)
+bjraw.com##body:remove-class(modal-open)
 bjraw.com##+js(remove-attr, style, header)
 tour.purgatoryx.com###holiday-promo-bar,.social-net-wrap
 @@||use.fontawesome.com^$font,domain=bjraw.com|tour.purgatoryx.com
@@ -1161,25 +1161,21 @@ westcoastproductions.com##.membership-cards-container
 
 !!!! Sansyl !!!!!
 ! [dynamic filtering]
-!	n.a.
+!	www.passionxxx.com * 3p-script noop
 ! [/dynamic filtering]
 
-! 2021-05-21, 2021-07-24, 2021-12-23 https://www.elegantraw.com
+! 2021-05-21, 2021-07-24, 2021-12-23 https://www.elegantraw.com, https://www.passionxxx.com
 elegantraw.com##a[href^="join.php"],#confirmationModal,.in.fade.modal-backdrop,.main-banner,.membership-text
 elegantraw.com##.guest-promo-container:upward(1)
 elegantraw.com##.row-separator:upward(1):style(margin-top: 70px !important)
-elegantraw.com##+js(remove-class, modal-open, body)
 
-! 2022-05-20 https://www.passionxxx.com
-! [dynamic filtering]
-!	www.passionxxx.com * 3p-script noop
-! [/dynamic filtering]
 ||passionxxx.com/template/images/play.png$image
 passionxxx.com###confirmationModal,.guest-promo-container,.main-banner,.midpage-container,.modal-backdrop,.thumbnail-btn,.thumbnail-play-icon
 passionxxx.com##.access-button,.paginator:upward(.row)
 passionxxx.com##+js(remove-attr, href, a[href^="join.php"])
-passionxxx.com##+js(remove-class, modal-open, body)
 passionxxx.com##+js(remove-attr, href, a[href="/site/join"])
+
+elegantraw.com,passionxxx.com##body:remove-class(modal-open)
 
 
 !!!! SARJ !!!!!
@@ -1278,10 +1274,10 @@ naughtyamerica.com##.footer-join-button,.right-scene
 ! [/dynamic filtering]
 private.com##.adult-warning,.banner-join-2019,#disclaimer-dialog,#disclaimer-background,.join,#limited-offer,#pause-zone,#SCENE-AFTERVIDEO-JOIN,.scene-lateral:upward(div),#SCENE-UHD4K-LOGO,.top-promo,.zoom
 private.com##div[class^="banner-"]
-private.com##+js(remove-class, plus18, body, complete)
+private.com##body:remove-class(plus18)
 private.com##+js(remove-attr, href, a[href*="/join?"])
 private.com##+js(no-setTimeout-if, show_window)
-private.com#@#+js(no-setTimeout-if, prvtoffer)
+!private.com#@#+js(no-setTimeout-if, prvtoffer)
 ||pcom.st-content.com/images/px.png$image
 @@||pcoms.st-content.com^$media,domain=private.com
 @@||pcom.st-content.com^$media,domain=private.com
@@ -1313,10 +1309,9 @@ newsensations.com##+js(remove-attr, href, a[onclick^="newtload"])
 ! [/dynamic filtering]
 dorcelclub.com###agreement,.btn-dl,iframe,.no-access.photos,.play,.promo_banner
 dorcelclub.com##.no_access:watch-attr(style)
+dorcelclub.com##body:remove-class(disclaimer-enabled|promo-banner)
 dorcelclub.com##+js(remove-attr, style, html)
 dorcelclub.com##+js(remove-attr, style, body)
-dorcelclub.com##+js(remove-class, disclaimer-enabled, body.disclaimer-enabled)
-dorcelclub.com##+js(remove-class, promo-banner, body.promo-banner)
 
 ! 2021-05-16, 2022-05-21 https://www.stasyq.com
 ! [dynamic filtering]
@@ -1332,8 +1327,7 @@ stasyq.com##+js(no-setTimeout-if, redirectToMembership)
 !	n.a.
 ! [/dynamic filtering]
 pornworld.com###agree18,.banner:upward(1),.join-now,.modal-backdrop,.sexcash-track:upward(.responsive-banner),.site-banner
-pornworld.com##body:remove-class(blur-page)
-pornworld.com##+js(remove-class, __blur-thumbnails|modal-open, body, stay)
+pornworld.com##body:remove-class(blur-page|__blur-thumbnails|modal-open)
 pornworld.com##+js(remove-attr, style, body, stay)
 @@||gtflixtv.com^$media,domain=pornworld.com
 @@||hwnds.ddfstatic.com^$media,domain=pornworld.com
@@ -1462,9 +1456,9 @@ spizoo.com##+js(remove-attr, style, body)
 ! [/dynamic filtering]
 bang.com##.button-wrapper,#download-watch,#globalAd,.image-overlay,.top-announcement-wrapper
 bang.com##.upgrade-bar:upward(.w-full)
-bang.com##+js(remove-class, pt-[96px], body)
-bang.com##+js(remove-class, top-10, header)
-bang.com##+js(remove-class, pt-24, body)
+bang.com##header:remove-class(top-10)
+bang.com##body:remove-class(pt-[96px])
+bang.com##body:remove-class(pt-24)
 @@||i.bang.com^$media,1p
 
 ! 2021-05-16 https://www.tugpass.com
@@ -1494,7 +1488,7 @@ kink.com##.info-header,.nag-screen,.--networ,.promo-join
 !	javhd.com * 3p-script noop
 ! [/dynamic filtering]
 javhd.com##.btn--buy
-javhd.com##+js(remove-class, showWarningPopup, body)
+javhd.com##body:remove-class(showWarningPopup)
 @@||c4.cdnjav.com^$media,domain=javhd.com
 @@||static.javhd.com^$media,1p
 
@@ -1503,8 +1497,8 @@ javhd.com##+js(remove-class, showWarningPopup, body)
 !	n.a.
 ! [/dynamic filtering]
 alljapanesepass.com##.b-player-join,.b-fake-player-bar,.b-fake-player-play_btn,.btn-download
+alljapanesepass.com##body:remove-class(showWarningPopup)
 alljapanesepass.com##+js(remove-attr, href, a[href*="/signup/"])
-alljapanesepass.com##+js(remove-class, showWarningPopup, body)
 
 ! 2023-12-21, 2022-12-30, 2021-07-24, 2022-05-17 https://tour.bamvisions.com
 ! [dynamic filtering]
@@ -1539,7 +1533,7 @@ cherrypimps.com##+js(addEventListener-defuser, click)
 teenfidelity.com###age-verification-modal,.button,.hero,.join-options,.page-break,.promoBar,.upcoming-model-container
 teenfidelity.com###main-carousel:upward(2)
 teenfidelity.com##table[style*=" "]:upward(section)
-teenfidelity.com##+js(remove-class, hasPromoBar, html)
+teenfidelity.com##html:remove-class(hasPromoBar)
 @@||tour-cdn.kellymadisonmedia.com^$media,domain=teenfidelity.com
 
 ! 2023-11-24, 2023-01-05, 2022-06-08, 2021-06-10, 2021-07-03 https://penthousegold.com
@@ -1585,7 +1579,7 @@ wankzvr.com##.page-header__swiper,.sub-hero
 ! [/dynamic filtering]
 forum.adultdvdtalk.com###enter_overlay
 adultdvdtalk.com###enterPageModal,.modal-backdrop
-adultdvdtalk.com##+js(remove-class, modal-open, body)
+adultdvdtalk.com##body:remove-class(modal-open)
 adultdvdtalk.com##+js(remove-attr, style, .app, stay)
 
 ! 2021-06-03 https://www.adultdvdempire.com, https://www.adultempire.com
